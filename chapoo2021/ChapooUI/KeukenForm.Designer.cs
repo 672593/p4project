@@ -1,7 +1,7 @@
 ﻿
 namespace ChapooUI
 {
-    partial class Form1
+    partial class KeukenForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,12 @@ namespace ChapooUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNames = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // lblNames
-            // 
-            this.lblNames.AutoSize = true;
-            this.lblNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNames.Location = new System.Drawing.Point(12, 9);
-            this.lblNames.Name = "lblNames";
-            this.lblNames.Size = new System.Drawing.Size(29, 29);
-            this.lblNames.TabIndex = 0;
-            this.lblNames.Text = "--";
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblNames);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            this.Text = "KeukenForm";
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNames;
     }
 }
-

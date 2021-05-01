@@ -25,10 +25,10 @@ C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\bin\Debug\ChapooLogic.pdb
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\bin\Debug\ChapooModel.pdb
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\bin\Debug\ChapooDAL.pdb
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.csprojAssemblyReference.cache
-C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.Form1.resources
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.Properties.Resources.resources
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.csproj.GenerateResource.cache
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.csproj.CoreCompileInputs.cache
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.csproj.CopyComplete
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.exe
 C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.pdb
+C:\Users\anelg\source\repos\Chapoo\chapoo2021\ChapooUI\obj\Debug\ChapooUI.AdminForm.resources
