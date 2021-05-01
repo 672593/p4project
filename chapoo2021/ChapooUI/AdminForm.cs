@@ -12,10 +12,10 @@ using ChapooLogic;
 
 namespace ChapooUI
 {
-    public partial class Form1 : Form
+    public partial class AdminForm : Form
     {
         TestLogic logic = new TestLogic();
-        public Form1()
+        public AdminForm()
         {
             InitializeComponent();
             GetNames();
