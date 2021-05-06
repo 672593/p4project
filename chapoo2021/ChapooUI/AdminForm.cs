@@ -18,9 +18,9 @@ namespace ChapooUI
         public AdminForm()
         {
             InitializeComponent();
-            GetNames();
-        }
-        public void GetNames()
+/*            GetNames();
+*/        }
+      /*  public void GetNames()
         {
             List<TestModel> list = logic.GetAllTest();
 
@@ -28,6 +28,6 @@ namespace ChapooUI
             {
                 lblNames.Text += $"{item.Id}. - {item.Name}\n";
             }
-        }
+        }*/
     }
 }
