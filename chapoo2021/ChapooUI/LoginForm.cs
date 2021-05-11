@@ -56,7 +56,7 @@ namespace ChapooUI
             this.Hide();
             switch(employee.FunctionId)
             {
-                case 
+                
             }
         }
 
