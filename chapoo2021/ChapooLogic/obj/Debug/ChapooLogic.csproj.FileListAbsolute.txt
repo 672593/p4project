@@ -20,3 +20,14 @@ C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooLogic\obj\Debug\Chapo
 C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
 C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.dll
 C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.pdb
+D:\School\git\p4project\chapoo2021\ChapooLogic\bin\Debug\ChapooLogic.dll
+D:\School\git\p4project\chapoo2021\ChapooLogic\bin\Debug\ChapooLogic.pdb
+D:\School\git\p4project\chapoo2021\ChapooLogic\bin\Debug\ChapooDAL.dll
+D:\School\git\p4project\chapoo2021\ChapooLogic\bin\Debug\ChapooModel.dll
+D:\School\git\p4project\chapoo2021\ChapooLogic\bin\Debug\ChapooDAL.pdb
+D:\School\git\p4project\chapoo2021\ChapooLogic\bin\Debug\ChapooModel.pdb
+D:\School\git\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.csprojAssemblyReference.cache
+D:\School\git\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.csproj.CoreCompileInputs.cache
+D:\School\git\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
+D:\School\git\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.dll
+D:\School\git\p4project\chapoo2021\ChapooLogic\obj\Debug\ChapooLogic.pdb

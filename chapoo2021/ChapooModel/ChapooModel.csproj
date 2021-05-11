@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bestelling.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="ResMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tafels.cs" />
