@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChapooLogic;
+using ChapooModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +19,14 @@ namespace ChapooUI
             InitializeComponent();
         }
 
+        private void RefreshStockBtn_Click(object sender, EventArgs e)
+        {
+            voorraad_barmanLv.Items.Clear();
+
+            ChapooLogic.BarLogic barLogic = new ChapooLogic.BarLogic();
+            List<BarModel> barList = barLogic.GetBar();
+
+
+        }
     }
 }

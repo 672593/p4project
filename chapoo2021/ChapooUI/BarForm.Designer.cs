@@ -29,7 +29,6 @@ namespace ChapooUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarForm));
             this.LogOffLink = new System.Windows.Forms.Label();
             this.Chapoo_title = new System.Windows.Forms.Label();
             this.bestelling_gereedLv = new System.Windows.Forms.ListView();
@@ -39,7 +38,7 @@ namespace ChapooUI
             this.RefreshImg = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RefreshStockBtn = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.voorraad_barmanLv = new System.Windows.Forms.ListView();
             this.voorraadLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,7 +121,6 @@ namespace ChapooUI
             // 
             this.RefreshImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.RefreshImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.RefreshImg.Image = ((System.Drawing.Image)(resources.GetObject("RefreshImg.Image")));
             this.RefreshImg.Location = new System.Drawing.Point(468, 84);
             this.RefreshImg.Name = "RefreshImg";
             this.RefreshImg.Size = new System.Drawing.Size(54, 36);
@@ -134,7 +132,6 @@ namespace ChapooUI
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1054, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 36);
@@ -155,17 +152,19 @@ namespace ChapooUI
             this.RefreshStockBtn.Size = new System.Drawing.Size(80, 48);
             this.RefreshStockBtn.TabIndex = 23;
             this.RefreshStockBtn.UseVisualStyleBackColor = false;
+            this.RefreshStockBtn.Click += new System.EventHandler(this.RefreshStockBtn_Click);
             // 
-            // listView1
+            // voorraad_barmanLv
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(613, 78);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(399, 167);
-            this.listView1.TabIndex = 22;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.voorraad_barmanLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.voorraad_barmanLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.voorraad_barmanLv.HideSelection = false;
+            this.voorraad_barmanLv.Location = new System.Drawing.Point(613, 78);
+            this.voorraad_barmanLv.Name = "voorraad_barmanLv";
+            this.voorraad_barmanLv.Size = new System.Drawing.Size(399, 167);
+            this.voorraad_barmanLv.TabIndex = 22;
+            this.voorraad_barmanLv.UseCompatibleStateImageBehavior = false;
+            this.voorraad_barmanLv.View = System.Windows.Forms.View.Details;
             // 
             // voorraadLbl
             // 
@@ -186,7 +185,7 @@ namespace ChapooUI
             this.ClientSize = new System.Drawing.Size(1241, 561);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RefreshStockBtn);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.voorraad_barmanLv);
             this.Controls.Add(this.voorraadLbl);
             this.Controls.Add(this.RefreshImg);
             this.Controls.Add(this.RefreshOrdersBtn);
@@ -215,7 +214,7 @@ namespace ChapooUI
         private System.Windows.Forms.PictureBox RefreshImg;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button RefreshStockBtn;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView voorraad_barmanLv;
         private System.Windows.Forms.Label voorraadLbl;
     }
 }
