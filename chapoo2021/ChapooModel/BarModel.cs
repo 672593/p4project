@@ -12,11 +12,11 @@ namespace ChapooModel
 
         public int Type { get; set; }
 
-        public int Price { get; set; }
+        public Decimal Price { get; set; }
 
         public int Stock { get; set; }
 
-        public int Alcohol { get; set; }
+        public Boolean Alcohol { get; set; }
 
         public string Name { get; set; }
     }

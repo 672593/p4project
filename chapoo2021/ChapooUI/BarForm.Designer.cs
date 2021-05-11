@@ -40,6 +40,12 @@ namespace ChapooUI
             this.RefreshStockBtn = new System.Windows.Forms.Button();
             this.voorraad_barmanLv = new System.Windows.Forms.ListView();
             this.voorraadLbl = new System.Windows.Forms.Label();
+            this.BarVoorraadId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BarMenuId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BarItemPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BarItemStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BarAlcoholCheck = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BarItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.RefreshImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -142,7 +148,6 @@ namespace ChapooUI
             // RefreshStockBtn
             // 
             this.RefreshStockBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
-            this.RefreshStockBtn.Enabled = false;
             this.RefreshStockBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.RefreshStockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshStockBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,6 +163,13 @@ namespace ChapooUI
             // 
             this.voorraad_barmanLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.voorraad_barmanLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.voorraad_barmanLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.BarVoorraadId,
+            this.BarMenuId,
+            this.BarItemPrice,
+            this.BarItemStock,
+            this.BarAlcoholCheck,
+            this.BarItemName});
             this.voorraad_barmanLv.HideSelection = false;
             this.voorraad_barmanLv.Location = new System.Drawing.Point(613, 78);
             this.voorraad_barmanLv.Name = "voorraad_barmanLv";
@@ -176,6 +188,35 @@ namespace ChapooUI
             this.voorraadLbl.Size = new System.Drawing.Size(81, 15);
             this.voorraadLbl.TabIndex = 21;
             this.voorraadLbl.Text = "VOORRAAD";
+            // 
+            // BarVoorraadId
+            // 
+            this.BarVoorraadId.Text = "Id";
+            this.BarVoorraadId.Width = 26;
+            // 
+            // BarMenuId
+            // 
+            this.BarMenuId.Text = "Menu Type";
+            this.BarMenuId.Width = 29;
+            // 
+            // BarItemPrice
+            // 
+            this.BarItemPrice.Text = "Price";
+            // 
+            // BarItemStock
+            // 
+            this.BarItemStock.Text = "Stock";
+            this.BarItemStock.Width = 37;
+            // 
+            // BarAlcoholCheck
+            // 
+            this.BarAlcoholCheck.Text = "Alcohol";
+            this.BarAlcoholCheck.Width = 36;
+            // 
+            // BarItemName
+            // 
+            this.BarItemName.Text = "Name";
+            this.BarItemName.Width = 210;
             // 
             // BarForm
             // 
@@ -216,5 +257,11 @@ namespace ChapooUI
         private System.Windows.Forms.Button RefreshStockBtn;
         private System.Windows.Forms.ListView voorraad_barmanLv;
         private System.Windows.Forms.Label voorraadLbl;
+        private System.Windows.Forms.ColumnHeader BarVoorraadId;
+        private System.Windows.Forms.ColumnHeader BarMenuId;
+        private System.Windows.Forms.ColumnHeader BarItemPrice;
+        private System.Windows.Forms.ColumnHeader BarItemStock;
+        private System.Windows.Forms.ColumnHeader BarAlcoholCheck;
+        private System.Windows.Forms.ColumnHeader BarItemName;
     }
 }
