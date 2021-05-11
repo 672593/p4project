@@ -4,3 +4,9 @@ C:\Users\anelg\source\repos\chapoo2021\ChapooModel\obj\Debug\ChapooModel.csprojA
 C:\Users\anelg\source\repos\chapoo2021\ChapooModel\obj\Debug\ChapooModel.csproj.CoreCompileInputs.cache
 C:\Users\anelg\source\repos\chapoo2021\ChapooModel\obj\Debug\ChapooModel.dll
 C:\Users\anelg\source\repos\chapoo2021\ChapooModel\obj\Debug\ChapooModel.pdb
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooModel\bin\Debug\ChapooModel.dll
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooModel\bin\Debug\ChapooModel.pdb
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooModel\obj\Debug\ChapooModel.csprojAssemblyReference.cache
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooModel\obj\Debug\ChapooModel.csproj.CoreCompileInputs.cache
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooModel\obj\Debug\ChapooModel.dll
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooModel\obj\Debug\ChapooModel.pdb
