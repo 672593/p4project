@@ -37,47 +37,47 @@ namespace ChapooUI
             this.OrderBtn1 = new System.Windows.Forms.Button();
             this.ReservationBtn1 = new System.Windows.Forms.Button();
             this.PayBtn1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Table6_pnl = new System.Windows.Forms.Panel();
             this.PayBtn6 = new System.Windows.Forms.Button();
             this.ReservationBtn6 = new System.Windows.Forms.Button();
             this.OrderBtn6 = new System.Windows.Forms.Button();
             this.Table6_Title = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.Table7_pnl = new System.Windows.Forms.Panel();
             this.PayBtn7 = new System.Windows.Forms.Button();
             this.ReservationBtn7 = new System.Windows.Forms.Button();
             this.OrderBtn7 = new System.Windows.Forms.Button();
             this.Table7_Title = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Table2_pnl = new System.Windows.Forms.Panel();
             this.PayBtn = new System.Windows.Forms.Button();
             this.ReservationBtn2 = new System.Windows.Forms.Button();
             this.OrderBtn2 = new System.Windows.Forms.Button();
             this.Table2_Title = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.Table8_pnl = new System.Windows.Forms.Panel();
             this.PayBtn8 = new System.Windows.Forms.Button();
             this.Reser8vationBtn = new System.Windows.Forms.Button();
             this.OrderBtn8 = new System.Windows.Forms.Button();
             this.Table8_Title = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.Table3_pnl = new System.Windows.Forms.Panel();
             this.PayBtn3 = new System.Windows.Forms.Button();
             this.ReservationBtn3 = new System.Windows.Forms.Button();
             this.OrderBtn3 = new System.Windows.Forms.Button();
             this.Table3_Title = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.Table9_pnl = new System.Windows.Forms.Panel();
             this.PayBtn9 = new System.Windows.Forms.Button();
             this.ReservationBtn9 = new System.Windows.Forms.Button();
             this.OrderBtn9 = new System.Windows.Forms.Button();
             this.Table9_Title = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.Table4_pnl = new System.Windows.Forms.Panel();
             this.PayBtn4 = new System.Windows.Forms.Button();
             this.ResservationBtn4 = new System.Windows.Forms.Button();
             this.OrderBtn4 = new System.Windows.Forms.Button();
             this.Table4_tiitle = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.Table10_pnl = new System.Windows.Forms.Panel();
             this.PayBtn10 = new System.Windows.Forms.Button();
             this.ReservationBtn10 = new System.Windows.Forms.Button();
             this.OrderBtn10 = new System.Windows.Forms.Button();
             this.Table10_Title = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.Table5_pnl = new System.Windows.Forms.Panel();
             this.PayBtn5 = new System.Windows.Forms.Button();
             this.ReservationBtn5 = new System.Windows.Forms.Button();
             this.OrderBtn5 = new System.Windows.Forms.Button();
@@ -86,15 +86,15 @@ namespace ChapooUI
             this.AllreservationsBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Table1_pnl.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.Table6_pnl.SuspendLayout();
+            this.Table7_pnl.SuspendLayout();
+            this.Table2_pnl.SuspendLayout();
+            this.Table8_pnl.SuspendLayout();
+            this.Table3_pnl.SuspendLayout();
+            this.Table9_pnl.SuspendLayout();
+            this.Table4_pnl.SuspendLayout();
+            this.Table10_pnl.SuspendLayout();
+            this.Table5_pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // Chapoo_title
@@ -194,16 +194,16 @@ namespace ChapooUI
             this.PayBtn1.Text = "AFREKENEN";
             this.PayBtn1.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // Table6_pnl
             // 
-            this.panel1.Controls.Add(this.PayBtn6);
-            this.panel1.Controls.Add(this.ReservationBtn6);
-            this.panel1.Controls.Add(this.OrderBtn6);
-            this.panel1.Controls.Add(this.Table6_Title);
-            this.panel1.Location = new System.Drawing.Point(13, 304);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 202);
-            this.panel1.TabIndex = 18;
+            this.Table6_pnl.Controls.Add(this.PayBtn6);
+            this.Table6_pnl.Controls.Add(this.ReservationBtn6);
+            this.Table6_pnl.Controls.Add(this.OrderBtn6);
+            this.Table6_pnl.Controls.Add(this.Table6_Title);
+            this.Table6_pnl.Location = new System.Drawing.Point(13, 304);
+            this.Table6_pnl.Name = "Table6_pnl";
+            this.Table6_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table6_pnl.TabIndex = 18;
             // 
             // PayBtn6
             // 
@@ -258,16 +258,16 @@ namespace ChapooUI
             this.Table6_Title.TabIndex = 14;
             this.Table6_Title.Text = "TAFEL 6";
             // 
-            // panel2
+            // Table7_pnl
             // 
-            this.panel2.Controls.Add(this.PayBtn7);
-            this.panel2.Controls.Add(this.ReservationBtn7);
-            this.panel2.Controls.Add(this.OrderBtn7);
-            this.panel2.Controls.Add(this.Table7_Title);
-            this.panel2.Location = new System.Drawing.Point(295, 304);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(266, 202);
-            this.panel2.TabIndex = 20;
+            this.Table7_pnl.Controls.Add(this.PayBtn7);
+            this.Table7_pnl.Controls.Add(this.ReservationBtn7);
+            this.Table7_pnl.Controls.Add(this.OrderBtn7);
+            this.Table7_pnl.Controls.Add(this.Table7_Title);
+            this.Table7_pnl.Location = new System.Drawing.Point(295, 304);
+            this.Table7_pnl.Name = "Table7_pnl";
+            this.Table7_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table7_pnl.TabIndex = 20;
             // 
             // PayBtn7
             // 
@@ -322,16 +322,16 @@ namespace ChapooUI
             this.Table7_Title.TabIndex = 14;
             this.Table7_Title.Text = "TAFEL 7";
             // 
-            // panel3
+            // Table2_pnl
             // 
-            this.panel3.Controls.Add(this.PayBtn);
-            this.panel3.Controls.Add(this.ReservationBtn2);
-            this.panel3.Controls.Add(this.OrderBtn2);
-            this.panel3.Controls.Add(this.Table2_Title);
-            this.panel3.Location = new System.Drawing.Point(295, 82);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 202);
-            this.panel3.TabIndex = 19;
+            this.Table2_pnl.Controls.Add(this.PayBtn);
+            this.Table2_pnl.Controls.Add(this.ReservationBtn2);
+            this.Table2_pnl.Controls.Add(this.OrderBtn2);
+            this.Table2_pnl.Controls.Add(this.Table2_Title);
+            this.Table2_pnl.Location = new System.Drawing.Point(295, 82);
+            this.Table2_pnl.Name = "Table2_pnl";
+            this.Table2_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table2_pnl.TabIndex = 19;
             // 
             // PayBtn
             // 
@@ -386,16 +386,16 @@ namespace ChapooUI
             this.Table2_Title.TabIndex = 14;
             this.Table2_Title.Text = "TAFEL 2";
             // 
-            // panel4
+            // Table8_pnl
             // 
-            this.panel4.Controls.Add(this.PayBtn8);
-            this.panel4.Controls.Add(this.Reser8vationBtn);
-            this.panel4.Controls.Add(this.OrderBtn8);
-            this.panel4.Controls.Add(this.Table8_Title);
-            this.panel4.Location = new System.Drawing.Point(580, 304);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(266, 202);
-            this.panel4.TabIndex = 22;
+            this.Table8_pnl.Controls.Add(this.PayBtn8);
+            this.Table8_pnl.Controls.Add(this.Reser8vationBtn);
+            this.Table8_pnl.Controls.Add(this.OrderBtn8);
+            this.Table8_pnl.Controls.Add(this.Table8_Title);
+            this.Table8_pnl.Location = new System.Drawing.Point(580, 304);
+            this.Table8_pnl.Name = "Table8_pnl";
+            this.Table8_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table8_pnl.TabIndex = 22;
             // 
             // PayBtn8
             // 
@@ -450,16 +450,16 @@ namespace ChapooUI
             this.Table8_Title.TabIndex = 14;
             this.Table8_Title.Text = "TAFEL 8";
             // 
-            // panel5
+            // Table3_pnl
             // 
-            this.panel5.Controls.Add(this.PayBtn3);
-            this.panel5.Controls.Add(this.ReservationBtn3);
-            this.panel5.Controls.Add(this.OrderBtn3);
-            this.panel5.Controls.Add(this.Table3_Title);
-            this.panel5.Location = new System.Drawing.Point(580, 82);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(266, 202);
-            this.panel5.TabIndex = 21;
+            this.Table3_pnl.Controls.Add(this.PayBtn3);
+            this.Table3_pnl.Controls.Add(this.ReservationBtn3);
+            this.Table3_pnl.Controls.Add(this.OrderBtn3);
+            this.Table3_pnl.Controls.Add(this.Table3_Title);
+            this.Table3_pnl.Location = new System.Drawing.Point(580, 82);
+            this.Table3_pnl.Name = "Table3_pnl";
+            this.Table3_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table3_pnl.TabIndex = 21;
             // 
             // PayBtn3
             // 
@@ -514,16 +514,16 @@ namespace ChapooUI
             this.Table3_Title.TabIndex = 14;
             this.Table3_Title.Text = "TAFEL 3";
             // 
-            // panel6
+            // Table9_pnl
             // 
-            this.panel6.Controls.Add(this.PayBtn9);
-            this.panel6.Controls.Add(this.ReservationBtn9);
-            this.panel6.Controls.Add(this.OrderBtn9);
-            this.panel6.Controls.Add(this.Table9_Title);
-            this.panel6.Location = new System.Drawing.Point(865, 304);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(266, 202);
-            this.panel6.TabIndex = 24;
+            this.Table9_pnl.Controls.Add(this.PayBtn9);
+            this.Table9_pnl.Controls.Add(this.ReservationBtn9);
+            this.Table9_pnl.Controls.Add(this.OrderBtn9);
+            this.Table9_pnl.Controls.Add(this.Table9_Title);
+            this.Table9_pnl.Location = new System.Drawing.Point(865, 304);
+            this.Table9_pnl.Name = "Table9_pnl";
+            this.Table9_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table9_pnl.TabIndex = 24;
             // 
             // PayBtn9
             // 
@@ -578,16 +578,16 @@ namespace ChapooUI
             this.Table9_Title.TabIndex = 14;
             this.Table9_Title.Text = "TAFEL 9";
             // 
-            // panel7
+            // Table4_pnl
             // 
-            this.panel7.Controls.Add(this.PayBtn4);
-            this.panel7.Controls.Add(this.ResservationBtn4);
-            this.panel7.Controls.Add(this.OrderBtn4);
-            this.panel7.Controls.Add(this.Table4_tiitle);
-            this.panel7.Location = new System.Drawing.Point(865, 82);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(266, 202);
-            this.panel7.TabIndex = 23;
+            this.Table4_pnl.Controls.Add(this.PayBtn4);
+            this.Table4_pnl.Controls.Add(this.ResservationBtn4);
+            this.Table4_pnl.Controls.Add(this.OrderBtn4);
+            this.Table4_pnl.Controls.Add(this.Table4_tiitle);
+            this.Table4_pnl.Location = new System.Drawing.Point(865, 82);
+            this.Table4_pnl.Name = "Table4_pnl";
+            this.Table4_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table4_pnl.TabIndex = 23;
             // 
             // PayBtn4
             // 
@@ -642,16 +642,16 @@ namespace ChapooUI
             this.Table4_tiitle.TabIndex = 14;
             this.Table4_tiitle.Text = "TAFEL 4";
             // 
-            // panel8
+            // Table10_pnl
             // 
-            this.panel8.Controls.Add(this.PayBtn10);
-            this.panel8.Controls.Add(this.ReservationBtn10);
-            this.panel8.Controls.Add(this.OrderBtn10);
-            this.panel8.Controls.Add(this.Table10_Title);
-            this.panel8.Location = new System.Drawing.Point(1153, 304);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(266, 202);
-            this.panel8.TabIndex = 26;
+            this.Table10_pnl.Controls.Add(this.PayBtn10);
+            this.Table10_pnl.Controls.Add(this.ReservationBtn10);
+            this.Table10_pnl.Controls.Add(this.OrderBtn10);
+            this.Table10_pnl.Controls.Add(this.Table10_Title);
+            this.Table10_pnl.Location = new System.Drawing.Point(1153, 304);
+            this.Table10_pnl.Name = "Table10_pnl";
+            this.Table10_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table10_pnl.TabIndex = 26;
             // 
             // PayBtn10
             // 
@@ -706,16 +706,16 @@ namespace ChapooUI
             this.Table10_Title.TabIndex = 14;
             this.Table10_Title.Text = "TAFEL 10";
             // 
-            // panel9
+            // Table5_pnl
             // 
-            this.panel9.Controls.Add(this.PayBtn5);
-            this.panel9.Controls.Add(this.ReservationBtn5);
-            this.panel9.Controls.Add(this.OrderBtn5);
-            this.panel9.Controls.Add(this.Table5_Title);
-            this.panel9.Location = new System.Drawing.Point(1153, 82);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(266, 202);
-            this.panel9.TabIndex = 25;
+            this.Table5_pnl.Controls.Add(this.PayBtn5);
+            this.Table5_pnl.Controls.Add(this.ReservationBtn5);
+            this.Table5_pnl.Controls.Add(this.OrderBtn5);
+            this.Table5_pnl.Controls.Add(this.Table5_Title);
+            this.Table5_pnl.Location = new System.Drawing.Point(1153, 82);
+            this.Table5_pnl.Name = "Table5_pnl";
+            this.Table5_pnl.Size = new System.Drawing.Size(266, 202);
+            this.Table5_pnl.TabIndex = 25;
             // 
             // PayBtn5
             // 
@@ -806,15 +806,15 @@ namespace ChapooUI
             this.ClientSize = new System.Drawing.Size(1433, 561);
             this.Controls.Add(this.AllreservationsBtn);
             this.Controls.Add(this.AllOrdersBtn);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Table10_pnl);
+            this.Controls.Add(this.Table9_pnl);
+            this.Controls.Add(this.Table5_pnl);
+            this.Controls.Add(this.Table8_pnl);
+            this.Controls.Add(this.Table4_pnl);
+            this.Controls.Add(this.Table7_pnl);
+            this.Controls.Add(this.Table3_pnl);
+            this.Controls.Add(this.Table2_pnl);
+            this.Controls.Add(this.Table6_pnl);
             this.Controls.Add(this.Table1_pnl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LogOffLink);
@@ -824,24 +824,24 @@ namespace ChapooUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Table1_pnl.ResumeLayout(false);
             this.Table1_pnl.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.Table6_pnl.ResumeLayout(false);
+            this.Table6_pnl.PerformLayout();
+            this.Table7_pnl.ResumeLayout(false);
+            this.Table7_pnl.PerformLayout();
+            this.Table2_pnl.ResumeLayout(false);
+            this.Table2_pnl.PerformLayout();
+            this.Table8_pnl.ResumeLayout(false);
+            this.Table8_pnl.PerformLayout();
+            this.Table3_pnl.ResumeLayout(false);
+            this.Table3_pnl.PerformLayout();
+            this.Table9_pnl.ResumeLayout(false);
+            this.Table9_pnl.PerformLayout();
+            this.Table4_pnl.ResumeLayout(false);
+            this.Table4_pnl.PerformLayout();
+            this.Table10_pnl.ResumeLayout(false);
+            this.Table10_pnl.PerformLayout();
+            this.Table5_pnl.ResumeLayout(false);
+            this.Table5_pnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -857,47 +857,47 @@ namespace ChapooUI
         private System.Windows.Forms.Button ReservationBtn1;
         private System.Windows.Forms.Button OrderBtn1;
         private System.Windows.Forms.Label Table1_Title;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Table6_pnl;
         private System.Windows.Forms.Button PayBtn6;
         private System.Windows.Forms.Button ReservationBtn6;
         private System.Windows.Forms.Button OrderBtn6;
         private System.Windows.Forms.Label Table6_Title;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Table7_pnl;
         private System.Windows.Forms.Button PayBtn7;
         private System.Windows.Forms.Button ReservationBtn7;
         private System.Windows.Forms.Button OrderBtn7;
         private System.Windows.Forms.Label Table7_Title;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel Table2_pnl;
         private System.Windows.Forms.Button PayBtn;
         private System.Windows.Forms.Button ReservationBtn2;
         private System.Windows.Forms.Button OrderBtn2;
         private System.Windows.Forms.Label Table2_Title;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel Table8_pnl;
         private System.Windows.Forms.Button PayBtn8;
         private System.Windows.Forms.Button Reser8vationBtn;
         private System.Windows.Forms.Button OrderBtn8;
         private System.Windows.Forms.Label Table8_Title;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel Table3_pnl;
         private System.Windows.Forms.Button PayBtn3;
         private System.Windows.Forms.Button ReservationBtn3;
         private System.Windows.Forms.Button OrderBtn3;
         private System.Windows.Forms.Label Table3_Title;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel Table9_pnl;
         private System.Windows.Forms.Button PayBtn9;
         private System.Windows.Forms.Button ReservationBtn9;
         private System.Windows.Forms.Button OrderBtn9;
         private System.Windows.Forms.Label Table9_Title;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel Table4_pnl;
         private System.Windows.Forms.Button PayBtn4;
         private System.Windows.Forms.Button ResservationBtn4;
         private System.Windows.Forms.Button OrderBtn4;
         private System.Windows.Forms.Label Table4_tiitle;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel Table10_pnl;
         private System.Windows.Forms.Button PayBtn10;
         private System.Windows.Forms.Button ReservationBtn10;
         private System.Windows.Forms.Button OrderBtn10;
         private System.Windows.Forms.Label Table10_Title;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel Table5_pnl;
         private System.Windows.Forms.Button PayBtn5;
         private System.Windows.Forms.Button ReservationBtn5;
         private System.Windows.Forms.Button OrderBtn5;
