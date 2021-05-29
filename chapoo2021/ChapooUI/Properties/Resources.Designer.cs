@@ -63,9 +63,9 @@ namespace ChapooUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap a184022714a8a65ab5c07055726e5ae0 {
+        internal static System.Drawing.Bitmap Chapoo_Logo_White {
             get {
-                object obj = ResourceManager.GetObject("a184022714a8a65ab5c07055726e5ae0", resourceCulture);
+                object obj = ResourceManager.GetObject("Chapoo Logo White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace ChapooUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap a184022714a8a65ab5c07055726e5ae01 {
+        internal static System.Drawing.Bitmap Chapoo_Logo_White1 {
             get {
-                object obj = ResourceManager.GetObject("a184022714a8a65ab5c07055726e5ae01", resourceCulture);
+                object obj = ResourceManager.GetObject("Chapoo Logo White1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
