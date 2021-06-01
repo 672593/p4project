@@ -12,9 +12,9 @@ namespace ChapooLogic
     {
         Employee_DAO Employee_DAO = new Employee_DAO();
 
-        public Employee GetWorkerLogin(string username, string password)
+        public string GetSalt(Employee employee)
         {
-            return Employee_DAO.GetWorkerLogin(username, password);
+            return Employee_DAO.GetSalt(employee);
         }
 
 
