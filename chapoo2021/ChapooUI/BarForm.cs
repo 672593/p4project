@@ -26,7 +26,7 @@ namespace ChapooUI
             {
                 ListViewItem item = new ListViewItem(b.ItemID.ToString());
                 item.SubItems.Add(b.Type.ToString());
-                item.SubItems.Add(b.Price.ToString());
+                item.SubItems.Add(b.Price.ToString("F"));
                 item.SubItems.Add(b.Stock.ToString());
                 item.SubItems.Add(b.Alcohol.ToString());
                 item.SubItems.Add(b.Name);
@@ -46,7 +46,7 @@ namespace ChapooUI
             {
                 ListViewItem item = new ListViewItem(b.ItemID.ToString());
                 item.SubItems.Add(b.Type.ToString());
-                item.SubItems.Add(b.Price.ToString());
+                item.SubItems.Add(b.Price.ToString("F"));
                 item.SubItems.Add(b.Stock.ToString());
                 item.SubItems.Add(b.Alcohol.ToString());
                 item.SubItems.Add(b.Name);

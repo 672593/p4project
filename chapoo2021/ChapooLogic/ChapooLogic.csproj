@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarBestellingLogic.cs" />
     <Compile Include="BarLogic.cs" />
+    <Compile Include="KeukenLogic.cs" />
     <Compile Include="TestLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,6 +56,9 @@
       <Project>{4c368063-9d5f-47ae-80ce-2cd1e08cec2a}</Project>
       <Name>ChapooModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
