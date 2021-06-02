@@ -22,14 +22,16 @@ namespace ChapooDAL
             List<BarBestellingModel> barOrderList = new List<BarBestellingModel>();
             foreach (DataRow dr in dataTable.Rows)
             {
-                BarBestellingModel baritem = new BarBestellingModel()
-                {
-
-
-
-
-                };
-                barOrderList.Add(baritem);
+                    BarBestellingModel bbestelItem = new BarBestellingModel()
+                    {
+                        OrderItemID = (int)dr["orderItemId"],
+                        MenuItemId = (int)dr["menuItemId"],
+                        OrderItemStatus = (Boolean)dr["orderItemStatus"],
+                        orderTableId = (int)dr["orderTableId"],
+                        Price = (Decimal)dr["price"],
+                        Name = (string)(dr["itemName"].ToString())
+                    };
+                    barOrderList.Add(bbestelItem);
 
             }
             return barOrderList;

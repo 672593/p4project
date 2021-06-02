@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChapooDAL;
+using ChapooModel;
 
 namespace ChapooLogic
 {
@@ -23,12 +25,12 @@ namespace ChapooLogic
 
                 // something went wrong connecting to the database, so we will add a fake student to the list to make sure the rest of the application continues working!
                 List<KeukenModel> keukenList = new List<KeukenModel>();
-                KeukenModel a = new keukenModel();
+                KeukenModel a = new KeukenModel();
                 a.Name = "Failed";
                 a.ItemID = 474791;
                 keukenList.Add(a);
 
-                KeukenModel b = new keukenModel();
+                KeukenModel b = new KeukenModel();
                 b.Name = "Failed2";
                 b.ItemID = 197474;
                 keukenList.Add(b);

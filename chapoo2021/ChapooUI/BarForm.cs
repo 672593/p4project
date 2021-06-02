@@ -17,18 +17,18 @@ namespace ChapooUI
         public BarForm()
         {
             InitializeComponent();
-            ChapooLogic.BarLogic barLogic = new ChapooLogic.BarLogic();
-            List<BarModel> barList = barLogic.GetBar();
+            ChapooLogic.KeukenLogic barLogic = new ChapooLogic.KeukenLogic();
+            List<KeukenModel> barList = barLogic.GetKeuken();
 
             voorraad_barmanLv.Items.Clear();
 
-            foreach (ChapooModel.BarModel b in barList)
+            foreach (ChapooModel.KeukenModel b in barList)
             {
                 ListViewItem item = new ListViewItem(b.ItemID.ToString());
                 item.SubItems.Add(b.Type.ToString());
                 item.SubItems.Add(b.Price.ToString("F"));
                 item.SubItems.Add(b.Stock.ToString());
-                item.SubItems.Add(b.Alcohol.ToString());
+                //item.SubItems.Add(b.Alcohol.ToString());
                 item.SubItems.Add(b.Name);
 
                 voorraad_barmanLv.Items.Add(item);
