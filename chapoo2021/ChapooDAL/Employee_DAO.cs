@@ -17,6 +17,21 @@ namespace ChapooDAL
             SqlParameter[] sqlp = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery("GetEmployees", sqlp));
         }
+
+        public Employee GetCredentials(int id, string password)
+        {
+            SqlParameter[] sqlp = new SqlParameter[2]
+            {
+                new SqlParameter("@id", id),
+                new SqlParameter("@password", id)
+            };
+            
+            DataTable results = ExecuteSelectQuery("GetCredentials", sqlp);
+
+        }
+
+
+
         public List<Employee> ReadTables(DataTable dataTable)
         {
             List<Employee> employees = new List<Employee>();
@@ -39,7 +54,8 @@ namespace ChapooDAL
 
         public string GetSalt(Employee employee)
         {
-            String query = $"SELECT Salt From Gebruiker WHERE Gebruikersnaam = '{Employee.employeeId}'";
+            
+            String query = $"SELECT Salt From Gebruiker WHERE Gebruikersnaam = '{employee.employeeId}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             OpenConnection();
             DataTable acc = ExecuteSelectQuery(query, sqlParameters);

@@ -36,6 +36,7 @@ namespace ChapooUI
             this.txt_User = new System.Windows.Forms.TextBox();
             this.lbl_WachtVer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +78,8 @@ namespace ChapooUI
             this.txt_Pass.TabIndex = 2;
             this.txt_Pass.Text = "Password";
             this.txt_Pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Pass.Enter += new System.EventHandler(this.txt_Pass_Enter);
+            this.txt_Pass.Leave += new System.EventHandler(this.txt_Pass_Leave);
             // 
             // txt_User
             // 
@@ -90,6 +93,8 @@ namespace ChapooUI
             this.txt_User.TabIndex = 3;
             this.txt_User.Text = "Username";
             this.txt_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_User.Enter += new System.EventHandler(this.txt_User_Enter);
+            this.txt_User.Leave += new System.EventHandler(this.txt_User_Leave);
             // 
             // lbl_WachtVer
             // 
@@ -111,12 +116,23 @@ namespace ChapooUI
             this.panel1.Size = new System.Drawing.Size(2, 270);
             this.panel1.TabIndex = 5;
             // 
+            // lbl_Error
+            // 
+            this.lbl_Error.AutoSize = true;
+            this.lbl_Error.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Error.Location = new System.Drawing.Point(294, 493);
+            this.lbl_Error.Name = "lbl_Error";
+            this.lbl_Error.Size = new System.Drawing.Size(0, 45);
+            this.lbl_Error.TabIndex = 6;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_WachtVer);
             this.Controls.Add(this.txt_User);
@@ -139,5 +155,6 @@ namespace ChapooUI
         private System.Windows.Forms.TextBox txt_User;
         private System.Windows.Forms.Label lbl_WachtVer;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_Error;
     }
 }
