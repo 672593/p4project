@@ -24,13 +24,56 @@ namespace ChapooUI
 
         private void CheckCredentials()
         {
+            ChapooLogic.Employee_Service service = new ChapooLogic.Employee_Service();
+            ChapooLogic.Function_Service functieService = new ChapooLogic.Function_Service();
             if (string.IsNullOrEmpty(txt_User.Text) || string.IsNullOrEmpty(txt_Pass.Text) || !int.TryParse(txt_User.Text, out int id))
             {
                 lbl_Error.Text = "Incorrect Username/Password";
             }
 
             string password = txt_Pass.Text;
-            Employee employee = employee_service.GetCredentials(id, password);
+            Employee huidigGebruiker = new Employee();
+            huidigGebruiker.username = txt_User.Text;
+            string salt = service.GetSalt(huidigGebruiker);
+            HashwithSalt retrieve = new HashwithSalt();
+            string hash = retrieve.GenerateHash(password, salt);
+
+            Employee employee = employee_service.GetCredentials(int.Parse(huidigGebruiker.username), hash);
+
+            if (huidigGebruiker.validlogin == 1)
+            {
+                int function = functieService.GetFunctie(huidigGebruiker);
+                MessageBox.Show($"Welkom {huidigGebruiker.username.ToUpper()}\n\nU bent ingelogd met functie: {(Employee.FunctieNaam)function}");
+
+                this.Hide();
+
+                if (function == 1)
+                {
+                    TafelForm tafelOverzicht = new TafelForm();
+                    tafelOverzicht.Account = huidigGebruiker;
+                    tafelOverzicht.Show();
+                }
+                else if (function == 2)
+                {
+                    KeukenForm keukenOverzicht = new KeukenForm();
+                    keukenOverzicht.Show();
+                }
+                else if (function == 3)
+                {
+                    BarForm barOverzicht = new BarForm();
+                    barOverzicht.Show();
+                }
+                else if (function == 4)
+                {
+                    AdminForm adminform = new AdminForm();
+                }
+                else
+                {
+                    MessageBox.Show("Geen functie gevonden.");
+                }
+            }
+
+
         }
 
 

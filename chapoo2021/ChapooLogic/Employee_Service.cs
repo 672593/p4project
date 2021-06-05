@@ -19,9 +19,9 @@ namespace ChapooLogic
 
 
 
-        public string GetSalt(Employee employee)
+        public string GetSalt(Employee Employee)
         {
-            return Employee_DAO.GetSalt(employee);
+            return Employee_DAO.GetSalt(Employee);
         }
 
 

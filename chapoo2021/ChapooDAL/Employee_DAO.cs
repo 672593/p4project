@@ -25,10 +25,25 @@ namespace ChapooDAL
                 new SqlParameter("@id", id),
                 new SqlParameter("@password", id)
             };
-            
-            DataTable results = ExecuteSelectQuery("GetCredentials", sqlp);
+
+            DataTable results = new DataTable;
+            results = ExecuteSelectQuery("GetCredentials", sqlp);
+
+            Employee huidigGebruiker = new Employee();
+            huidigGebruiker.username = id.ToString();
+            if (results.Rows[0][0].ToString() == "1")
+            {
+                huidigGebruiker.validlogin = 1;
+                return huidigGebruiker;
+            }
+            else
+            {
+                huidigGebruiker.validlogin = 0;
+                return huidigGebruiker;
+            }
 
         }
+
 
 
 
