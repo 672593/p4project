@@ -23,14 +23,13 @@ namespace ChapooDAL
             SqlParameter[] sqlp = new SqlParameter[2]
             {
                 new SqlParameter("@id", id),
-                new SqlParameter("@password", id)
+                new SqlParameter("@password", password)
             };
 
-            DataTable results = new DataTable;
+            DataTable results = new DataTable();
             results = ExecuteSelectQuery("GetCredentials", sqlp);
 
             Employee huidigGebruiker = new Employee();
-            huidigGebruiker.username = id.ToString();
             if (results.Rows[0][0].ToString() == "1")
             {
                 huidigGebruiker.validlogin = 1;
@@ -69,11 +68,13 @@ namespace ChapooDAL
 
         public string GetSalt(Employee employee)
         {
-            
-            String query = $"SELECT Salt From Gebruiker WHERE Gebruikersnaam = '{employee.employeeId}'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            OpenConnection();
-            DataTable acc = ExecuteSelectQuery(query, sqlParameters);
+
+            SqlParameter[] sqlp = new SqlParameter[1]
+            {
+                new SqlParameter("@id", employee.employeeId)
+            };
+
+            DataTable acc = ExecuteSelectQuery("GetSalt", sqlp);
             foreach (DataRow dr in acc.Rows)
             {
                 employee.Salt = (String)dr["Salt"];

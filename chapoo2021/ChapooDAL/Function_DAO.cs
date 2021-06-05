@@ -14,11 +14,15 @@ namespace ChapooDAL
         {
             public int Function(Employee Employee)
             {
-                String FunctieQuery = $"select functieId from Gebruiker where Gebruikersnaam = '{account.gebruikersnaam}'";
-                SqlParameter[] sqlParameters = new SqlParameter[0];
-                OpenConnection();
-                DataTable readFunctie = ExecuteSelectQuery(FunctieQuery, sqlParameters);
-                foreach (DataRow dr in readFunctie.Rows)
+
+                SqlParameter[] sqlp = new SqlParameter[1]
+                {
+                    new SqlParameter("@id", Employee.employeeId)
+                };
+
+                DataTable acc = ExecuteSelectQuery("GetFunction", sqlp);
+
+                foreach (DataRow dr in acc.Rows)
                 {
                     Employee.FunctionId = (int)dr["functionID"];
                 }
