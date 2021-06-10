@@ -39,13 +39,18 @@ namespace ChapooUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RefreshStockBtn = new System.Windows.Forms.Button();
             this.voorraad_barmanLv = new System.Windows.Forms.ListView();
-            this.voorraadLbl = new System.Windows.Forms.Label();
             this.BarVoorraadId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarMenuId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarItemPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarItemStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarAlcoholCheck = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.voorraadLbl = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.RefreshImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,12 +81,19 @@ namespace ChapooUI
             // 
             this.bestelling_gereedLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.bestelling_gereedLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bestelling_gereedLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
             this.bestelling_gereedLv.HideSelection = false;
             this.bestelling_gereedLv.Location = new System.Drawing.Point(27, 78);
             this.bestelling_gereedLv.Name = "bestelling_gereedLv";
             this.bestelling_gereedLv.Size = new System.Drawing.Size(399, 167);
             this.bestelling_gereedLv.TabIndex = 15;
             this.bestelling_gereedLv.UseCompatibleStateImageBehavior = false;
+            this.bestelling_gereedLv.View = System.Windows.Forms.View.Details;
             // 
             // ingekomen_bestellingenLbl
             // 
@@ -112,7 +124,6 @@ namespace ChapooUI
             // RefreshOrdersBtn
             // 
             this.RefreshOrdersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
-            this.RefreshOrdersBtn.Enabled = false;
             this.RefreshOrdersBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.RefreshOrdersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshOrdersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +133,7 @@ namespace ChapooUI
             this.RefreshOrdersBtn.Size = new System.Drawing.Size(80, 48);
             this.RefreshOrdersBtn.TabIndex = 19;
             this.RefreshOrdersBtn.UseVisualStyleBackColor = false;
+            this.RefreshOrdersBtn.Click += new System.EventHandler(this.RefreshOrdersBtn_Click);
             // 
             // RefreshImg
             // 
@@ -178,17 +190,6 @@ namespace ChapooUI
             this.voorraad_barmanLv.UseCompatibleStateImageBehavior = false;
             this.voorraad_barmanLv.View = System.Windows.Forms.View.Details;
             // 
-            // voorraadLbl
-            // 
-            this.voorraadLbl.AutoSize = true;
-            this.voorraadLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voorraadLbl.ForeColor = System.Drawing.Color.White;
-            this.voorraadLbl.Location = new System.Drawing.Point(610, 50);
-            this.voorraadLbl.Name = "voorraadLbl";
-            this.voorraadLbl.Size = new System.Drawing.Size(81, 15);
-            this.voorraadLbl.TabIndex = 21;
-            this.voorraadLbl.Text = "VOORRAAD";
-            // 
             // BarVoorraadId
             // 
             this.BarVoorraadId.Text = "Id";
@@ -217,6 +218,17 @@ namespace ChapooUI
             // 
             this.BarItemName.Text = "Name";
             this.BarItemName.Width = 210;
+            // 
+            // voorraadLbl
+            // 
+            this.voorraadLbl.AutoSize = true;
+            this.voorraadLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voorraadLbl.ForeColor = System.Drawing.Color.White;
+            this.voorraadLbl.Location = new System.Drawing.Point(610, 50);
+            this.voorraadLbl.Name = "voorraadLbl";
+            this.voorraadLbl.Size = new System.Drawing.Size(81, 15);
+            this.voorraadLbl.TabIndex = 21;
+            this.voorraadLbl.Text = "VOORRAAD";
             // 
             // BarForm
             // 
@@ -263,5 +275,10 @@ namespace ChapooUI
         private System.Windows.Forms.ColumnHeader BarItemStock;
         private System.Windows.Forms.ColumnHeader BarAlcoholCheck;
         private System.Windows.Forms.ColumnHeader BarItemName;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

@@ -54,5 +54,25 @@ namespace ChapooUI
                 voorraad_barmanLv.Items.Add(item);
             }
         }
+
+        private void RefreshOrdersBtn_Click(object sender, EventArgs e)
+        {
+            ChapooLogic.BarBestellingLogic bbarLogic = new ChapooLogic.BarBestellingLogic();
+            List<BarBestellingModel> bbarList = bbarLogic.GetBar();
+
+            bestelling_gereedLv.Items.Clear();
+
+            foreach (ChapooModel.BarBestellingModel b in bbarList)
+            {
+                ListViewItem item = new ListViewItem(b.OrderItemID.ToString());
+                item.SubItems.Add(b.Amount.ToString());
+                item.SubItems.Add(b.Price.ToString("F"));
+                item.SubItems.Add(b.orderTableId.ToString());
+                item.SubItems.Add(b.Name);
+                item.SubItems.Add(b.OrderItemStatus.ToString());
+
+                bestelling_gereedLv.Items.Add(item);
+            }
+        }
     }
 }
