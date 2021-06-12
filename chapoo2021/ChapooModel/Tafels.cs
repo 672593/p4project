@@ -13,5 +13,7 @@ namespace ChapooModel
         public string comment;
         public int TafelStatusId { get; set; }
         public bool LopendeOrder { get; set; }
+
+        public DateTime orderTijd;
     }
 }

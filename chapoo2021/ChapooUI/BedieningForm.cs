@@ -16,8 +16,10 @@ namespace ChapooUI
     public partial class BedieningForm : Form
     {
         private List<Tafels> tafels;
+
         private Tafels_Service tafelService;
         private List<Label> labels;
+        private List<Label> wlabels;
         public void HidePanelsRecursively(Control container)             // Made by Faruk Bikmaz
         {
             if (container is Panel)
@@ -45,7 +47,22 @@ namespace ChapooUI
             labels.Add(lbl_tf_9);
             labels.Add(lbl_tf_10);
 
+            // all waiting labels added to a list Made by Jelle de Vries
+            wlabels = new List<Label>();
+            wlabels.Add(lbl_w_1);
+            wlabels.Add(lbl_w_2);
+            wlabels.Add(lbl_w_3);
+            wlabels.Add(lbl_w_4);
+            wlabels.Add(lbl_w_5);
+            wlabels.Add(lbl_w_6);
+            wlabels.Add(lbl_w_7);
+            wlabels.Add(lbl_w_8);
+            wlabels.Add(lbl_w_9);
+            wlabels.Add(lbl_w_10);
+            
+            
             TafelStatus();
+            OrderStatus()
 
         }
 
@@ -73,6 +90,23 @@ namespace ChapooUI
                     labels[i].Text = "Gereserveerd";
                 }
             }
+        }
+
+        private void OrderStatus()
+        {
+            tafels = tafelService.GetOrderStatus();
+
+            for (int i = 0; i < tafels.Count; i++)
+            {
+                if (tafels[i].LopendeOrder == true)
+                {
+                    TimeSpan wachttijd = tafels[i].orderTijd - DateTime.Now;
+
+                    wlabels[i].Text = "Wachttijd is {0} minuten.", wachttijd.Minutes.ToString();
+                }
+            }
+
+
         }
 
 

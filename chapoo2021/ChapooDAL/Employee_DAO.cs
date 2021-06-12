@@ -30,7 +30,7 @@ namespace ChapooDAL
                 new SqlParameter("@id", id),
                 new SqlParameter("@password", password)
             };
-
+            //SELECT COUNT(*) FROM employee WHERE employeeId = @id AND hashedPassword = @password;
             DataTable results = ExecuteSelectQuery("GetCredentials", sqlp);
 
             // the parameters get returned as a new employee
@@ -80,7 +80,7 @@ namespace ChapooDAL
             {
                 new SqlParameter("@id", employee.employeeId)
             };
-
+            //SELECT Salt From employee WHERE employeeId = @id;
             DataTable acc = ExecuteSelectQuery("GetSalt", sqlp);
             foreach (DataRow dr in acc.Rows)
             {
@@ -89,7 +89,58 @@ namespace ChapooDAL
             return employee.Salt;
         }
 
+        public string GetPassQuestion(Employee employee)
+        {
+            SqlParameter[] sqlp = new SqlParameter[1]
+            {
+                new SqlParameter("@id", employee.username)
+            };
+            DataTable em = ExecuteSelectQuery("GetPassQ", sqlp);
 
+            foreach (DataRow dr in em.Rows)
+            {
+                employee.SecretQuestion = (string)dr["SecretQuestion"];
+            }
+
+            return employee.SecretQuestion;
+        }
+
+        public string Getforgotpass(Employee employee)
+        {
+            SqlParameter[] sqlp = new SqlParameter[1]
+            {
+                new SqlParameter("@id", employee.username)
+            };
+            DataTable em = ExecuteSelectQuery("GetPassA", sqlp);
+
+            foreach (DataRow dr in em.Rows)
+            {
+                employee.SecretAnswer = (string)dr["SecretAnswer"];
+            }
+
+            return employee.SecretAnswer;
+        }
+
+        public void AlterPass(int gebruikersnaam, string hash, string salt)
+        {
+            // alter hash
+            SqlParameter[] sqlp = new SqlParameter[2]
+            {
+                new SqlParameter("@id", gebruikersnaam),
+                new SqlParameter("@hash", hash)
+            };
+            
+            ExecuteEditQuery("AlterHash", sqlp);
+
+            // alter salt
+            SqlParameter[] sqlq = new SqlParameter[2]
+            {
+                new SqlParameter("@id", gebruikersnaam),
+                new SqlParameter("@salt", salt)
+            };
+
+            ExecuteEditQuery("AlterSalt", sqlq);
+        }
 
 
 

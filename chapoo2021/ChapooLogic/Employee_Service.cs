@@ -25,7 +25,21 @@ namespace ChapooLogic
             return Employee_DAO.GetSalt(Employee);
         }
 
+        public string forgotpassquestion(Employee employee)
+        {
+            return Employee_DAO.GetPassQuestion(employee);
+        }
+
+        public string forgotpass(Employee employee)
+        {
+            return Employee_DAO.Getforgotpass(employee);
+        }
+        
+        public void Alterpass(int gebruikersnaam, string hash, string salt)
+        {
+            Employee_DAO.AlterPass(gebruikersnaam, hash, salt);
+        }
+
 
     }
-    
 }

@@ -33,5 +33,11 @@ namespace ChapooDAL
             SqlParameter[] sqlp = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery("GetTafelStatus", sqlp));
         }
+
+        public List<Tafels> GetOrderStatus() // made by Jelle de Vries. Get order data from database
+        {
+            SqlParameter[] sqlp = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery("GetOrderStatus", sqlp));
+        }
     }
 }

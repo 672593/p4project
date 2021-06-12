@@ -90,7 +90,9 @@ namespace ChapooUI
 
         private void lbl_WachtVer_Click(object sender, EventArgs e)
         {
-
+            WachtwoordVergeten wachtwoordVergeten = new WachtwoordVergeten();
+            wachtwoordVergeten.Show();
+            this.Close();
         }
 
         

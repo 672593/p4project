@@ -38,6 +38,11 @@ namespace ChapooLogic
         {
             return tafels_DAO.Get_Tafel_Data();
         }
+
+        public List<Tafels> GetOrderStatus()
+        {
+
+        }
     }
 
 }

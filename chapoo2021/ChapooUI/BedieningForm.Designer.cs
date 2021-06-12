@@ -32,51 +32,61 @@ namespace ChapooUI
             this.Chapoo_title = new System.Windows.Forms.Label();
             this.LogOffLink = new System.Windows.Forms.Label();
             this.Table1_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_1 = new System.Windows.Forms.Label();
             this.PayBtn1 = new System.Windows.Forms.Button();
             this.ReservationBtn1 = new System.Windows.Forms.Button();
             this.OrderBtn1 = new System.Windows.Forms.Button();
             this.Table1_Title = new System.Windows.Forms.Label();
             this.Table6_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_6 = new System.Windows.Forms.Label();
             this.PayBtn6 = new System.Windows.Forms.Button();
             this.ReservationBtn6 = new System.Windows.Forms.Button();
             this.OrderBtn6 = new System.Windows.Forms.Button();
             this.Table6_Title = new System.Windows.Forms.Label();
             this.Table7_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_7 = new System.Windows.Forms.Label();
             this.PayBtn7 = new System.Windows.Forms.Button();
             this.ReservationBtn7 = new System.Windows.Forms.Button();
             this.OrderBtn7 = new System.Windows.Forms.Button();
             this.Table7_Title = new System.Windows.Forms.Label();
             this.Table2_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_2 = new System.Windows.Forms.Label();
             this.PayBtn = new System.Windows.Forms.Button();
             this.ReservationBtn2 = new System.Windows.Forms.Button();
             this.OrderBtn2 = new System.Windows.Forms.Button();
             this.Table2_Title = new System.Windows.Forms.Label();
             this.Table8_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_8 = new System.Windows.Forms.Label();
             this.PayBtn8 = new System.Windows.Forms.Button();
             this.Reser8vationBtn = new System.Windows.Forms.Button();
             this.OrderBtn8 = new System.Windows.Forms.Button();
             this.Table8_Title = new System.Windows.Forms.Label();
             this.Table3_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_3 = new System.Windows.Forms.Label();
             this.PayBtn3 = new System.Windows.Forms.Button();
             this.ReservationBtn3 = new System.Windows.Forms.Button();
             this.OrderBtn3 = new System.Windows.Forms.Button();
             this.Table3_Title = new System.Windows.Forms.Label();
             this.Table9_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_9 = new System.Windows.Forms.Label();
             this.PayBtn9 = new System.Windows.Forms.Button();
             this.ReservationBtn9 = new System.Windows.Forms.Button();
             this.OrderBtn9 = new System.Windows.Forms.Button();
             this.Table9_Title = new System.Windows.Forms.Label();
             this.Table4_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_4 = new System.Windows.Forms.Label();
             this.PayBtn4 = new System.Windows.Forms.Button();
             this.ResservationBtn4 = new System.Windows.Forms.Button();
             this.OrderBtn4 = new System.Windows.Forms.Button();
             this.Table4_tiitle = new System.Windows.Forms.Label();
             this.Table10_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_10 = new System.Windows.Forms.Label();
             this.PayBtn10 = new System.Windows.Forms.Button();
             this.ReservationBtn10 = new System.Windows.Forms.Button();
             this.OrderBtn10 = new System.Windows.Forms.Button();
             this.Table10_Title = new System.Windows.Forms.Label();
             this.Table5_pnl = new System.Windows.Forms.Panel();
+            this.lbl_tf_5 = new System.Windows.Forms.Label();
             this.PayBtn5 = new System.Windows.Forms.Button();
             this.ReservationBtn5 = new System.Windows.Forms.Button();
             this.OrderBtn5 = new System.Windows.Forms.Button();
@@ -111,16 +121,16 @@ namespace ChapooUI
             this.AddBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_tf_1 = new System.Windows.Forms.Label();
-            this.lbl_tf_2 = new System.Windows.Forms.Label();
-            this.lbl_tf_3 = new System.Windows.Forms.Label();
-            this.lbl_tf_4 = new System.Windows.Forms.Label();
-            this.lbl_tf_6 = new System.Windows.Forms.Label();
-            this.lbl_tf_7 = new System.Windows.Forms.Label();
-            this.lbl_tf_8 = new System.Windows.Forms.Label();
-            this.lbl_tf_9 = new System.Windows.Forms.Label();
-            this.lbl_tf_5 = new System.Windows.Forms.Label();
-            this.lbl_tf_10 = new System.Windows.Forms.Label();
+            this.lbl_w_1 = new System.Windows.Forms.Label();
+            this.lbl_w_2 = new System.Windows.Forms.Label();
+            this.lbl_w_3 = new System.Windows.Forms.Label();
+            this.lbl_w_4 = new System.Windows.Forms.Label();
+            this.lbl_w_5 = new System.Windows.Forms.Label();
+            this.lbl_w_6 = new System.Windows.Forms.Label();
+            this.lbl_w_7 = new System.Windows.Forms.Label();
+            this.lbl_w_8 = new System.Windows.Forms.Label();
+            this.lbl_w_9 = new System.Windows.Forms.Label();
+            this.lbl_w_10 = new System.Windows.Forms.Label();
             this.Table1_pnl.SuspendLayout();
             this.Table6_pnl.SuspendLayout();
             this.Table7_pnl.SuspendLayout();
@@ -163,6 +173,7 @@ namespace ChapooUI
             // 
             // Table1_pnl
             // 
+            this.Table1_pnl.Controls.Add(this.lbl_w_1);
             this.Table1_pnl.Controls.Add(this.lbl_tf_1);
             this.Table1_pnl.Controls.Add(this.PayBtn1);
             this.Table1_pnl.Controls.Add(this.ReservationBtn1);
@@ -172,6 +183,17 @@ namespace ChapooUI
             this.Table1_pnl.Name = "Table1_pnl";
             this.Table1_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table1_pnl.TabIndex = 13;
+            // 
+            // lbl_tf_1
+            // 
+            this.lbl_tf_1.AutoSize = true;
+            this.lbl_tf_1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_1.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_1.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_1.Name = "lbl_tf_1";
+            this.lbl_tf_1.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_1.TabIndex = 18;
+            this.lbl_tf_1.Text = "Gereserveerd";
             // 
             // PayBtn1
             // 
@@ -228,6 +250,7 @@ namespace ChapooUI
             // 
             // Table6_pnl
             // 
+            this.Table6_pnl.Controls.Add(this.lbl_w_6);
             this.Table6_pnl.Controls.Add(this.lbl_tf_6);
             this.Table6_pnl.Controls.Add(this.PayBtn6);
             this.Table6_pnl.Controls.Add(this.ReservationBtn6);
@@ -237,6 +260,17 @@ namespace ChapooUI
             this.Table6_pnl.Name = "Table6_pnl";
             this.Table6_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table6_pnl.TabIndex = 18;
+            // 
+            // lbl_tf_6
+            // 
+            this.lbl_tf_6.AutoSize = true;
+            this.lbl_tf_6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_6.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_6.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_6.Name = "lbl_tf_6";
+            this.lbl_tf_6.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_6.TabIndex = 22;
+            this.lbl_tf_6.Text = "Gereserveerd";
             // 
             // PayBtn6
             // 
@@ -293,6 +327,7 @@ namespace ChapooUI
             // 
             // Table7_pnl
             // 
+            this.Table7_pnl.Controls.Add(this.lbl_w_7);
             this.Table7_pnl.Controls.Add(this.lbl_tf_7);
             this.Table7_pnl.Controls.Add(this.PayBtn7);
             this.Table7_pnl.Controls.Add(this.ReservationBtn7);
@@ -302,6 +337,17 @@ namespace ChapooUI
             this.Table7_pnl.Name = "Table7_pnl";
             this.Table7_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table7_pnl.TabIndex = 20;
+            // 
+            // lbl_tf_7
+            // 
+            this.lbl_tf_7.AutoSize = true;
+            this.lbl_tf_7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_7.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_7.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_7.Name = "lbl_tf_7";
+            this.lbl_tf_7.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_7.TabIndex = 22;
+            this.lbl_tf_7.Text = "Gereserveerd";
             // 
             // PayBtn7
             // 
@@ -358,6 +404,7 @@ namespace ChapooUI
             // 
             // Table2_pnl
             // 
+            this.Table2_pnl.Controls.Add(this.lbl_w_2);
             this.Table2_pnl.Controls.Add(this.lbl_tf_2);
             this.Table2_pnl.Controls.Add(this.PayBtn);
             this.Table2_pnl.Controls.Add(this.ReservationBtn2);
@@ -367,6 +414,17 @@ namespace ChapooUI
             this.Table2_pnl.Name = "Table2_pnl";
             this.Table2_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table2_pnl.TabIndex = 19;
+            // 
+            // lbl_tf_2
+            // 
+            this.lbl_tf_2.AutoSize = true;
+            this.lbl_tf_2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_2.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_2.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_2.Name = "lbl_tf_2";
+            this.lbl_tf_2.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_2.TabIndex = 19;
+            this.lbl_tf_2.Text = "Gereserveerd";
             // 
             // PayBtn
             // 
@@ -423,6 +481,7 @@ namespace ChapooUI
             // 
             // Table8_pnl
             // 
+            this.Table8_pnl.Controls.Add(this.lbl_w_8);
             this.Table8_pnl.Controls.Add(this.lbl_tf_8);
             this.Table8_pnl.Controls.Add(this.PayBtn8);
             this.Table8_pnl.Controls.Add(this.Reser8vationBtn);
@@ -432,6 +491,17 @@ namespace ChapooUI
             this.Table8_pnl.Name = "Table8_pnl";
             this.Table8_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table8_pnl.TabIndex = 22;
+            // 
+            // lbl_tf_8
+            // 
+            this.lbl_tf_8.AutoSize = true;
+            this.lbl_tf_8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_8.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_8.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_8.Name = "lbl_tf_8";
+            this.lbl_tf_8.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_8.TabIndex = 22;
+            this.lbl_tf_8.Text = "Gereserveerd";
             // 
             // PayBtn8
             // 
@@ -488,6 +558,7 @@ namespace ChapooUI
             // 
             // Table3_pnl
             // 
+            this.Table3_pnl.Controls.Add(this.lbl_w_3);
             this.Table3_pnl.Controls.Add(this.lbl_tf_3);
             this.Table3_pnl.Controls.Add(this.PayBtn3);
             this.Table3_pnl.Controls.Add(this.ReservationBtn3);
@@ -497,6 +568,17 @@ namespace ChapooUI
             this.Table3_pnl.Name = "Table3_pnl";
             this.Table3_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table3_pnl.TabIndex = 21;
+            // 
+            // lbl_tf_3
+            // 
+            this.lbl_tf_3.AutoSize = true;
+            this.lbl_tf_3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_3.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_3.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_3.Name = "lbl_tf_3";
+            this.lbl_tf_3.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_3.TabIndex = 20;
+            this.lbl_tf_3.Text = "Gereserveerd";
             // 
             // PayBtn3
             // 
@@ -553,6 +635,7 @@ namespace ChapooUI
             // 
             // Table9_pnl
             // 
+            this.Table9_pnl.Controls.Add(this.lbl_w_9);
             this.Table9_pnl.Controls.Add(this.lbl_tf_9);
             this.Table9_pnl.Controls.Add(this.PayBtn9);
             this.Table9_pnl.Controls.Add(this.ReservationBtn9);
@@ -562,6 +645,17 @@ namespace ChapooUI
             this.Table9_pnl.Name = "Table9_pnl";
             this.Table9_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table9_pnl.TabIndex = 24;
+            // 
+            // lbl_tf_9
+            // 
+            this.lbl_tf_9.AutoSize = true;
+            this.lbl_tf_9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_9.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_9.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_9.Name = "lbl_tf_9";
+            this.lbl_tf_9.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_9.TabIndex = 22;
+            this.lbl_tf_9.Text = "Gereserveerd";
             // 
             // PayBtn9
             // 
@@ -618,6 +712,7 @@ namespace ChapooUI
             // 
             // Table4_pnl
             // 
+            this.Table4_pnl.Controls.Add(this.lbl_w_4);
             this.Table4_pnl.Controls.Add(this.lbl_tf_4);
             this.Table4_pnl.Controls.Add(this.PayBtn4);
             this.Table4_pnl.Controls.Add(this.ResservationBtn4);
@@ -627,6 +722,17 @@ namespace ChapooUI
             this.Table4_pnl.Name = "Table4_pnl";
             this.Table4_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table4_pnl.TabIndex = 23;
+            // 
+            // lbl_tf_4
+            // 
+            this.lbl_tf_4.AutoSize = true;
+            this.lbl_tf_4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_4.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_4.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_4.Name = "lbl_tf_4";
+            this.lbl_tf_4.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_4.TabIndex = 21;
+            this.lbl_tf_4.Text = "Gereserveerd";
             // 
             // PayBtn4
             // 
@@ -683,6 +789,7 @@ namespace ChapooUI
             // 
             // Table10_pnl
             // 
+            this.Table10_pnl.Controls.Add(this.lbl_w_10);
             this.Table10_pnl.Controls.Add(this.lbl_tf_10);
             this.Table10_pnl.Controls.Add(this.PayBtn10);
             this.Table10_pnl.Controls.Add(this.ReservationBtn10);
@@ -692,6 +799,17 @@ namespace ChapooUI
             this.Table10_pnl.Name = "Table10_pnl";
             this.Table10_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table10_pnl.TabIndex = 26;
+            // 
+            // lbl_tf_10
+            // 
+            this.lbl_tf_10.AutoSize = true;
+            this.lbl_tf_10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_10.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_10.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_10.Name = "lbl_tf_10";
+            this.lbl_tf_10.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_10.TabIndex = 23;
+            this.lbl_tf_10.Text = "Gereserveerd";
             // 
             // PayBtn10
             // 
@@ -748,6 +866,7 @@ namespace ChapooUI
             // 
             // Table5_pnl
             // 
+            this.Table5_pnl.Controls.Add(this.lbl_w_5);
             this.Table5_pnl.Controls.Add(this.lbl_tf_5);
             this.Table5_pnl.Controls.Add(this.PayBtn5);
             this.Table5_pnl.Controls.Add(this.ReservationBtn5);
@@ -757,6 +876,17 @@ namespace ChapooUI
             this.Table5_pnl.Name = "Table5_pnl";
             this.Table5_pnl.Size = new System.Drawing.Size(266, 202);
             this.Table5_pnl.TabIndex = 25;
+            // 
+            // lbl_tf_5
+            // 
+            this.lbl_tf_5.AutoSize = true;
+            this.lbl_tf_5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tf_5.ForeColor = System.Drawing.Color.White;
+            this.lbl_tf_5.Location = new System.Drawing.Point(132, 14);
+            this.lbl_tf_5.Name = "lbl_tf_5";
+            this.lbl_tf_5.Size = new System.Drawing.Size(111, 21);
+            this.lbl_tf_5.TabIndex = 23;
+            this.lbl_tf_5.Text = "Gereserveerd";
             // 
             // PayBtn5
             // 
@@ -848,7 +978,7 @@ namespace ChapooUI
             this.Order_pnl.Controls.Add(this.AllOrdersBtn2);
             this.Order_pnl.Controls.Add(this.AddBtn);
             this.Order_pnl.Controls.Add(this.pictureBox2);
-            this.Order_pnl.Location = new System.Drawing.Point(1446, 82);
+            this.Order_pnl.Location = new System.Drawing.Point(1464, 82);
             this.Order_pnl.Name = "Order_pnl";
             this.Order_pnl.Size = new System.Drawing.Size(1045, 494);
             this.Order_pnl.TabIndex = 28;
@@ -1156,115 +1286,115 @@ namespace ChapooUI
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // lbl_tf_1
+            // lbl_w_1
             // 
-            this.lbl_tf_1.AutoSize = true;
-            this.lbl_tf_1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_1.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_1.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_1.Name = "lbl_tf_1";
-            this.lbl_tf_1.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_1.TabIndex = 18;
-            this.lbl_tf_1.Text = "Gereserveerd";
+            this.lbl_w_1.AutoSize = true;
+            this.lbl_w_1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_1.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_1.Location = new System.Drawing.Point(37, 180);
+            this.lbl_w_1.Name = "lbl_w_1";
+            this.lbl_w_1.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_1.TabIndex = 19;
+            this.lbl_w_1.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_2
+            // lbl_w_2
             // 
-            this.lbl_tf_2.AutoSize = true;
-            this.lbl_tf_2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_2.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_2.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_2.Name = "lbl_tf_2";
-            this.lbl_tf_2.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_2.TabIndex = 19;
-            this.lbl_tf_2.Text = "Gereserveerd";
+            this.lbl_w_2.AutoSize = true;
+            this.lbl_w_2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_2.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_2.Location = new System.Drawing.Point(38, 180);
+            this.lbl_w_2.Name = "lbl_w_2";
+            this.lbl_w_2.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_2.TabIndex = 20;
+            this.lbl_w_2.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_3
+            // lbl_w_3
             // 
-            this.lbl_tf_3.AutoSize = true;
-            this.lbl_tf_3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_3.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_3.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_3.Name = "lbl_tf_3";
-            this.lbl_tf_3.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_3.TabIndex = 20;
-            this.lbl_tf_3.Text = "Gereserveerd";
+            this.lbl_w_3.AutoSize = true;
+            this.lbl_w_3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_3.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_3.Location = new System.Drawing.Point(39, 180);
+            this.lbl_w_3.Name = "lbl_w_3";
+            this.lbl_w_3.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_3.TabIndex = 21;
+            this.lbl_w_3.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_4
+            // lbl_w_4
             // 
-            this.lbl_tf_4.AutoSize = true;
-            this.lbl_tf_4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_4.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_4.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_4.Name = "lbl_tf_4";
-            this.lbl_tf_4.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_4.TabIndex = 21;
-            this.lbl_tf_4.Text = "Gereserveerd";
+            this.lbl_w_4.AutoSize = true;
+            this.lbl_w_4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_4.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_4.Location = new System.Drawing.Point(37, 180);
+            this.lbl_w_4.Name = "lbl_w_4";
+            this.lbl_w_4.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_4.TabIndex = 22;
+            this.lbl_w_4.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_6
+            // lbl_w_5
             // 
-            this.lbl_tf_6.AutoSize = true;
-            this.lbl_tf_6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_6.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_6.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_6.Name = "lbl_tf_6";
-            this.lbl_tf_6.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_6.TabIndex = 22;
-            this.lbl_tf_6.Text = "Gereserveerd";
+            this.lbl_w_5.AutoSize = true;
+            this.lbl_w_5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_5.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_5.Location = new System.Drawing.Point(38, 180);
+            this.lbl_w_5.Name = "lbl_w_5";
+            this.lbl_w_5.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_5.TabIndex = 23;
+            this.lbl_w_5.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_7
+            // lbl_w_6
             // 
-            this.lbl_tf_7.AutoSize = true;
-            this.lbl_tf_7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_7.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_7.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_7.Name = "lbl_tf_7";
-            this.lbl_tf_7.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_7.TabIndex = 22;
-            this.lbl_tf_7.Text = "Gereserveerd";
+            this.lbl_w_6.AutoSize = true;
+            this.lbl_w_6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_6.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_6.Location = new System.Drawing.Point(37, 180);
+            this.lbl_w_6.Name = "lbl_w_6";
+            this.lbl_w_6.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_6.TabIndex = 24;
+            this.lbl_w_6.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_8
+            // lbl_w_7
             // 
-            this.lbl_tf_8.AutoSize = true;
-            this.lbl_tf_8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_8.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_8.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_8.Name = "lbl_tf_8";
-            this.lbl_tf_8.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_8.TabIndex = 22;
-            this.lbl_tf_8.Text = "Gereserveerd";
+            this.lbl_w_7.AutoSize = true;
+            this.lbl_w_7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_7.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_7.Location = new System.Drawing.Point(38, 180);
+            this.lbl_w_7.Name = "lbl_w_7";
+            this.lbl_w_7.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_7.TabIndex = 25;
+            this.lbl_w_7.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_9
+            // lbl_w_8
             // 
-            this.lbl_tf_9.AutoSize = true;
-            this.lbl_tf_9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_9.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_9.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_9.Name = "lbl_tf_9";
-            this.lbl_tf_9.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_9.TabIndex = 22;
-            this.lbl_tf_9.Text = "Gereserveerd";
+            this.lbl_w_8.AutoSize = true;
+            this.lbl_w_8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_8.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_8.Location = new System.Drawing.Point(39, 180);
+            this.lbl_w_8.Name = "lbl_w_8";
+            this.lbl_w_8.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_8.TabIndex = 26;
+            this.lbl_w_8.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_5
+            // lbl_w_9
             // 
-            this.lbl_tf_5.AutoSize = true;
-            this.lbl_tf_5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_5.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_5.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_5.Name = "lbl_tf_5";
-            this.lbl_tf_5.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_5.TabIndex = 23;
-            this.lbl_tf_5.Text = "Gereserveerd";
+            this.lbl_w_9.AutoSize = true;
+            this.lbl_w_9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_9.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_9.Location = new System.Drawing.Point(37, 180);
+            this.lbl_w_9.Name = "lbl_w_9";
+            this.lbl_w_9.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_9.TabIndex = 27;
+            this.lbl_w_9.Text = "Wachttijd is 40 minuten";
             // 
-            // lbl_tf_10
+            // lbl_w_10
             // 
-            this.lbl_tf_10.AutoSize = true;
-            this.lbl_tf_10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tf_10.ForeColor = System.Drawing.Color.White;
-            this.lbl_tf_10.Location = new System.Drawing.Point(132, 14);
-            this.lbl_tf_10.Name = "lbl_tf_10";
-            this.lbl_tf_10.Size = new System.Drawing.Size(111, 21);
-            this.lbl_tf_10.TabIndex = 23;
-            this.lbl_tf_10.Text = "Gereserveerd";
+            this.lbl_w_10.AutoSize = true;
+            this.lbl_w_10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_w_10.ForeColor = System.Drawing.Color.White;
+            this.lbl_w_10.Location = new System.Drawing.Point(38, 180);
+            this.lbl_w_10.Name = "lbl_w_10";
+            this.lbl_w_10.Size = new System.Drawing.Size(191, 21);
+            this.lbl_w_10.TabIndex = 28;
+            this.lbl_w_10.Text = "Wachttijd is 40 minuten";
             // 
             // BedieningForm
             // 
@@ -1416,5 +1546,15 @@ namespace ChapooUI
         private System.Windows.Forms.Label lbl_tf_4;
         private System.Windows.Forms.Label lbl_tf_10;
         private System.Windows.Forms.Label lbl_tf_5;
+        private System.Windows.Forms.Label lbl_w_1;
+        private System.Windows.Forms.Label lbl_w_6;
+        private System.Windows.Forms.Label lbl_w_7;
+        private System.Windows.Forms.Label lbl_w_2;
+        private System.Windows.Forms.Label lbl_w_8;
+        private System.Windows.Forms.Label lbl_w_3;
+        private System.Windows.Forms.Label lbl_w_9;
+        private System.Windows.Forms.Label lbl_w_4;
+        private System.Windows.Forms.Label lbl_w_10;
+        private System.Windows.Forms.Label lbl_w_5;
     }
 }
