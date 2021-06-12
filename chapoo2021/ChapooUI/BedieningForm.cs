@@ -102,8 +102,9 @@ namespace ChapooUI
                 {
                     TimeSpan wachttijd = tafels[i].orderTijd - DateTime.Now;
 
-                    wlabels[i].Text = "Wachttijd is {0} minuten.", wachttijd.Minutes.ToString();
+                    wlabels[i].Text = $"Wachttijd is {wachttijd.Minutes.ToString()} minuten.";
                 }
+
             }
 
 
