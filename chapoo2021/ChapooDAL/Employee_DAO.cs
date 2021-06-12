@@ -10,14 +10,19 @@ using System.Threading.Tasks;
 
 namespace ChapooDAL
 {
+    // Made by Jelle de Vries
     public class Employee_DAO : Base
     {
+        // get all employees
+        /*
         public List<Employee> DB_Get_All_Accounts()
         {
             SqlParameter[] sqlp = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery("GetEmployees", sqlp));
         }
+        */
 
+        // get credentials (salt and hashed password) for employeeID @id
         public Employee GetCredentials(int id, string password)
         {
             SqlParameter[] sqlp = new SqlParameter[2]
@@ -26,10 +31,11 @@ namespace ChapooDAL
                 new SqlParameter("@password", password)
             };
 
-            DataTable results = new DataTable();
-            results = ExecuteSelectQuery("GetCredentials", sqlp);
+            DataTable results = ExecuteSelectQuery("GetCredentials", sqlp);
 
+            // the parameters get returned as a new employee
             Employee huidigGebruiker = new Employee();
+            //check if employee login is valid  
             if (results.Rows[0][0].ToString() == "1")
             {
                 huidigGebruiker.validlogin = 1;
@@ -66,6 +72,7 @@ namespace ChapooDAL
             return employees;
         }
 
+        // get salt for user with @id
         public string GetSalt(Employee employee)
         {
 

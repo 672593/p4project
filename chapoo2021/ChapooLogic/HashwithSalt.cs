@@ -9,6 +9,8 @@ namespace ChapooLogic
 {
     public class HashwithSalt
     {
+        // made by Jelle de Vries
+        // create a salt
         public string CreateSalt(int size)
         {
             RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
@@ -18,6 +20,7 @@ namespace ChapooLogic
             return Convert.ToBase64String(buff);
         }
 
+        // generate hash based on password input and salt
         public string GenerateHash(string input, string salt)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(input + salt);

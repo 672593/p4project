@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Bestelling.cs" />
     <Compile Include="HashwithSaltResults.cs" />
-    <Compile Include="RNG.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ResMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

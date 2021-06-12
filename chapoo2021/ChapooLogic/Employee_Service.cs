@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapooLogic
 {
+    // made by Jelle de Vries
     public class Employee_Service
     {
         Employee_DAO Employee_DAO = new Employee_DAO();
