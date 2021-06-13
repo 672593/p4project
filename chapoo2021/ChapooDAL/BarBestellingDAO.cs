@@ -29,12 +29,22 @@ namespace ChapooDAL
                         OrderItemStatus = (Boolean)dr["orderItemStatus"],
                         orderTableId = (int)dr["orderTableId"],
                         Price = (Decimal)dr["price"],
-                        Name = (string)(dr["itemName"].ToString())
+                        Name = (string)(dr["itemName"].ToString()),
+                        Alcohol = (Boolean)(dr["alcohol"])
                     };
                     barOrderList.Add(bbestelItem);
 
             }
             return barOrderList;
+        }
+
+        public void WijzigBestellingBar(BarBestellingModel act)
+        {
+            SqlParameter sqlparameter1 = new SqlParameter("@OrderItemId", act.OrderItemID);
+            SqlParameter sqlparameter2 = new SqlParameter("@OrderStatus", act.OrderItemStatus);
+            SqlParameter[] sqlparameter = new SqlParameter[] { sqlparameter1, sqlparameter2 };
+            ExecuteEditQuery("UpdateOrderStatus", sqlparameter);
+            Console.WriteLine("sadasfdss");
         }
     }
 }

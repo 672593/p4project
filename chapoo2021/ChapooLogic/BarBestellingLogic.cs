@@ -37,5 +37,19 @@ namespace ChapooLogic
                 return barOrderList;
             }
         }
+
+        public bool WijzigBestellingBar(BarBestellingModel bar)
+        {
+            try
+            {
+                bar_db.WijzigBestellingBar(bar);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }

@@ -31,14 +31,14 @@ namespace ChapooUI
         {
             this.LogOffLink = new System.Windows.Forms.Label();
             this.Chapoo_title = new System.Windows.Forms.Label();
-            this.bestelling_gereedLv = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.barbestelling_gereedLv = new System.Windows.Forms.ListView();
+            this.tb_ID_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Amount_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Prijs_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Tafel_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Name_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ingekomen_bestellingenLbl = new System.Windows.Forms.Label();
-            this.ConfirmOrderBtn = new System.Windows.Forms.Button();
+            this.btn_Gereed_Bestelling_Bar = new System.Windows.Forms.Button();
             this.RefreshOrdersBtn = new System.Windows.Forms.Button();
             this.RefreshImg = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@ namespace ChapooUI
             this.BarAlcoholCheck = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.voorraadLbl = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Status_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.keukenbestelling_gereedLv = new System.Windows.Forms.ListView();
             this.tb_ID_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tb_Amount_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,9 +76,21 @@ namespace ChapooUI
             this.tb_pnl_Prijs_keuken = new System.Windows.Forms.Label();
             this.tb_pnl_Name_keuken = new System.Windows.Forms.Label();
             this.btn_Gereed_Bestelling_Keuken = new System.Windows.Forms.Button();
+            this.pnl_Bar_Bestelling_Wijzig = new System.Windows.Forms.Panel();
+            this.tb_pnl_Name_bar = new System.Windows.Forms.Label();
+            this.tb_pnl_Prijs_bar = new System.Windows.Forms.Label();
+            this.tb_pnl_Amount_bar = new System.Windows.Forms.Label();
+            this.tb_pnl_Status_bar = new System.Windows.Forms.Label();
+            this.tb_pnl_Tafel_bar = new System.Windows.Forms.Label();
+            this.tb_pnl_ID_bar = new System.Windows.Forms.Label();
+            this.btn_Bar_Wijzig_Cancel = new System.Windows.Forms.Button();
+            this.btn_Bar_Wijzig_Accept = new System.Windows.Forms.Button();
+            this.tb_Alcohol_bar_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_pnl_Alcohol_bar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Keuken_Bestelling_Wijzig.SuspendLayout();
+            this.pnl_Bar_Bestelling_Wijzig.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogOffLink
@@ -103,24 +115,45 @@ namespace ChapooUI
             this.Chapoo_title.TabIndex = 12;
             this.Chapoo_title.Text = "Chapoo | Barman";
             // 
-            // bestelling_gereedLv
+            // barbestelling_gereedLv
             // 
-            this.bestelling_gereedLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
-            this.bestelling_gereedLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bestelling_gereedLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.bestelling_gereedLv.HideSelection = false;
-            this.bestelling_gereedLv.Location = new System.Drawing.Point(27, 78);
-            this.bestelling_gereedLv.Name = "bestelling_gereedLv";
-            this.bestelling_gereedLv.Size = new System.Drawing.Size(399, 167);
-            this.bestelling_gereedLv.TabIndex = 15;
-            this.bestelling_gereedLv.UseCompatibleStateImageBehavior = false;
-            this.bestelling_gereedLv.View = System.Windows.Forms.View.Details;
+            this.barbestelling_gereedLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.barbestelling_gereedLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.barbestelling_gereedLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.tb_ID_bar_bestelling,
+            this.tb_Amount_bar_bestelling,
+            this.tb_Prijs_bar_bestelling,
+            this.tb_Tafel_bar_bestelling,
+            this.tb_Name_bar_bestelling,
+            this.tb_Status_bar_bestelling,
+            this.tb_Alcohol_bar_bestelling});
+            this.barbestelling_gereedLv.HideSelection = false;
+            this.barbestelling_gereedLv.Location = new System.Drawing.Point(27, 78);
+            this.barbestelling_gereedLv.Name = "barbestelling_gereedLv";
+            this.barbestelling_gereedLv.Size = new System.Drawing.Size(399, 167);
+            this.barbestelling_gereedLv.TabIndex = 15;
+            this.barbestelling_gereedLv.UseCompatibleStateImageBehavior = false;
+            this.barbestelling_gereedLv.View = System.Windows.Forms.View.Details;
+            // 
+            // tb_ID_bar_bestelling
+            // 
+            this.tb_ID_bar_bestelling.Text = "Id";
+            // 
+            // tb_Amount_bar_bestelling
+            // 
+            this.tb_Amount_bar_bestelling.Text = "Amount";
+            // 
+            // tb_Prijs_bar_bestelling
+            // 
+            this.tb_Prijs_bar_bestelling.Text = "Prijs";
+            // 
+            // tb_Tafel_bar_bestelling
+            // 
+            this.tb_Tafel_bar_bestelling.Text = "Tafel";
+            // 
+            // tb_Name_bar_bestelling
+            // 
+            this.tb_Name_bar_bestelling.Text = "Name";
             // 
             // ingekomen_bestellingenLbl
             // 
@@ -133,20 +166,20 @@ namespace ChapooUI
             this.ingekomen_bestellingenLbl.TabIndex = 14;
             this.ingekomen_bestellingenLbl.Text = "INGEKOMEN BESTELLINGEN";
             // 
-            // ConfirmOrderBtn
+            // btn_Gereed_Bestelling_Bar
             // 
-            this.ConfirmOrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
-            this.ConfirmOrderBtn.Enabled = false;
-            this.ConfirmOrderBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
-            this.ConfirmOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConfirmOrderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmOrderBtn.ForeColor = System.Drawing.Color.White;
-            this.ConfirmOrderBtn.Location = new System.Drawing.Point(27, 269);
-            this.ConfirmOrderBtn.Name = "ConfirmOrderBtn";
-            this.ConfirmOrderBtn.Size = new System.Drawing.Size(179, 48);
-            this.ConfirmOrderBtn.TabIndex = 18;
-            this.ConfirmOrderBtn.Text = "BEVESTIGEN";
-            this.ConfirmOrderBtn.UseVisualStyleBackColor = false;
+            this.btn_Gereed_Bestelling_Bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.btn_Gereed_Bestelling_Bar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.btn_Gereed_Bestelling_Bar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Gereed_Bestelling_Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gereed_Bestelling_Bar.ForeColor = System.Drawing.Color.White;
+            this.btn_Gereed_Bestelling_Bar.Location = new System.Drawing.Point(27, 269);
+            this.btn_Gereed_Bestelling_Bar.Name = "btn_Gereed_Bestelling_Bar";
+            this.btn_Gereed_Bestelling_Bar.Size = new System.Drawing.Size(179, 48);
+            this.btn_Gereed_Bestelling_Bar.TabIndex = 18;
+            this.btn_Gereed_Bestelling_Bar.Text = "BEVESTIGEN";
+            this.btn_Gereed_Bestelling_Bar.UseVisualStyleBackColor = false;
+            this.btn_Gereed_Bestelling_Bar.Click += new System.EventHandler(this.btn_Gereed_Bestelling_Bar_Click);
             // 
             // RefreshOrdersBtn
             // 
@@ -257,6 +290,10 @@ namespace ChapooUI
             this.voorraadLbl.TabIndex = 21;
             this.voorraadLbl.Text = "VOORRAAD";
             // 
+            // tb_Status_bar_bestelling
+            // 
+            this.tb_Status_bar_bestelling.Text = "Status";
+            // 
             // keukenbestelling_gereedLv
             // 
             this.keukenbestelling_gereedLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
@@ -359,7 +396,7 @@ namespace ChapooUI
             this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_ID_keuken);
             this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.btn_Keuken_Wijzig_Cancel);
             this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.btn_Keuken_Wijzig_Accept);
-            this.pnl_Keuken_Bestelling_Wijzig.Location = new System.Drawing.Point(331, 132);
+            this.pnl_Keuken_Bestelling_Wijzig.Location = new System.Drawing.Point(257, 99);
             this.pnl_Keuken_Bestelling_Wijzig.Name = "pnl_Keuken_Bestelling_Wijzig";
             this.pnl_Keuken_Bestelling_Wijzig.Size = new System.Drawing.Size(537, 334);
             this.pnl_Keuken_Bestelling_Wijzig.TabIndex = 27;
@@ -385,6 +422,7 @@ namespace ChapooUI
             this.btn_Keuken_Wijzig_Accept.TabIndex = 4;
             this.btn_Keuken_Wijzig_Accept.Text = "Gereed";
             this.btn_Keuken_Wijzig_Accept.UseVisualStyleBackColor = true;
+            this.btn_Keuken_Wijzig_Accept.Click += new System.EventHandler(this.btn_Keuken_Wijzig_Accept_Click);
             // 
             // tb_pnl_ID_keuken
             // 
@@ -455,12 +493,120 @@ namespace ChapooUI
             this.btn_Gereed_Bestelling_Keuken.UseVisualStyleBackColor = false;
             this.btn_Gereed_Bestelling_Keuken.Click += new System.EventHandler(this.btn_Gereed_Bestelling_Keuken_Click);
             // 
+            // pnl_Bar_Bestelling_Wijzig
+            // 
+            this.pnl_Bar_Bestelling_Wijzig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Alcohol_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Name_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Prijs_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Amount_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Status_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Tafel_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_ID_bar);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.btn_Bar_Wijzig_Cancel);
+            this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.btn_Bar_Wijzig_Accept);
+            this.pnl_Bar_Bestelling_Wijzig.Location = new System.Drawing.Point(456, 103);
+            this.pnl_Bar_Bestelling_Wijzig.Name = "pnl_Bar_Bestelling_Wijzig";
+            this.pnl_Bar_Bestelling_Wijzig.Size = new System.Drawing.Size(537, 334);
+            this.pnl_Bar_Bestelling_Wijzig.TabIndex = 28;
+            this.pnl_Bar_Bestelling_Wijzig.Visible = false;
+            // 
+            // tb_pnl_Name_bar
+            // 
+            this.tb_pnl_Name_bar.AutoSize = true;
+            this.tb_pnl_Name_bar.Location = new System.Drawing.Point(49, 202);
+            this.tb_pnl_Name_bar.Name = "tb_pnl_Name_bar";
+            this.tb_pnl_Name_bar.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Name_bar.TabIndex = 11;
+            this.tb_pnl_Name_bar.Text = "label1";
+            // 
+            // tb_pnl_Prijs_bar
+            // 
+            this.tb_pnl_Prijs_bar.AutoSize = true;
+            this.tb_pnl_Prijs_bar.Location = new System.Drawing.Point(49, 170);
+            this.tb_pnl_Prijs_bar.Name = "tb_pnl_Prijs_bar";
+            this.tb_pnl_Prijs_bar.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Prijs_bar.TabIndex = 10;
+            this.tb_pnl_Prijs_bar.Text = "label1";
+            // 
+            // tb_pnl_Amount_bar
+            // 
+            this.tb_pnl_Amount_bar.AutoSize = true;
+            this.tb_pnl_Amount_bar.Location = new System.Drawing.Point(49, 136);
+            this.tb_pnl_Amount_bar.Name = "tb_pnl_Amount_bar";
+            this.tb_pnl_Amount_bar.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Amount_bar.TabIndex = 9;
+            this.tb_pnl_Amount_bar.Text = "label1";
+            // 
+            // tb_pnl_Status_bar
+            // 
+            this.tb_pnl_Status_bar.AutoSize = true;
+            this.tb_pnl_Status_bar.Location = new System.Drawing.Point(49, 66);
+            this.tb_pnl_Status_bar.Name = "tb_pnl_Status_bar";
+            this.tb_pnl_Status_bar.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Status_bar.TabIndex = 8;
+            this.tb_pnl_Status_bar.Text = "label1";
+            // 
+            // tb_pnl_Tafel_bar
+            // 
+            this.tb_pnl_Tafel_bar.AutoSize = true;
+            this.tb_pnl_Tafel_bar.Location = new System.Drawing.Point(49, 99);
+            this.tb_pnl_Tafel_bar.Name = "tb_pnl_Tafel_bar";
+            this.tb_pnl_Tafel_bar.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Tafel_bar.TabIndex = 7;
+            this.tb_pnl_Tafel_bar.Text = "label1";
+            // 
+            // tb_pnl_ID_bar
+            // 
+            this.tb_pnl_ID_bar.AutoSize = true;
+            this.tb_pnl_ID_bar.Location = new System.Drawing.Point(46, 38);
+            this.tb_pnl_ID_bar.Name = "tb_pnl_ID_bar";
+            this.tb_pnl_ID_bar.Size = new System.Drawing.Size(28, 13);
+            this.tb_pnl_ID_bar.TabIndex = 6;
+            this.tb_pnl_ID_bar.Text = "Test";
+            // 
+            // btn_Bar_Wijzig_Cancel
+            // 
+            this.btn_Bar_Wijzig_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Bar_Wijzig_Cancel.Location = new System.Drawing.Point(280, 262);
+            this.btn_Bar_Wijzig_Cancel.Name = "btn_Bar_Wijzig_Cancel";
+            this.btn_Bar_Wijzig_Cancel.Size = new System.Drawing.Size(150, 32);
+            this.btn_Bar_Wijzig_Cancel.TabIndex = 5;
+            this.btn_Bar_Wijzig_Cancel.Text = "Cancel";
+            this.btn_Bar_Wijzig_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Bar_Wijzig_Cancel.Click += new System.EventHandler(this.btn_Bar_Wijzig_Cancel_Click);
+            // 
+            // btn_Bar_Wijzig_Accept
+            // 
+            this.btn_Bar_Wijzig_Accept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Bar_Wijzig_Accept.Location = new System.Drawing.Point(80, 262);
+            this.btn_Bar_Wijzig_Accept.Name = "btn_Bar_Wijzig_Accept";
+            this.btn_Bar_Wijzig_Accept.Size = new System.Drawing.Size(150, 32);
+            this.btn_Bar_Wijzig_Accept.TabIndex = 4;
+            this.btn_Bar_Wijzig_Accept.Text = "Gereed";
+            this.btn_Bar_Wijzig_Accept.UseVisualStyleBackColor = true;
+            this.btn_Bar_Wijzig_Accept.Click += new System.EventHandler(this.btn_Bar_Wijzig_Accept_Click);
+            // 
+            // tb_Alcohol_bar_bestelling
+            // 
+            this.tb_Alcohol_bar_bestelling.Text = "Alcohol";
+            // 
+            // tb_pnl_Alcohol_bar
+            // 
+            this.tb_pnl_Alcohol_bar.AutoSize = true;
+            this.tb_pnl_Alcohol_bar.Location = new System.Drawing.Point(49, 228);
+            this.tb_pnl_Alcohol_bar.Name = "tb_pnl_Alcohol_bar";
+            this.tb_pnl_Alcohol_bar.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Alcohol_bar.TabIndex = 12;
+            this.tb_pnl_Alcohol_bar.Text = "label1";
+            // 
             // BarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1241, 561);
+            this.Controls.Add(this.pnl_Bar_Bestelling_Wijzig);
             this.Controls.Add(this.btn_Gereed_Bestelling_Keuken);
             this.Controls.Add(this.pnl_Keuken_Bestelling_Wijzig);
             this.Controls.Add(this.voorraad_keukenLv);
@@ -471,8 +617,8 @@ namespace ChapooUI
             this.Controls.Add(this.voorraadLbl);
             this.Controls.Add(this.RefreshImg);
             this.Controls.Add(this.RefreshOrdersBtn);
-            this.Controls.Add(this.ConfirmOrderBtn);
-            this.Controls.Add(this.bestelling_gereedLv);
+            this.Controls.Add(this.btn_Gereed_Bestelling_Bar);
+            this.Controls.Add(this.barbestelling_gereedLv);
             this.Controls.Add(this.ingekomen_bestellingenLbl);
             this.Controls.Add(this.LogOffLink);
             this.Controls.Add(this.Chapoo_title);
@@ -482,6 +628,8 @@ namespace ChapooUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Keuken_Bestelling_Wijzig.ResumeLayout(false);
             this.pnl_Keuken_Bestelling_Wijzig.PerformLayout();
+            this.pnl_Bar_Bestelling_Wijzig.ResumeLayout(false);
+            this.pnl_Bar_Bestelling_Wijzig.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,9 +639,9 @@ namespace ChapooUI
 
         private System.Windows.Forms.Label LogOffLink;
         private System.Windows.Forms.Label Chapoo_title;
-        private System.Windows.Forms.ListView bestelling_gereedLv;
+        private System.Windows.Forms.ListView barbestelling_gereedLv;
         private System.Windows.Forms.Label ingekomen_bestellingenLbl;
-        private System.Windows.Forms.Button ConfirmOrderBtn;
+        private System.Windows.Forms.Button btn_Gereed_Bestelling_Bar;
         private System.Windows.Forms.Button RefreshOrdersBtn;
         private System.Windows.Forms.PictureBox RefreshImg;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -506,12 +654,12 @@ namespace ChapooUI
         private System.Windows.Forms.ColumnHeader BarItemStock;
         private System.Windows.Forms.ColumnHeader BarAlcoholCheck;
         private System.Windows.Forms.ColumnHeader BarItemName;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader tb_ID_bar_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Amount_bar_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Prijs_bar_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Tafel_bar_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Name_bar_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Status_bar_bestelling;
         private System.Windows.Forms.ListView keukenbestelling_gereedLv;
         private System.Windows.Forms.ColumnHeader tb_ID_keuken_bestelling;
         private System.Windows.Forms.ColumnHeader tb_Amount_keuken_bestelling;
@@ -536,5 +684,16 @@ namespace ChapooUI
         private System.Windows.Forms.Button btn_Keuken_Wijzig_Cancel;
         private System.Windows.Forms.Button btn_Keuken_Wijzig_Accept;
         private System.Windows.Forms.Button btn_Gereed_Bestelling_Keuken;
+        private System.Windows.Forms.Panel pnl_Bar_Bestelling_Wijzig;
+        private System.Windows.Forms.Label tb_pnl_Name_bar;
+        private System.Windows.Forms.Label tb_pnl_Prijs_bar;
+        private System.Windows.Forms.Label tb_pnl_Amount_bar;
+        private System.Windows.Forms.Label tb_pnl_Status_bar;
+        private System.Windows.Forms.Label tb_pnl_Tafel_bar;
+        private System.Windows.Forms.Label tb_pnl_ID_bar;
+        private System.Windows.Forms.Button btn_Bar_Wijzig_Cancel;
+        private System.Windows.Forms.Button btn_Bar_Wijzig_Accept;
+        private System.Windows.Forms.ColumnHeader tb_Alcohol_bar_bestelling;
+        private System.Windows.Forms.Label tb_pnl_Alcohol_bar;
     }
 }

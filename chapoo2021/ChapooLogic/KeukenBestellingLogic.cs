@@ -37,5 +37,19 @@ namespace ChapooLogic
                 return keukenOrderList;
             }
         }
+
+        public bool WijzigBestellingKeuken(KeukenBestellingModel keuken)
+        {
+            try
+            {
+                keuken_db.WijzigBestellingKeuken(keuken);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }

@@ -36,5 +36,13 @@ namespace ChapooDAL
             }
             return keukenOrderList;
         }
+
+        public void WijzigBestellingKeuken(KeukenBestellingModel act)
+        {
+            SqlParameter sqlparameter1 = new SqlParameter("@OrderItemId", act.OrderItemID);
+            SqlParameter sqlparameter2 = new SqlParameter("@OrderStatus", act.OrderItemStatus);
+            SqlParameter[] sqlparameter = new SqlParameter[] { sqlparameter1, sqlparameter2};
+            ExecuteEditQuery("UpdateOrderStatus", sqlparameter);
+        }
     }
 }

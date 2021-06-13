@@ -21,5 +21,7 @@ namespace ChapooModel
         public Boolean OrderItemStatus { get; set; }
 
         public string Name { get; set; }
+
+        public Boolean Alcohol { get; set; }
     }
 }
