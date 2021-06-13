@@ -8,10 +8,102 @@ using System.Threading.Tasks;
 
 namespace ChapooLogic
 {
-    // Made by Faruk Bikmaz
+    
     public class Menu_Service
     {
         private Menu_DAO _menuDAO = new Menu_DAO();
+
+        public List<Menuu> GetMenuNames()
+        {
+            try
+            {
+                List<Menuu> menu = _menuDAO.Db_Get_MenuNames();
+                return menu;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+
+                List<Menuu> menu = new List<Menuu>();
+                Menuu m = new Menuu();
+
+                //Test values
+                m.menuId = 99;
+                m.menuName = "Geen menu";
+
+                menu.Add(m);
+                return menu;
+            }
+        }
+
+        public List<MenuuItem> GetitemName(int menuId)
+        {
+            try
+            {
+                List<MenuuItem> itemNName = _menuDAO.Db_Get_itemName(menuId);
+                return itemNName;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+
+                List<MenuuItem> menuItem = new List<MenuuItem>();
+                MenuuItem m = new MenuuItem();
+
+                //Test values
+
+                m.itemName = "Geen";
+
+                menuItem.Add(m);
+                return menuItem;
+            }
+        }
+        public List<MenuuItem> GetSelectedMenuItemId(int menuId, int menuItemId)
+        {
+            try
+            {
+                List<MenuuItem> item = _menuDAO.GetSelectedMenuItemId(menuId, menuItemId);
+                return item;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+                List<MenuuItem> item = new List<MenuuItem>();
+                MenuuItem m = new MenuuItem();
+
+                //Test values
+
+                m.menuItemId = 1;
+
+                item.Add(m);
+                return item;
+            }
+        }
+
+        public List<MenuuItem> GetSelitemName(int menuId)
+        {
+            try
+            {
+                List<MenuuItem> itemNName = _menuDAO.Db_Get_SelectedMenuItems(menuId);
+                return itemNName;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+
+                List<MenuuItem> menuItem = new List<MenuuItem>();
+                MenuuItem m = new MenuuItem();
+
+                //Test values
+
+                m.itemName = "Geen";
+
+                menuItem.Add(m);
+                return menuItem;
+            }
+        }
+
         public List<Lunch> GetLunch()
         {
             try
@@ -28,7 +120,6 @@ namespace ChapooLogic
 
                 //Test values
                 l.itemName = "Geen LUNCH vandaag";
-                l.price = 100;
 
                 lunch.Add(l);
                 return lunch;
@@ -51,7 +142,6 @@ namespace ChapooLogic
 
                 //Test values
                 d.itemName = "Geen DINER vandaag";
-                d.price = 100;
 
                 diner.Add(d);
                 return diner;
@@ -74,8 +164,6 @@ namespace ChapooLogic
 
                 //Test values
                 dra.itemName = "geen DRANKJES vandaag";
-                dra.price = 100;
-                dra.alcohol = true;
 
                 drankjes.Add(dra);
                 return drankjes;

@@ -40,6 +40,7 @@ namespace ChapooUI
             this.btnLoginAsAdmin = new System.Windows.Forms.Button();
             this.btnLoginAsKeuken = new System.Windows.Forms.Button();
             this.btnLoginAsBarman = new System.Windows.Forms.Button();
+            this.btnLoginAsBediening = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +132,7 @@ namespace ChapooUI
             this.btnLoginAsAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnLoginAsAdmin.ForeColor = System.Drawing.Color.White;
             this.btnLoginAsAdmin.Location = new System.Drawing.Point(28, 397);
-            this.btnLoginAsAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoginAsAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoginAsAdmin.Name = "btnLoginAsAdmin";
             this.btnLoginAsAdmin.Size = new System.Drawing.Size(190, 35);
             this.btnLoginAsAdmin.TabIndex = 14;
@@ -171,12 +172,29 @@ namespace ChapooUI
             this.btnLoginAsBarman.UseVisualStyleBackColor = false;
             this.btnLoginAsBarman.Click += new System.EventHandler(this.btnLoginAsBarman_Click);
             // 
+            // btnLoginAsBediening
+            // 
+            this.btnLoginAsBediening.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.btnLoginAsBediening.FlatAppearance.BorderSize = 0;
+            this.btnLoginAsBediening.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginAsBediening.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnLoginAsBediening.ForeColor = System.Drawing.Color.White;
+            this.btnLoginAsBediening.Location = new System.Drawing.Point(28, 344);
+            this.btnLoginAsBediening.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoginAsBediening.Name = "btnLoginAsBediening";
+            this.btnLoginAsBediening.Size = new System.Drawing.Size(190, 35);
+            this.btnLoginAsBediening.TabIndex = 17;
+            this.btnLoginAsBediening.Text = "Login als bedining";
+            this.btnLoginAsBediening.UseVisualStyleBackColor = false;
+            this.btnLoginAsBediening.Click += new System.EventHandler(this.btnLoginAsBediening_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(756, 456);
+            this.Controls.Add(this.btnLoginAsBediening);
             this.Controls.Add(this.btnLoginAsBarman);
             this.Controls.Add(this.btnLoginAsKeuken);
             this.Controls.Add(this.btnLoginAsAdmin);
@@ -187,7 +205,7 @@ namespace ChapooUI
             this.Controls.Add(this.txt_Pass);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -208,5 +226,6 @@ namespace ChapooUI
         private System.Windows.Forms.Button btnLoginAsAdmin;
         private System.Windows.Forms.Button btnLoginAsKeuken;
         private System.Windows.Forms.Button btnLoginAsBarman;
+        private System.Windows.Forms.Button btnLoginAsBediening;
     }
 }

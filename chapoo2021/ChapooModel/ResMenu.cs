@@ -1,6 +1,5 @@
 ﻿namespace ChapooModel
 {
-    // Made by Faruk Bikmaz
     public class ResMenu
     {
         public int menuItemId;
@@ -11,7 +10,7 @@
         public string itemName;
 
     }
-    public class Lunch { public string itemName; public decimal price; }
-    public class Diner { public string itemName; public decimal price; }
-    public class Drankjes { public string itemName; public decimal price; public bool alcohol; }
+    public class Lunch { public string itemName { get; set; } }
+    public class Diner { public string itemName { get; set; } }
+    public class Drankjes { public string itemName { get; set; } }
 }

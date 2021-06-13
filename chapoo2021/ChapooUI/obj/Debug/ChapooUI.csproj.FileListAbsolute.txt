@@ -109,3 +109,6 @@ C:\Users\ninow\OneDrive\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug
 C:\Users\ninow\OneDrive\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug\ChapooUI.csproj.CopyComplete
 C:\Users\ninow\OneDrive\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug\ChapooUI.exe
 C:\Users\ninow\OneDrive\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug\ChapooUI.pdb
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug\ChapooUI.BarKeukenForm.resources
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug\ChapooUI.LoginForm.resources
+C:\Users\Faruk\Documents\GitHub\p4project\chapoo2021\ChapooUI\obj\Debug\ChapooUI.WachtwoordVergeten.resources

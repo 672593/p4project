@@ -3,7 +3,7 @@
 namespace ChapooModel
 {
     // made by Faruk Bikmaz
-    public class Tafels
+    public class Table
     {
         public int tableId;
         public int orderTableId;

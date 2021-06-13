@@ -153,5 +153,11 @@ namespace ChapooUI
             BarKeukenForm barkeuken = new BarKeukenForm(keuken);
             barkeuken.Show();
         }
+
+        private void btnLoginAsBediening_Click(object sender, EventArgs e)
+        {
+            BedieningForm bform = new BedieningForm();
+            bform.Show();
+        }
     }
 }

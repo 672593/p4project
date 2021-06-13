@@ -166,5 +166,11 @@
   <ItemGroup>
     <None Include="Resources\png_logo_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
