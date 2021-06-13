@@ -10,23 +10,23 @@ using System.Threading.Tasks;
 
 namespace ChapooDAL
 {
-        public class Functie_DAO : Base
+    public class Function_DAO : Base
+    {
+        public int Function(Employee Employee)
         {
-            public int Function(Employee Employee)
+
+            SqlParameter[] sqlp = new SqlParameter[1]
             {
-
-                SqlParameter[] sqlp = new SqlParameter[1]
-                {
                     new SqlParameter("@id", Employee.employeeId)
-                };
+            };
 
-                DataTable acc = ExecuteSelectQuery("GetFunction", sqlp);
+            DataTable acc = ExecuteSelectQuery("GetFunction", sqlp);
 
-                foreach (DataRow dr in acc.Rows)
-                {
-                    Employee.FunctionId = (int)dr["functionID"];
-                }
-                return Employee.FunctionId;
+            foreach (DataRow dr in acc.Rows)
+            {
+                Employee.FunctionId = (int)dr["functionID"];
             }
+            return Employee.FunctionId;
         }
+    }
 }

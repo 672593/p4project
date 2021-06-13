@@ -63,19 +63,9 @@ namespace ChapooUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Chapoo_Logo_White {
+        internal static System.Drawing.Bitmap png_logo_white {
             get {
-                object obj = ResourceManager.GetObject("Chapoo Logo White", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Chapoo_Logo_White1 {
-            get {
-                object obj = ResourceManager.GetObject("Chapoo Logo White1", resourceCulture);
+                object obj = ResourceManager.GetObject("png_logo_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,12 +10,12 @@ namespace ChapooLogic
 {
     public class Function_Service
     {
-        static Functie_DAO functie_db = new Functie_DAO();
+        static Function_DAO functie_db = new Function_DAO();
         public int GetFunctie(Employee employee)
         {
             return functie_db.Function(employee);
         }
     }
-        
-        
+
+
 }

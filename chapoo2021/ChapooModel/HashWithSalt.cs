@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace ChapooModel
 {
-    public class HashwithSaltResults
+    //Anel Gusinac
+    public class HashWithSalt
     {
-        public string Salt { get; }
-
+        public string Salt { get; set; }
         public string Digest { get; set; }
-
-
-        public HashwithSaltResults(string salt, string digest)
+        public HashWithSalt(string salt, string digest)
         {
             Salt = salt;
-
             Digest = digest;
         }
     }

@@ -81,7 +81,6 @@ namespace ChapooDAL
             try
             {
                 command.Connection = OpenConnection();
-                command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
                 command.ExecuteNonQuery();

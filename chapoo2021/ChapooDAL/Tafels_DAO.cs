@@ -7,7 +7,7 @@ namespace ChapooDAL
 {
     public class Tafels_DAO : Base
     {
-        // Made by Faruk Bikmaz & Jelle de Vries
+        // Made by Faruk Bikmaz
 
         public List<Tafels> Db_Get_All_Free_Tables()
         {
@@ -26,18 +26,6 @@ namespace ChapooDAL
                 tafels.Add(t);
             }
             return tafels;
-        }
-
-        public List<Tafels> Get_Tafel_Data() // made by Jelle de Vries. Get table data from database
-        {
-            SqlParameter[] sqlp = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery("GetTafelStatus", sqlp));
-        }
-
-        public List<Tafels> GetOrderStatus() // made by Jelle de Vries. Get order data from database
-        {
-            SqlParameter[] sqlp = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery("GetOrderStatus", sqlp));
         }
     }
 }

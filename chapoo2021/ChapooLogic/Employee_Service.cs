@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 
 namespace ChapooLogic
 {
@@ -12,17 +14,22 @@ namespace ChapooLogic
     public class Employee_Service
     {
         Employee_DAO Employee_DAO = new Employee_DAO();
+        private PasswordWithSaltHasher _passwordHasher = new PasswordWithSaltHasher();
 
         public Employee GetCredentials(int id, string password)
         {
             return Employee_DAO.GetCredentials(id, password);
         }
-
-
-
         public string GetSalt(Employee Employee)
         {
-            return Employee_DAO.GetSalt(Employee);
+           string salt = Employee_DAO.GetSalt(Employee);
+
+            return salt;
+        }
+
+        public HashWithSalt CheckHash(string password, string salt)
+        {
+            return _passwordHasher.HashWithSaltCheck(password, salt, SHA256.Create());
         }
 
         public string forgotpassquestion(Employee employee)
@@ -34,7 +41,7 @@ namespace ChapooLogic
         {
             return Employee_DAO.Getforgotpass(employee);
         }
-        
+
         public void Alterpass(int gebruikersnaam, string hash, string salt)
         {
             Employee_DAO.AlterPass(gebruikersnaam, hash, salt);

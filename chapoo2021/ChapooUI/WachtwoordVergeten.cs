@@ -23,7 +23,7 @@ namespace ChapooUI
         {
             if (!string.IsNullOrWhiteSpace(txt_User.Text))
             {
-                
+
                 ChapooLogic.Employee_Service service = new Employee_Service();
                 Employee employee = new Employee();
 
@@ -38,7 +38,7 @@ namespace ChapooUI
             }
         }
 
-        
+
 
         private void btn_check_Click(object sender, EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace ChapooUI
 
                 //get answer
                 answer = service.forgotpass(employee);
-                
+
                 // check if answer matches
                 if (txt_answer.Text.ToLower() == answer.ToLower())
                 {
@@ -72,8 +72,8 @@ namespace ChapooUI
                         service.Alterpass(username, hashed, salt);
                         // show success
                         MessageBox.Show("Je wachtwoord is succesvol veranderd");
-                        
-                        
+
+
                         // open login form again
                         LoginForm loginForm = new LoginForm();
                         loginForm.Show();

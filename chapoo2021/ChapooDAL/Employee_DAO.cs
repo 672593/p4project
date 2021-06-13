@@ -28,7 +28,7 @@ namespace ChapooDAL
             SqlParameter[] sqlp = new SqlParameter[2]
             {
                 new SqlParameter("@id", id),
-                new SqlParameter("@password", password)
+                new SqlParameter("@password", password),
             };
             //SELECT COUNT(*) FROM employee WHERE employeeId = @id AND hashedPassword = @password;
             DataTable results = ExecuteSelectQuery("GetCredentials", sqlp);
@@ -73,20 +73,22 @@ namespace ChapooDAL
         }
 
         // get salt for user with @id
-        public string GetSalt(Employee employee)
+        public string GetSalt(Employee Employee)
         {
-
+            int id = int.Parse(Employee.username);
             SqlParameter[] sqlp = new SqlParameter[1]
             {
-                new SqlParameter("@id", employee.employeeId)
+                new SqlParameter("@id", id),
             };
             //SELECT Salt From employee WHERE employeeId = @id;
             DataTable acc = ExecuteSelectQuery("GetSalt", sqlp);
+            
             foreach (DataRow dr in acc.Rows)
             {
-                employee.Salt = (String)dr["Salt"];
+                Employee.Salt = (string)dr["Salt"];
+                
             }
-            return employee.Salt;
+            return Employee.Salt;
         }
 
         public string GetPassQuestion(Employee employee)
@@ -129,7 +131,7 @@ namespace ChapooDAL
                 new SqlParameter("@id", gebruikersnaam),
                 new SqlParameter("@hash", hash)
             };
-            
+
             ExecuteEditQuery("AlterHash", sqlp);
 
             // alter salt

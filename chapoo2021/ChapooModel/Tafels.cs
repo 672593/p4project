@@ -2,7 +2,7 @@
 
 namespace ChapooModel
 {
-    // made by Faruk Bikmaz & Jelle de Vries
+    // made by Faruk Bikmaz
     public class Tafels
     {
         public int tableId;
@@ -11,9 +11,5 @@ namespace ChapooModel
         public DateTime currentDate;
         public decimal Price;
         public string comment;
-        public int TafelStatusId { get; set; }
-        public bool LopendeOrder { get; set; }
-
-        public DateTime orderTijd;
     }
 }
