@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarBestellingModel.cs" />
+    <Compile Include="BarModel.cs" />
     <Compile Include="Bestelling.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="HashWithSalt.cs" />
+    <Compile Include="KeukenBestellingModel.cs" />
+    <Compile Include="KeukenModel.cs" />
     <Compile Include="MenuItems.cs" />
     <Compile Include="ResMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

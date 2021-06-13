@@ -58,12 +58,14 @@ namespace ChapooUI
                 }
                 else if (function == 2)
                 {
-                    KeukenForm keukenOverzicht = new KeukenForm();
+                    Boolean keuken = true;
+                    BarKeukenForm keukenOverzicht = new BarKeukenForm(keuken);
                     keukenOverzicht.Show();
                 }
                 else if (function == 3)
                 {
-                    BarForm barOverzicht = new BarForm();
+                    Boolean keuken = false;
+                    BarKeukenForm barOverzicht = new BarKeukenForm(keuken);
                     barOverzicht.Show();
                 }
                 else if (function == 4)
@@ -136,6 +138,20 @@ namespace ChapooUI
         {
             AdminForm adminform = new AdminForm();
             adminform.Show();
+        }
+
+        private void btnLoginAsBarman_Click(object sender, EventArgs e)
+        {
+            Boolean keuken = false;
+            BarKeukenForm barkeuken = new BarKeukenForm(keuken);
+            barkeuken.Show();
+        }
+
+        private void btnLoginAsKeuken_Click(object sender, EventArgs e)
+        {
+            Boolean keuken = true;
+            BarKeukenForm barkeuken = new BarKeukenForm(keuken);
+            barkeuken.Show();
         }
     }
 }

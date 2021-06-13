@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarBestellingLogic.cs" />
+    <Compile Include="BarLogic.cs" />
     <Compile Include="Employee_Service.cs" />
     <Compile Include="Function_service.cs" />
     <Compile Include="HashwithSalt.cs" />
+    <Compile Include="KeukenBestellingLogic.cs" />
+    <Compile Include="KeukenLogic.cs" />
     <Compile Include="MenuItems_Service.cs" />
     <Compile Include="Menu_Service.cs" />
     <Compile Include="PasswordWithSaltHasher.cs" />
