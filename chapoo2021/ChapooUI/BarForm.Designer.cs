@@ -32,6 +32,11 @@ namespace ChapooUI
             this.LogOffLink = new System.Windows.Forms.Label();
             this.Chapoo_title = new System.Windows.Forms.Label();
             this.bestelling_gereedLv = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ingekomen_bestellingenLbl = new System.Windows.Forms.Label();
             this.ConfirmOrderBtn = new System.Windows.Forms.Button();
             this.RefreshOrdersBtn = new System.Windows.Forms.Button();
@@ -46,13 +51,34 @@ namespace ChapooUI
             this.BarAlcoholCheck = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BarItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.voorraadLbl = new System.Windows.Forms.Label();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.keukenbestelling_gereedLv = new System.Windows.Forms.ListView();
+            this.tb_ID_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Amount_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Prijs_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Table_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Name_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_Status_keuken_bestelling = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.voorraad_keukenLv = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnl_Keuken_Bestelling_Wijzig = new System.Windows.Forms.Panel();
+            this.btn_Keuken_Wijzig_Cancel = new System.Windows.Forms.Button();
+            this.btn_Keuken_Wijzig_Accept = new System.Windows.Forms.Button();
+            this.tb_pnl_ID_keuken = new System.Windows.Forms.Label();
+            this.tb_pnl_Tafel_keuken = new System.Windows.Forms.Label();
+            this.tb_pnl_Status_keuken = new System.Windows.Forms.Label();
+            this.tb_pnl_Amount_keuken = new System.Windows.Forms.Label();
+            this.tb_pnl_Prijs_keuken = new System.Windows.Forms.Label();
+            this.tb_pnl_Name_keuken = new System.Windows.Forms.Label();
+            this.btn_Gereed_Bestelling_Keuken = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_Keuken_Bestelling_Wijzig.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogOffLink
@@ -86,7 +112,8 @@ namespace ChapooUI
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader6});
             this.bestelling_gereedLv.HideSelection = false;
             this.bestelling_gereedLv.Location = new System.Drawing.Point(27, 78);
             this.bestelling_gereedLv.Name = "bestelling_gereedLv";
@@ -139,7 +166,7 @@ namespace ChapooUI
             // 
             this.RefreshImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
             this.RefreshImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.RefreshImg.Location = new System.Drawing.Point(468, 84);
+            this.RefreshImg.Location = new System.Drawing.Point(465, 171);
             this.RefreshImg.Name = "RefreshImg";
             this.RefreshImg.Size = new System.Drawing.Size(54, 36);
             this.RefreshImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -230,12 +257,214 @@ namespace ChapooUI
             this.voorraadLbl.TabIndex = 21;
             this.voorraadLbl.Text = "VOORRAAD";
             // 
+            // keukenbestelling_gereedLv
+            // 
+            this.keukenbestelling_gereedLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.keukenbestelling_gereedLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.keukenbestelling_gereedLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.tb_ID_keuken_bestelling,
+            this.tb_Amount_keuken_bestelling,
+            this.tb_Prijs_keuken_bestelling,
+            this.tb_Table_keuken_bestelling,
+            this.tb_Name_keuken_bestelling,
+            this.tb_Status_keuken_bestelling});
+            this.keukenbestelling_gereedLv.HideSelection = false;
+            this.keukenbestelling_gereedLv.Location = new System.Drawing.Point(27, 354);
+            this.keukenbestelling_gereedLv.Name = "keukenbestelling_gereedLv";
+            this.keukenbestelling_gereedLv.Size = new System.Drawing.Size(399, 167);
+            this.keukenbestelling_gereedLv.TabIndex = 25;
+            this.keukenbestelling_gereedLv.UseCompatibleStateImageBehavior = false;
+            this.keukenbestelling_gereedLv.View = System.Windows.Forms.View.Details;
+            // 
+            // tb_ID_keuken_bestelling
+            // 
+            this.tb_ID_keuken_bestelling.Text = "id";
+            // 
+            // tb_Amount_keuken_bestelling
+            // 
+            this.tb_Amount_keuken_bestelling.Text = "Amount";
+            // 
+            // tb_Prijs_keuken_bestelling
+            // 
+            this.tb_Prijs_keuken_bestelling.Text = "Prijs";
+            // 
+            // tb_Table_keuken_bestelling
+            // 
+            this.tb_Table_keuken_bestelling.Text = "Tafel Nummer";
+            // 
+            // tb_Name_keuken_bestelling
+            // 
+            this.tb_Name_keuken_bestelling.Text = "Name";
+            // 
+            // tb_Status_keuken_bestelling
+            // 
+            this.tb_Status_keuken_bestelling.Text = "Status";
+            // 
+            // voorraad_keukenLv
+            // 
+            this.voorraad_keukenLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.voorraad_keukenLv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.voorraad_keukenLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18});
+            this.voorraad_keukenLv.HideSelection = false;
+            this.voorraad_keukenLv.Location = new System.Drawing.Point(613, 354);
+            this.voorraad_keukenLv.Name = "voorraad_keukenLv";
+            this.voorraad_keukenLv.Size = new System.Drawing.Size(399, 167);
+            this.voorraad_keukenLv.TabIndex = 26;
+            this.voorraad_keukenLv.UseCompatibleStateImageBehavior = false;
+            this.voorraad_keukenLv.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Id";
+            this.columnHeader13.Width = 26;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Menu Type";
+            this.columnHeader14.Width = 29;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Price";
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Stock";
+            this.columnHeader16.Width = 37;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Alcohol";
+            this.columnHeader17.Width = 36;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Name";
+            this.columnHeader18.Width = 210;
+            // 
+            // pnl_Keuken_Bestelling_Wijzig
+            // 
+            this.pnl_Keuken_Bestelling_Wijzig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Name_keuken);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Prijs_keuken);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Amount_keuken);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Status_keuken);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_Tafel_keuken);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_ID_keuken);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.btn_Keuken_Wijzig_Cancel);
+            this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.btn_Keuken_Wijzig_Accept);
+            this.pnl_Keuken_Bestelling_Wijzig.Location = new System.Drawing.Point(331, 132);
+            this.pnl_Keuken_Bestelling_Wijzig.Name = "pnl_Keuken_Bestelling_Wijzig";
+            this.pnl_Keuken_Bestelling_Wijzig.Size = new System.Drawing.Size(537, 334);
+            this.pnl_Keuken_Bestelling_Wijzig.TabIndex = 27;
+            this.pnl_Keuken_Bestelling_Wijzig.Visible = false;
+            // 
+            // btn_Keuken_Wijzig_Cancel
+            // 
+            this.btn_Keuken_Wijzig_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Keuken_Wijzig_Cancel.Location = new System.Drawing.Point(280, 262);
+            this.btn_Keuken_Wijzig_Cancel.Name = "btn_Keuken_Wijzig_Cancel";
+            this.btn_Keuken_Wijzig_Cancel.Size = new System.Drawing.Size(150, 32);
+            this.btn_Keuken_Wijzig_Cancel.TabIndex = 5;
+            this.btn_Keuken_Wijzig_Cancel.Text = "Cancel";
+            this.btn_Keuken_Wijzig_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Keuken_Wijzig_Cancel.Click += new System.EventHandler(this.btn_Keuken_Wijzig_Cancel_Click);
+            // 
+            // btn_Keuken_Wijzig_Accept
+            // 
+            this.btn_Keuken_Wijzig_Accept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Keuken_Wijzig_Accept.Location = new System.Drawing.Point(80, 262);
+            this.btn_Keuken_Wijzig_Accept.Name = "btn_Keuken_Wijzig_Accept";
+            this.btn_Keuken_Wijzig_Accept.Size = new System.Drawing.Size(150, 32);
+            this.btn_Keuken_Wijzig_Accept.TabIndex = 4;
+            this.btn_Keuken_Wijzig_Accept.Text = "Gereed";
+            this.btn_Keuken_Wijzig_Accept.UseVisualStyleBackColor = true;
+            // 
+            // tb_pnl_ID_keuken
+            // 
+            this.tb_pnl_ID_keuken.AutoSize = true;
+            this.tb_pnl_ID_keuken.Location = new System.Drawing.Point(46, 38);
+            this.tb_pnl_ID_keuken.Name = "tb_pnl_ID_keuken";
+            this.tb_pnl_ID_keuken.Size = new System.Drawing.Size(28, 13);
+            this.tb_pnl_ID_keuken.TabIndex = 6;
+            this.tb_pnl_ID_keuken.Text = "Test";
+            // 
+            // tb_pnl_Tafel_keuken
+            // 
+            this.tb_pnl_Tafel_keuken.AutoSize = true;
+            this.tb_pnl_Tafel_keuken.Location = new System.Drawing.Point(49, 99);
+            this.tb_pnl_Tafel_keuken.Name = "tb_pnl_Tafel_keuken";
+            this.tb_pnl_Tafel_keuken.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Tafel_keuken.TabIndex = 7;
+            this.tb_pnl_Tafel_keuken.Text = "label1";
+            // 
+            // tb_pnl_Status_keuken
+            // 
+            this.tb_pnl_Status_keuken.AutoSize = true;
+            this.tb_pnl_Status_keuken.Location = new System.Drawing.Point(49, 66);
+            this.tb_pnl_Status_keuken.Name = "tb_pnl_Status_keuken";
+            this.tb_pnl_Status_keuken.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Status_keuken.TabIndex = 8;
+            this.tb_pnl_Status_keuken.Text = "label1";
+            // 
+            // tb_pnl_Amount_keuken
+            // 
+            this.tb_pnl_Amount_keuken.AutoSize = true;
+            this.tb_pnl_Amount_keuken.Location = new System.Drawing.Point(49, 136);
+            this.tb_pnl_Amount_keuken.Name = "tb_pnl_Amount_keuken";
+            this.tb_pnl_Amount_keuken.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Amount_keuken.TabIndex = 9;
+            this.tb_pnl_Amount_keuken.Text = "label1";
+            // 
+            // tb_pnl_Prijs_keuken
+            // 
+            this.tb_pnl_Prijs_keuken.AutoSize = true;
+            this.tb_pnl_Prijs_keuken.Location = new System.Drawing.Point(49, 170);
+            this.tb_pnl_Prijs_keuken.Name = "tb_pnl_Prijs_keuken";
+            this.tb_pnl_Prijs_keuken.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Prijs_keuken.TabIndex = 10;
+            this.tb_pnl_Prijs_keuken.Text = "label1";
+            // 
+            // tb_pnl_Name_keuken
+            // 
+            this.tb_pnl_Name_keuken.AutoSize = true;
+            this.tb_pnl_Name_keuken.Location = new System.Drawing.Point(49, 202);
+            this.tb_pnl_Name_keuken.Name = "tb_pnl_Name_keuken";
+            this.tb_pnl_Name_keuken.Size = new System.Drawing.Size(35, 13);
+            this.tb_pnl_Name_keuken.TabIndex = 11;
+            this.tb_pnl_Name_keuken.Text = "label1";
+            // 
+            // btn_Gereed_Bestelling_Keuken
+            // 
+            this.btn_Gereed_Bestelling_Keuken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.btn_Gereed_Bestelling_Keuken.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(93)))));
+            this.btn_Gereed_Bestelling_Keuken.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Gereed_Bestelling_Keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gereed_Bestelling_Keuken.ForeColor = System.Drawing.Color.White;
+            this.btn_Gereed_Bestelling_Keuken.Location = new System.Drawing.Point(432, 473);
+            this.btn_Gereed_Bestelling_Keuken.Name = "btn_Gereed_Bestelling_Keuken";
+            this.btn_Gereed_Bestelling_Keuken.Size = new System.Drawing.Size(179, 48);
+            this.btn_Gereed_Bestelling_Keuken.TabIndex = 28;
+            this.btn_Gereed_Bestelling_Keuken.Text = "GEREED";
+            this.btn_Gereed_Bestelling_Keuken.UseVisualStyleBackColor = false;
+            this.btn_Gereed_Bestelling_Keuken.Click += new System.EventHandler(this.btn_Gereed_Bestelling_Keuken_Click);
+            // 
             // BarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1241, 561);
+            this.Controls.Add(this.btn_Gereed_Bestelling_Keuken);
+            this.Controls.Add(this.pnl_Keuken_Bestelling_Wijzig);
+            this.Controls.Add(this.voorraad_keukenLv);
+            this.Controls.Add(this.keukenbestelling_gereedLv);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RefreshStockBtn);
             this.Controls.Add(this.voorraad_barmanLv);
@@ -251,6 +480,8 @@ namespace ChapooUI
             this.Text = "BarForm";
             ((System.ComponentModel.ISupportInitialize)(this.RefreshImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_Keuken_Bestelling_Wijzig.ResumeLayout(false);
+            this.pnl_Keuken_Bestelling_Wijzig.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +511,30 @@ namespace ChapooUI
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ListView keukenbestelling_gereedLv;
+        private System.Windows.Forms.ColumnHeader tb_ID_keuken_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Amount_keuken_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Prijs_keuken_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Table_keuken_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Name_keuken_bestelling;
+        private System.Windows.Forms.ColumnHeader tb_Status_keuken_bestelling;
+        private System.Windows.Forms.ListView voorraad_keukenLv;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.Panel pnl_Keuken_Bestelling_Wijzig;
+        private System.Windows.Forms.Label tb_pnl_Name_keuken;
+        private System.Windows.Forms.Label tb_pnl_Prijs_keuken;
+        private System.Windows.Forms.Label tb_pnl_Amount_keuken;
+        private System.Windows.Forms.Label tb_pnl_Status_keuken;
+        private System.Windows.Forms.Label tb_pnl_Tafel_keuken;
+        private System.Windows.Forms.Label tb_pnl_ID_keuken;
+        private System.Windows.Forms.Button btn_Keuken_Wijzig_Cancel;
+        private System.Windows.Forms.Button btn_Keuken_Wijzig_Accept;
+        private System.Windows.Forms.Button btn_Gereed_Bestelling_Keuken;
     }
 }

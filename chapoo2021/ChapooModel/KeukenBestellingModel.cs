@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChapooModel
 {
-    class KeukenBestellingModel
+    public class KeukenBestellingModel
     {
         public int OrderItemID { get; set; }
 
