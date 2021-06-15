@@ -33,10 +33,9 @@ namespace ChapooUI
         public BedieningForm()
         {
             InitializeComponent();
+            pnl_Afrekenen.Hide();
             // HidePanelsRecursively(this);
         }
-
-        // OVERZCIH VAN ORDERS
 
         private void AllOrdersBtn_Click(object sender, EventArgs e)
         {
@@ -96,8 +95,8 @@ namespace ChapooUI
             int selectmenuItemId;
             if (AllOrderslv.SelectedItems.Count > 0)
             {
-                selectOrderItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[1].Text);
-                selectmenuItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[0].Text);
+                selectOrderItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[0].Text);
+                selectmenuItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[1].Text);
 
                 if (be_service.DeleteOrderItem(selectmenuItemId, selectOrderItemId) == true)
                 {
@@ -147,8 +146,7 @@ namespace ChapooUI
             }
             else { MessageBox.Show("Er is iets fout gegaan"); }
         }
-
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void Add()
         {
             HidePanelsRecursively(this);
             AddOrder_pnl.Show();
@@ -167,7 +165,10 @@ namespace ChapooUI
             }
 
             FillMenuItem(1);
-
+        }
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            Add();
         }
 
         private void AllOrdersBtn2_Click(object sender, EventArgs e)
@@ -258,7 +259,13 @@ namespace ChapooUI
             }
         }
 
-        private void minAantalBtn_Click(object sender, EventArgs e)
+        private void plusAantalBtn_Click_1(object sender, EventArgs e)
+        {
+            int amount = int.Parse(AmountBox.Text);
+            amount++;
+            AmountBox.Text = amount.ToString();
+        }
+        private void minAantalBtn_Click_1(object sender, EventArgs e)
         {
             int amount2 = int.Parse(AmountBox.Text);
             amount2--;
@@ -268,14 +275,6 @@ namespace ChapooUI
             }
             AmountBox.Text = amount2.ToString();
         }
-
-        private void plusAantalBtn_Click(object sender, EventArgs e)
-        {
-            int amount = int.Parse(AmountBox.Text);
-            amount++;
-            AmountBox.Text = amount.ToString();
-        }
-
         private void AllResBtn_Click(object sender, EventArgs e)
         {
             HidePanelsRecursively(this);
@@ -313,59 +312,37 @@ namespace ChapooUI
 
         private void ChangeResBtn_Click(object sender, EventArgs e)
         {
-            HidePanelsRecursively(this);
-
-            Res_pnl.Show(); Order_pnl.Show();
-            int reservationId = int.Parse(Reservationlv.SelectedItems[0].SubItems[0].Text);
-            int tableId = int.Parse(Reservationlv.SelectedItems[0].SubItems[1].Text);
-            string reservationName = Reservationlv.SelectedItems[0].SubItems[2].Text;
-            string reservationTel = Reservationlv.SelectedItems[0].SubItems[3].Text;
-            string reservationEmail = Reservationlv.SelectedItems[0].SubItems[4].Text;
-            string reservationComment = Reservationlv.SelectedItems[0].SubItems[5].Text;
-            DateTime reservationDate = DateTime.Parse(Reservationlv.SelectedItems[0].SubItems[6].Text);
-
-            if (!string.IsNullOrEmpty(reservationName))
+            if (Reservationlv.SelectedItems.Count <= 0 || Reservationlv.SelectedItems.Count == null)
             {
-                tableId = TafelResDD.SelectedIndex + 1;
-                reservationTel = telBox.Text;
-                reservationName = aamBox.Text;
-                reservationEmail = emailBox.Text;
-                reservationComment = opmerkingBox.Text;
-                reservationDate = DateTime.Parse(datumBox.ToString());
+                MessageBox.Show("U heeft geen reservering geselecteerd");
             }
             else
             {
-                throw new Exception("Er is iets fout gegaan!");
+                ChangeRes_pnl.Show();
+                TafelResDD.Text = (Reservationlv.SelectedItems[0].SubItems[1].Text);
+                aamBox.Text = Reservationlv.SelectedItems[0].SubItems[2].Text;
+                telBox.Text = Reservationlv.SelectedItems[0].SubItems[3].Text;
+                emailBox.Text = Reservationlv.SelectedItems[0].SubItems[4].Text;
+                opmerkingBox.Text = Reservationlv.SelectedItems[0].SubItems[5].Text;
+                datumBox.Text = Reservationlv.SelectedItems[0].SubItems[6].Text;
             }
-            Reservering re = new Reservering();
-            re.reservationId = int.Parse(Reservationlv.SelectedItems[0].SubItems[0].Text);
-            re.tableId = int.Parse(Reservationlv.SelectedItems[0].SubItems[1].Text);
-            re.reservationName = Reservationlv.SelectedItems[0].SubItems[2].Text;
-            re.reservationTel = Reservationlv.SelectedItems[0].SubItems[3].Text;
-            re.reservationEmail = Reservationlv.SelectedItems[0].SubItems[4].Text;
-            re.reservationComment = Reservationlv.SelectedItems[0].SubItems[5].Text;
-            re.reservationDate = DateTime.Parse(Reservationlv.SelectedItems[0].SubItems[6].Text);
-
-            if (res_service.EditReservering(reservationId, tableId, reservationName, reservationTel, reservationEmail, reservationComment, reservationDate) == true)
-            {
-                MessageBox.Show($"Rerservering gewijzigd!");
-                FillResList();
-                ChangeRes_pnl.Hide();
-            }
-            else { MessageBox.Show("Er is iets fout gegaan"); }
+            
         }
-
-        private void AddResBtn_Click(object sender, EventArgs e)
+        private void AddRes()
         {
             HidePanelsRecursively(this);
 
-            Res_pnl.Show(); Order_pnl.Show(); AddRes_pnl.Show();
+            Order_pnl.Show(); AddRes_pnl.Show();
             FillResList();
             AddTafelDD.Items.Clear();
             foreach (Table t in t_service.GetTables())
             {
                 AddTafelDD.Items.Add(t.tableId);
             }
+        }
+        private void AddResBtn_Click(object sender, EventArgs e)
+        {
+            AddRes();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
@@ -400,7 +377,79 @@ namespace ChapooUI
                 MessageBox.Show("Er is iets fout gegaan!");
             }
         }
+        private void ChangeResAcceptBtn_Click(object sender, EventArgs e)
+        {
+            HidePanelsRecursively(this);
 
+            Res_pnl.Show(); Order_pnl.Show();
+
+            int reservationId = int.Parse(Reservationlv.SelectedItems[0].SubItems[0].Text);
+            int tableId = int.Parse(Reservationlv.SelectedItems[0].SubItems[1].Text);
+            string reservationName = Reservationlv.SelectedItems[0].SubItems[2].Text;
+            string reservationTel = Reservationlv.SelectedItems[0].SubItems[3].Text;
+            string reservationEmail = Reservationlv.SelectedItems[0].SubItems[4].Text;
+            string reservationComment = Reservationlv.SelectedItems[0].SubItems[5].Text;
+            DateTime reservationDate = DateTime.Parse(Reservationlv.SelectedItems[0].SubItems[6].Text);
+
+            if (!string.IsNullOrEmpty(reservationName))
+            {
+                tableId = tableId;
+                reservationTel = telBox.Text;
+                reservationName = aamBox.Text;
+                reservationEmail = emailBox.Text;
+                reservationComment = opmerkingBox.Text;
+                reservationDate = DateTime.Parse(datumBox.Text);
+            }
+            else
+            {
+                throw new Exception("Er is iets fout gegaan!");
+            }
+            Reservering re = new Reservering();
+            re.reservationId = int.Parse(Reservationlv.SelectedItems[0].SubItems[0].Text);
+            re.tableId = int.Parse(Reservationlv.SelectedItems[0].SubItems[1].Text);
+            re.reservationName = Reservationlv.SelectedItems[0].SubItems[2].Text;
+            re.reservationTel = Reservationlv.SelectedItems[0].SubItems[3].Text;
+            re.reservationEmail = Reservationlv.SelectedItems[0].SubItems[4].Text;
+            re.reservationComment = Reservationlv.SelectedItems[0].SubItems[5].Text;
+            re.reservationDate = DateTime.Parse(Reservationlv.SelectedItems[0].SubItems[6].Text);
+
+            if (res_service.EditReservering(reservationId, tableId, reservationName, reservationTel, reservationEmail, reservationComment, reservationDate) == true)
+            {
+                MessageBox.Show($"Rerservering gewijzigd!");
+                FillResList();
+                ChangeRes_pnl.Hide();
+            }
+            else { MessageBox.Show("Er is iets fout gegaan"); }
+        }
+    
+
+        private void BevestigResBtn_Click_1(object sender, EventArgs e)
+        {
+            AddTafelDD.Items.Clear();
+            foreach (Table t in t_service.GetTables())
+            {
+                AddTafelDD.Items.Add(t.tableId);
+            }
+            Reservering reservering = new Reservering
+            {
+                reservationId = res_service.GetLastReserveringId(),
+                tableId = AddTafelDD.SelectedIndex + 1,
+                reservationName = AddNaamDD.Text,
+                reservationTel = Addtel.Text,
+                reservationEmail = AddEmail.Text,
+                reservationComment = AddOpmerking.Text,
+                reservationDate = DateTime.Parse(AddDatum.Text)
+            };
+
+            if (res_service.InsertReservering(reservering) == true)
+            {
+                MessageBox.Show("Reservering toegevoegd");
+            }
+            else
+            {
+                MessageBox.Show("Er is iets fout gegaan!");
+            }
+        }
         private void ChangeBtn_Click(object sender, EventArgs e)
         {
             if (AllOrderslv.SelectedItems.Count <= 0 || AllOrderslv.SelectedItems.Count == null)
@@ -416,6 +465,105 @@ namespace ChapooUI
             }
         }
 
+        private void OrderBtn1_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn6_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn2_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn3_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn7_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn4_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn8_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn5_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn9_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void OrderBtn10_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void ReservationBtn1_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn6_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn2_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn3_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn7_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ResservationBtn4_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void Reser8vationBtn_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn5_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn9_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
+
+        private void ReservationBtn10_Click(object sender, EventArgs e)
+        {
+            AddRes();
+        }
 
         // kelvin
 
@@ -580,5 +728,6 @@ namespace ChapooUI
             bedieningForm.Closed += (s, args) => this.Close();
             bedieningForm.Show();
         }
+
     }
 }

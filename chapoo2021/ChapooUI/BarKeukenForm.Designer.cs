@@ -93,10 +93,9 @@ namespace ChapooUI
             this.LogOffLink.AutoSize = true;
             this.LogOffLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOffLink.ForeColor = System.Drawing.Color.Red;
-            this.LogOffLink.Location = new System.Drawing.Point(1720, 14);
-            this.LogOffLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LogOffLink.Location = new System.Drawing.Point(1147, 9);
             this.LogOffLink.Name = "LogOffLink";
-            this.LogOffLink.Size = new System.Drawing.Size(143, 33);
+            this.LogOffLink.Size = new System.Drawing.Size(69, 15);
             this.LogOffLink.TabIndex = 13;
             this.LogOffLink.Text = "Uitloggen";
             this.LogOffLink.Click += new System.EventHandler(this.LogOffLink_Click);
@@ -106,10 +105,9 @@ namespace ChapooUI
             this.Chapoo_title.AutoSize = true;
             this.Chapoo_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chapoo_title.ForeColor = System.Drawing.Color.White;
-            this.Chapoo_title.Location = new System.Drawing.Point(36, 14);
-            this.Chapoo_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Chapoo_title.Location = new System.Drawing.Point(24, 9);
             this.Chapoo_title.Name = "Chapoo_title";
-            this.Chapoo_title.Size = new System.Drawing.Size(165, 22);
+            this.Chapoo_title.Size = new System.Drawing.Size(118, 15);
             this.Chapoo_title.TabIndex = 12;
             this.Chapoo_title.Text = "Chapoo | Barman";
             // 
@@ -126,10 +124,9 @@ namespace ChapooUI
             this.tb_Status_bar_bestelling,
             this.tb_Alcohol_bar_bestelling});
             this.barbestelling_gereedLv.HideSelection = false;
-            this.barbestelling_gereedLv.Location = new System.Drawing.Point(40, 120);
-            this.barbestelling_gereedLv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.barbestelling_gereedLv.Location = new System.Drawing.Point(27, 78);
             this.barbestelling_gereedLv.Name = "barbestelling_gereedLv";
-            this.barbestelling_gereedLv.Size = new System.Drawing.Size(836, 622);
+            this.barbestelling_gereedLv.Size = new System.Drawing.Size(557, 404);
             this.barbestelling_gereedLv.TabIndex = 15;
             this.barbestelling_gereedLv.UseCompatibleStateImageBehavior = false;
             this.barbestelling_gereedLv.View = System.Windows.Forms.View.Details;
@@ -172,10 +169,9 @@ namespace ChapooUI
             this.ingekomen_bestellingenLbl.AutoSize = true;
             this.ingekomen_bestellingenLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingekomen_bestellingenLbl.ForeColor = System.Drawing.Color.White;
-            this.ingekomen_bestellingenLbl.Location = new System.Drawing.Point(36, 77);
-            this.ingekomen_bestellingenLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ingekomen_bestellingenLbl.Location = new System.Drawing.Point(24, 50);
             this.ingekomen_bestellingenLbl.Name = "ingekomen_bestellingenLbl";
-            this.ingekomen_bestellingenLbl.Size = new System.Drawing.Size(281, 22);
+            this.ingekomen_bestellingenLbl.Size = new System.Drawing.Size(197, 15);
             this.ingekomen_bestellingenLbl.TabIndex = 14;
             this.ingekomen_bestellingenLbl.Text = "INGEKOMEN BESTELLINGEN";
             // 
@@ -186,10 +182,9 @@ namespace ChapooUI
             this.btn_Gereed_Bestelling_Bar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Gereed_Bestelling_Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Gereed_Bestelling_Bar.ForeColor = System.Drawing.Color.White;
-            this.btn_Gereed_Bestelling_Bar.Location = new System.Drawing.Point(18, 751);
-            this.btn_Gereed_Bestelling_Bar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Gereed_Bestelling_Bar.Location = new System.Drawing.Point(12, 488);
             this.btn_Gereed_Bestelling_Bar.Name = "btn_Gereed_Bestelling_Bar";
-            this.btn_Gereed_Bestelling_Bar.Size = new System.Drawing.Size(268, 74);
+            this.btn_Gereed_Bestelling_Bar.Size = new System.Drawing.Size(179, 48);
             this.btn_Gereed_Bestelling_Bar.TabIndex = 18;
             this.btn_Gereed_Bestelling_Bar.Text = "GEREED BESTELLING";
             this.btn_Gereed_Bestelling_Bar.UseVisualStyleBackColor = false;
@@ -202,10 +197,9 @@ namespace ChapooUI
             this.RefreshOrdersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshOrdersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RefreshOrdersBtn.ForeColor = System.Drawing.Color.White;
-            this.RefreshOrdersBtn.Location = new System.Drawing.Point(296, 752);
-            this.RefreshOrdersBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RefreshOrdersBtn.Location = new System.Drawing.Point(197, 489);
             this.RefreshOrdersBtn.Name = "RefreshOrdersBtn";
-            this.RefreshOrdersBtn.Size = new System.Drawing.Size(129, 75);
+            this.RefreshOrdersBtn.Size = new System.Drawing.Size(86, 49);
             this.RefreshOrdersBtn.TabIndex = 19;
             this.RefreshOrdersBtn.Text = "REFRESH";
             this.RefreshOrdersBtn.UseVisualStyleBackColor = false;
@@ -218,10 +212,9 @@ namespace ChapooUI
             this.RefreshStockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshStockBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RefreshStockBtn.ForeColor = System.Drawing.Color.White;
-            this.RefreshStockBtn.Location = new System.Drawing.Point(434, 752);
-            this.RefreshStockBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RefreshStockBtn.Location = new System.Drawing.Point(289, 489);
             this.RefreshStockBtn.Name = "RefreshStockBtn";
-            this.RefreshStockBtn.Size = new System.Drawing.Size(129, 77);
+            this.RefreshStockBtn.Size = new System.Drawing.Size(86, 50);
             this.RefreshStockBtn.TabIndex = 23;
             this.RefreshStockBtn.Text = "REFRESH";
             this.RefreshStockBtn.UseVisualStyleBackColor = false;
@@ -239,10 +232,9 @@ namespace ChapooUI
             this.BarAlcoholCheck,
             this.BarItemName});
             this.voorraad_barmanLv.HideSelection = false;
-            this.voorraad_barmanLv.Location = new System.Drawing.Point(920, 120);
-            this.voorraad_barmanLv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.voorraad_barmanLv.Location = new System.Drawing.Point(613, 78);
             this.voorraad_barmanLv.Name = "voorraad_barmanLv";
-            this.voorraad_barmanLv.Size = new System.Drawing.Size(924, 651);
+            this.voorraad_barmanLv.Size = new System.Drawing.Size(616, 423);
             this.voorraad_barmanLv.TabIndex = 22;
             this.voorraad_barmanLv.UseCompatibleStateImageBehavior = false;
             this.voorraad_barmanLv.View = System.Windows.Forms.View.Details;
@@ -281,10 +273,9 @@ namespace ChapooUI
             this.voorraadLbl.AutoSize = true;
             this.voorraadLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voorraadLbl.ForeColor = System.Drawing.Color.White;
-            this.voorraadLbl.Location = new System.Drawing.Point(915, 77);
-            this.voorraadLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.voorraadLbl.Location = new System.Drawing.Point(610, 50);
             this.voorraadLbl.Name = "voorraadLbl";
-            this.voorraadLbl.Size = new System.Drawing.Size(121, 22);
+            this.voorraadLbl.Size = new System.Drawing.Size(81, 15);
             this.voorraadLbl.TabIndex = 21;
             this.voorraadLbl.Text = "VOORRAAD";
             // 
@@ -299,11 +290,13 @@ namespace ChapooUI
             this.tb_Table_keuken_bestelling,
             this.tb_Name_keuken_bestelling,
             this.tb_Status_keuken_bestelling});
+            this.keukenbestelling_gereedLv.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.keukenbestelling_gereedLv.ForeColor = System.Drawing.Color.White;
+            this.keukenbestelling_gereedLv.FullRowSelect = true;
             this.keukenbestelling_gereedLv.HideSelection = false;
-            this.keukenbestelling_gereedLv.Location = new System.Drawing.Point(40, 120);
-            this.keukenbestelling_gereedLv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.keukenbestelling_gereedLv.Location = new System.Drawing.Point(27, 78);
             this.keukenbestelling_gereedLv.Name = "keukenbestelling_gereedLv";
-            this.keukenbestelling_gereedLv.Size = new System.Drawing.Size(836, 622);
+            this.keukenbestelling_gereedLv.Size = new System.Drawing.Size(557, 404);
             this.keukenbestelling_gereedLv.TabIndex = 25;
             this.keukenbestelling_gereedLv.UseCompatibleStateImageBehavior = false;
             this.keukenbestelling_gereedLv.View = System.Windows.Forms.View.Details;
@@ -347,11 +340,13 @@ namespace ChapooUI
             this.columnHeader15,
             this.columnHeader16,
             this.columnHeader17});
+            this.voorraad_keukenLv.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.voorraad_keukenLv.ForeColor = System.Drawing.Color.White;
+            this.voorraad_keukenLv.FullRowSelect = true;
             this.voorraad_keukenLv.HideSelection = false;
-            this.voorraad_keukenLv.Location = new System.Drawing.Point(920, 120);
-            this.voorraad_keukenLv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.voorraad_keukenLv.Location = new System.Drawing.Point(613, 78);
             this.voorraad_keukenLv.Name = "voorraad_keukenLv";
-            this.voorraad_keukenLv.Size = new System.Drawing.Size(924, 668);
+            this.voorraad_keukenLv.Size = new System.Drawing.Size(616, 434);
             this.voorraad_keukenLv.TabIndex = 26;
             this.voorraad_keukenLv.UseCompatibleStateImageBehavior = false;
             this.voorraad_keukenLv.View = System.Windows.Forms.View.Details;
@@ -391,80 +386,72 @@ namespace ChapooUI
             this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.tb_pnl_ID_keuken);
             this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.btn_Keuken_Wijzig_Cancel);
             this.pnl_Keuken_Bestelling_Wijzig.Controls.Add(this.btn_Keuken_Wijzig_Accept);
-            this.pnl_Keuken_Bestelling_Wijzig.Location = new System.Drawing.Point(386, 152);
-            this.pnl_Keuken_Bestelling_Wijzig.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_Keuken_Bestelling_Wijzig.Location = new System.Drawing.Point(257, 99);
             this.pnl_Keuken_Bestelling_Wijzig.Name = "pnl_Keuken_Bestelling_Wijzig";
-            this.pnl_Keuken_Bestelling_Wijzig.Size = new System.Drawing.Size(804, 513);
+            this.pnl_Keuken_Bestelling_Wijzig.Size = new System.Drawing.Size(537, 334);
             this.pnl_Keuken_Bestelling_Wijzig.TabIndex = 27;
             this.pnl_Keuken_Bestelling_Wijzig.Visible = false;
             // 
             // tb_pnl_Name_keuken
             // 
             this.tb_pnl_Name_keuken.AutoSize = true;
-            this.tb_pnl_Name_keuken.Location = new System.Drawing.Point(74, 311);
-            this.tb_pnl_Name_keuken.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Name_keuken.Location = new System.Drawing.Point(49, 202);
             this.tb_pnl_Name_keuken.Name = "tb_pnl_Name_keuken";
-            this.tb_pnl_Name_keuken.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Name_keuken.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Name_keuken.TabIndex = 11;
             this.tb_pnl_Name_keuken.Text = "label1";
             // 
             // tb_pnl_Prijs_keuken
             // 
             this.tb_pnl_Prijs_keuken.AutoSize = true;
-            this.tb_pnl_Prijs_keuken.Location = new System.Drawing.Point(74, 262);
-            this.tb_pnl_Prijs_keuken.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Prijs_keuken.Location = new System.Drawing.Point(49, 170);
             this.tb_pnl_Prijs_keuken.Name = "tb_pnl_Prijs_keuken";
-            this.tb_pnl_Prijs_keuken.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Prijs_keuken.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Prijs_keuken.TabIndex = 10;
             this.tb_pnl_Prijs_keuken.Text = "label1";
             // 
             // tb_pnl_Amount_keuken
             // 
             this.tb_pnl_Amount_keuken.AutoSize = true;
-            this.tb_pnl_Amount_keuken.Location = new System.Drawing.Point(74, 209);
-            this.tb_pnl_Amount_keuken.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Amount_keuken.Location = new System.Drawing.Point(49, 136);
             this.tb_pnl_Amount_keuken.Name = "tb_pnl_Amount_keuken";
-            this.tb_pnl_Amount_keuken.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Amount_keuken.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Amount_keuken.TabIndex = 9;
             this.tb_pnl_Amount_keuken.Text = "label1";
             // 
             // tb_pnl_Status_keuken
             // 
             this.tb_pnl_Status_keuken.AutoSize = true;
-            this.tb_pnl_Status_keuken.Location = new System.Drawing.Point(74, 102);
-            this.tb_pnl_Status_keuken.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Status_keuken.Location = new System.Drawing.Point(49, 66);
             this.tb_pnl_Status_keuken.Name = "tb_pnl_Status_keuken";
-            this.tb_pnl_Status_keuken.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Status_keuken.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Status_keuken.TabIndex = 8;
             this.tb_pnl_Status_keuken.Text = "label1";
             // 
             // tb_pnl_Tafel_keuken
             // 
             this.tb_pnl_Tafel_keuken.AutoSize = true;
-            this.tb_pnl_Tafel_keuken.Location = new System.Drawing.Point(74, 152);
-            this.tb_pnl_Tafel_keuken.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Tafel_keuken.Location = new System.Drawing.Point(49, 99);
             this.tb_pnl_Tafel_keuken.Name = "tb_pnl_Tafel_keuken";
-            this.tb_pnl_Tafel_keuken.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Tafel_keuken.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Tafel_keuken.TabIndex = 7;
             this.tb_pnl_Tafel_keuken.Text = "label1";
             // 
             // tb_pnl_ID_keuken
             // 
             this.tb_pnl_ID_keuken.AutoSize = true;
-            this.tb_pnl_ID_keuken.Location = new System.Drawing.Point(69, 58);
-            this.tb_pnl_ID_keuken.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_ID_keuken.Location = new System.Drawing.Point(46, 38);
             this.tb_pnl_ID_keuken.Name = "tb_pnl_ID_keuken";
-            this.tb_pnl_ID_keuken.Size = new System.Drawing.Size(40, 20);
+            this.tb_pnl_ID_keuken.Size = new System.Drawing.Size(28, 13);
             this.tb_pnl_ID_keuken.TabIndex = 6;
             this.tb_pnl_ID_keuken.Text = "Test";
             // 
             // btn_Keuken_Wijzig_Cancel
             // 
             this.btn_Keuken_Wijzig_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Keuken_Wijzig_Cancel.Location = new System.Drawing.Point(420, 403);
-            this.btn_Keuken_Wijzig_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Keuken_Wijzig_Cancel.Location = new System.Drawing.Point(280, 262);
             this.btn_Keuken_Wijzig_Cancel.Name = "btn_Keuken_Wijzig_Cancel";
-            this.btn_Keuken_Wijzig_Cancel.Size = new System.Drawing.Size(225, 49);
+            this.btn_Keuken_Wijzig_Cancel.Size = new System.Drawing.Size(150, 32);
             this.btn_Keuken_Wijzig_Cancel.TabIndex = 5;
             this.btn_Keuken_Wijzig_Cancel.Text = "Cancel";
             this.btn_Keuken_Wijzig_Cancel.UseVisualStyleBackColor = true;
@@ -473,10 +460,9 @@ namespace ChapooUI
             // btn_Keuken_Wijzig_Accept
             // 
             this.btn_Keuken_Wijzig_Accept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Keuken_Wijzig_Accept.Location = new System.Drawing.Point(120, 403);
-            this.btn_Keuken_Wijzig_Accept.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Keuken_Wijzig_Accept.Location = new System.Drawing.Point(80, 262);
             this.btn_Keuken_Wijzig_Accept.Name = "btn_Keuken_Wijzig_Accept";
-            this.btn_Keuken_Wijzig_Accept.Size = new System.Drawing.Size(225, 49);
+            this.btn_Keuken_Wijzig_Accept.Size = new System.Drawing.Size(150, 32);
             this.btn_Keuken_Wijzig_Accept.TabIndex = 4;
             this.btn_Keuken_Wijzig_Accept.Text = "Gereed";
             this.btn_Keuken_Wijzig_Accept.UseVisualStyleBackColor = true;
@@ -489,10 +475,9 @@ namespace ChapooUI
             this.btn_Gereed_Bestelling_Keuken.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Gereed_Bestelling_Keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Gereed_Bestelling_Keuken.ForeColor = System.Drawing.Color.White;
-            this.btn_Gereed_Bestelling_Keuken.Location = new System.Drawing.Point(18, 754);
-            this.btn_Gereed_Bestelling_Keuken.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Gereed_Bestelling_Keuken.Location = new System.Drawing.Point(12, 490);
             this.btn_Gereed_Bestelling_Keuken.Name = "btn_Gereed_Bestelling_Keuken";
-            this.btn_Gereed_Bestelling_Keuken.Size = new System.Drawing.Size(268, 74);
+            this.btn_Gereed_Bestelling_Keuken.Size = new System.Drawing.Size(179, 48);
             this.btn_Gereed_Bestelling_Keuken.TabIndex = 28;
             this.btn_Gereed_Bestelling_Keuken.Text = "GEREED BESTELLING";
             this.btn_Gereed_Bestelling_Keuken.UseVisualStyleBackColor = false;
@@ -510,90 +495,81 @@ namespace ChapooUI
             this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.tb_pnl_ID_bar);
             this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.btn_Bar_Wijzig_Cancel);
             this.pnl_Bar_Bestelling_Wijzig.Controls.Add(this.btn_Bar_Wijzig_Accept);
-            this.pnl_Bar_Bestelling_Wijzig.Location = new System.Drawing.Point(684, 158);
-            this.pnl_Bar_Bestelling_Wijzig.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl_Bar_Bestelling_Wijzig.Location = new System.Drawing.Point(456, 103);
             this.pnl_Bar_Bestelling_Wijzig.Name = "pnl_Bar_Bestelling_Wijzig";
-            this.pnl_Bar_Bestelling_Wijzig.Size = new System.Drawing.Size(804, 513);
+            this.pnl_Bar_Bestelling_Wijzig.Size = new System.Drawing.Size(537, 334);
             this.pnl_Bar_Bestelling_Wijzig.TabIndex = 28;
             this.pnl_Bar_Bestelling_Wijzig.Visible = false;
             // 
             // tb_pnl_Alcohol_bar
             // 
             this.tb_pnl_Alcohol_bar.AutoSize = true;
-            this.tb_pnl_Alcohol_bar.Location = new System.Drawing.Point(74, 351);
-            this.tb_pnl_Alcohol_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Alcohol_bar.Location = new System.Drawing.Point(49, 228);
             this.tb_pnl_Alcohol_bar.Name = "tb_pnl_Alcohol_bar";
-            this.tb_pnl_Alcohol_bar.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Alcohol_bar.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Alcohol_bar.TabIndex = 12;
             this.tb_pnl_Alcohol_bar.Text = "label1";
             // 
             // tb_pnl_Name_bar
             // 
             this.tb_pnl_Name_bar.AutoSize = true;
-            this.tb_pnl_Name_bar.Location = new System.Drawing.Point(74, 311);
-            this.tb_pnl_Name_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Name_bar.Location = new System.Drawing.Point(49, 202);
             this.tb_pnl_Name_bar.Name = "tb_pnl_Name_bar";
-            this.tb_pnl_Name_bar.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Name_bar.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Name_bar.TabIndex = 11;
             this.tb_pnl_Name_bar.Text = "label1";
             // 
             // tb_pnl_Prijs_bar
             // 
             this.tb_pnl_Prijs_bar.AutoSize = true;
-            this.tb_pnl_Prijs_bar.Location = new System.Drawing.Point(74, 262);
-            this.tb_pnl_Prijs_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Prijs_bar.Location = new System.Drawing.Point(49, 170);
             this.tb_pnl_Prijs_bar.Name = "tb_pnl_Prijs_bar";
-            this.tb_pnl_Prijs_bar.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Prijs_bar.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Prijs_bar.TabIndex = 10;
             this.tb_pnl_Prijs_bar.Text = "label1";
             // 
             // tb_pnl_Amount_bar
             // 
             this.tb_pnl_Amount_bar.AutoSize = true;
-            this.tb_pnl_Amount_bar.Location = new System.Drawing.Point(74, 209);
-            this.tb_pnl_Amount_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Amount_bar.Location = new System.Drawing.Point(49, 136);
             this.tb_pnl_Amount_bar.Name = "tb_pnl_Amount_bar";
-            this.tb_pnl_Amount_bar.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Amount_bar.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Amount_bar.TabIndex = 9;
             this.tb_pnl_Amount_bar.Text = "label1";
             // 
             // tb_pnl_Status_bar
             // 
             this.tb_pnl_Status_bar.AutoSize = true;
-            this.tb_pnl_Status_bar.Location = new System.Drawing.Point(74, 102);
-            this.tb_pnl_Status_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Status_bar.Location = new System.Drawing.Point(49, 66);
             this.tb_pnl_Status_bar.Name = "tb_pnl_Status_bar";
-            this.tb_pnl_Status_bar.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Status_bar.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Status_bar.TabIndex = 8;
             this.tb_pnl_Status_bar.Text = "label1";
             // 
             // tb_pnl_Tafel_bar
             // 
             this.tb_pnl_Tafel_bar.AutoSize = true;
-            this.tb_pnl_Tafel_bar.Location = new System.Drawing.Point(74, 152);
-            this.tb_pnl_Tafel_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_Tafel_bar.Location = new System.Drawing.Point(49, 99);
             this.tb_pnl_Tafel_bar.Name = "tb_pnl_Tafel_bar";
-            this.tb_pnl_Tafel_bar.Size = new System.Drawing.Size(51, 20);
+            this.tb_pnl_Tafel_bar.Size = new System.Drawing.Size(35, 13);
             this.tb_pnl_Tafel_bar.TabIndex = 7;
             this.tb_pnl_Tafel_bar.Text = "label1";
             // 
             // tb_pnl_ID_bar
             // 
             this.tb_pnl_ID_bar.AutoSize = true;
-            this.tb_pnl_ID_bar.Location = new System.Drawing.Point(69, 58);
-            this.tb_pnl_ID_bar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_pnl_ID_bar.Location = new System.Drawing.Point(46, 38);
             this.tb_pnl_ID_bar.Name = "tb_pnl_ID_bar";
-            this.tb_pnl_ID_bar.Size = new System.Drawing.Size(40, 20);
+            this.tb_pnl_ID_bar.Size = new System.Drawing.Size(28, 13);
             this.tb_pnl_ID_bar.TabIndex = 6;
             this.tb_pnl_ID_bar.Text = "Test";
             // 
             // btn_Bar_Wijzig_Cancel
             // 
             this.btn_Bar_Wijzig_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Bar_Wijzig_Cancel.Location = new System.Drawing.Point(420, 403);
-            this.btn_Bar_Wijzig_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Bar_Wijzig_Cancel.Location = new System.Drawing.Point(280, 262);
             this.btn_Bar_Wijzig_Cancel.Name = "btn_Bar_Wijzig_Cancel";
-            this.btn_Bar_Wijzig_Cancel.Size = new System.Drawing.Size(225, 49);
+            this.btn_Bar_Wijzig_Cancel.Size = new System.Drawing.Size(150, 32);
             this.btn_Bar_Wijzig_Cancel.TabIndex = 5;
             this.btn_Bar_Wijzig_Cancel.Text = "Cancel";
             this.btn_Bar_Wijzig_Cancel.UseVisualStyleBackColor = true;
@@ -602,10 +578,9 @@ namespace ChapooUI
             // btn_Bar_Wijzig_Accept
             // 
             this.btn_Bar_Wijzig_Accept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Bar_Wijzig_Accept.Location = new System.Drawing.Point(120, 403);
-            this.btn_Bar_Wijzig_Accept.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Bar_Wijzig_Accept.Location = new System.Drawing.Point(80, 262);
             this.btn_Bar_Wijzig_Accept.Name = "btn_Bar_Wijzig_Accept";
-            this.btn_Bar_Wijzig_Accept.Size = new System.Drawing.Size(225, 49);
+            this.btn_Bar_Wijzig_Accept.Size = new System.Drawing.Size(150, 32);
             this.btn_Bar_Wijzig_Accept.TabIndex = 4;
             this.btn_Bar_Wijzig_Accept.Text = "Gereed";
             this.btn_Bar_Wijzig_Accept.UseVisualStyleBackColor = true;
@@ -613,10 +588,10 @@ namespace ChapooUI
             // 
             // BarKeukenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(1862, 863);
+            this.ClientSize = new System.Drawing.Size(1241, 561);
             this.Controls.Add(this.pnl_Bar_Bestelling_Wijzig);
             this.Controls.Add(this.pnl_Keuken_Bestelling_Wijzig);
             this.Controls.Add(this.voorraad_keukenLv);
@@ -631,7 +606,6 @@ namespace ChapooUI
             this.Controls.Add(this.ingekomen_bestellingenLbl);
             this.Controls.Add(this.LogOffLink);
             this.Controls.Add(this.Chapoo_title);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BarKeukenForm";
             this.Text = "BarForm";
             this.pnl_Keuken_Bestelling_Wijzig.ResumeLayout(false);

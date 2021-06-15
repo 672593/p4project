@@ -6,62 +6,149 @@ using System.Threading.Tasks;
 using ChapooDAL;
 using ChapooModel;
 
-//Made by Anel Gusinac
+
 namespace ChapooLogic
 {
+    //Made by Anel Gusinac
     public class MenuItems_Service
     {
-
         MenuAdmin_DAO menuAdminDao = new MenuAdmin_DAO();
-
         //Gets all menuNames
         public List<MenuItems> GetMenuNames()
         {
-            return menuAdminDao.GetMenuNames();
-        }
+            try
+            {
+                return menuAdminDao.GetMenuNames();
+            }
+            catch (Exception e)
+            {
+                List<MenuItems> mItems = new List<MenuItems>();
+                MenuItems m = new MenuItems();
+                m.MenuItemName = "No items found.";
 
+                mItems.Add(m);
+
+                return mItems;
+            }
+        }
         //Only returns menuItem and Stock by menuId
         public List<MenuItems> GetMenuItemStock(int menuId)
         {
-            return menuAdminDao.GetMenuItemStock(menuId);
-        }
+            try
+            {
+                return menuAdminDao.GetMenuItemStock(menuId);
+            }
+            catch (Exception e)
+            {
+                List<MenuItems> mItems = new List<MenuItems>();
+                MenuItems m = new MenuItems();
+                m.MenuItemName = "No items found.";
 
+                mItems.Add(m);
+
+                return mItems;
+            }
+        }
         //Gets all menu items by menuId, inclding price alcoholbool etc.
         public List<MenuItems> GetAllMenuItemsByMenuId(int menuId)
         {
-            return menuAdminDao.GetMenuItemsByMenuId(menuId);
-        }
+            try
+            {
+                return menuAdminDao.GetMenuItemsByMenuId(menuId);
+            }
+            catch (Exception e)
+            {
+                List<MenuItems> mItems = new List<MenuItems>();
+                MenuItems m = new MenuItems();
+                m.MenuItemName = "No items found.";
 
+                mItems.Add(m);
+
+                return mItems;
+            }
+        }
         //werkt voorraad van een product bij.
         public void UpdateMenuItemStock(int id, int stock)
         {
-            menuAdminDao.UpdateMenuItemStock(id, stock);
+            try
+            {
+                menuAdminDao.UpdateMenuItemStock(id, stock);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         //Creates menu item
         public void CreateMenuItem(int menuId, double price, int stock, int alcohol, string name)
         {
-            menuAdminDao.CreateMenuItem(menuId, price, stock, alcohol, name);
+            try
+            {
+                menuAdminDao.CreateMenuItem(menuId, price, stock, alcohol, name);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         }
         //remove menu item by ID
         public void DeleteMenuItem(int menuId)
         {
-            menuAdminDao.DeleteMenuItem(menuId);
+            try
+            {
+                menuAdminDao.DeleteMenuItem(menuId);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         public void UpdateMenuItem(int menuItemId, string name, double price, int alcohol)
         {
-            menuAdminDao.UpdateMenuItem(menuItemId, name, price, alcohol);
+
+            try
+            {
+                menuAdminDao.UpdateMenuItem(menuItemId, name, price, alcohol);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         public void CreateMenu(string menuName)
         {
-            menuAdminDao.CreateMenu(menuName);
+            try
+            {
+                menuAdminDao.CreateMenu(menuName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         public void UpdateMenu(int menuId, string menuName)
         {
-            menuAdminDao.UpdateMenu(menuId, menuName);
+            try
+            {
+                menuAdminDao.UpdateMenu(menuId, menuName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         public void DeleteMenu(int menuId)
         {
-            menuAdminDao.DeleteMenu(menuId);
+            try
+            {
+                menuAdminDao.DeleteMenu(menuId);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         }
     }
 }
