@@ -91,12 +91,10 @@ namespace ChapooUI
         }
         private void DeleteOrderItemBtn_Click(object sender, EventArgs e)
         {
-            int selectOrderItemId;
-            int selectmenuItemId;
             if (AllOrderslv.SelectedItems.Count > 0)
             {
-                selectOrderItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[0].Text);
-                selectmenuItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[1].Text);
+                int selectOrderItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[0].Text);
+                int selectmenuItemId = int.Parse(AllOrderslv.SelectedItems[0].SubItems[1].Text);
 
                 if (be_service.DeleteOrderItem(selectmenuItemId, selectOrderItemId) == true)
                 {
@@ -245,7 +243,7 @@ namespace ChapooUI
             int menuId = MenuDD.SelectedIndex + 1;
             int menuItemId = ConsumptieDD.SelectedIndex + 1;
             FillMenuItem(menuId);
-            consumptieLabel.Text = menuItemId.ToString();
+            // consumptieLabel.Text = menuItemId.ToString();
 
             //  text = int.Parse(m_service.GetSelectedMenuItemId(menuId, menuItemId));
 
@@ -393,7 +391,7 @@ namespace ChapooUI
 
             if (!string.IsNullOrEmpty(reservationName))
             {
-                tableId = tableId;
+                tableId = int.Parse(Reservationlv.SelectedItems[0].SubItems[1].Text);
                 reservationTel = telBox.Text;
                 reservationName = aamBox.Text;
                 reservationEmail = emailBox.Text;

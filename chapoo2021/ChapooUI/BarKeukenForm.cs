@@ -29,7 +29,7 @@ namespace ChapooUI
                 voorraad_barmanLv.Hide();
                 RefreshOrdersBtn.Hide();
                 btn_Gereed_Bestelling_Bar.Hide();
-                Chapoo_title.Text = "Chapoo | Keuken";
+                Chapoo_title.Text = "| Keuken";
             }
             else
             {
@@ -39,7 +39,7 @@ namespace ChapooUI
                 voorraad_keukenLv.Hide();
                 RefreshStockBtn.Hide();
                 btn_Gereed_Bestelling_Keuken.Hide();
-                Chapoo_title.Text = "Chapoo | Barman";
+                Chapoo_title.Text = "| Barman";
             }
         }
 
