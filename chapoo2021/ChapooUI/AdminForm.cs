@@ -12,7 +12,7 @@ using ChapooLogic;
 
 namespace ChapooUI
 {
- //Made by Anel Gusinac
+    //Made by Anel Gusinac
     public partial class AdminForm : Form
     {
         private MenuItems_Service menuItemService = new MenuItems_Service();
@@ -28,6 +28,7 @@ namespace ChapooUI
 
             ShowPanel("pnlAdminHome");
         }
+        //Error Handling functions
         private void CallErrorPanel(string errorText)
         {
             lblAdminMessageText.Text = errorText;
@@ -41,6 +42,43 @@ namespace ChapooUI
             foreach (Control ctrl in container.Controls)
                 HidePanelsRecursively(ctrl);
         }
+        private bool CheckPanelTextboxesIfEmpty(Panel panel)
+        {
+            foreach (TextBox s in panel.Controls.OfType<TextBox>())
+            {
+                if (string.IsNullOrEmpty(s.Text))
+                {
+                    CallErrorPanel($"Alle velden moeten ingevuld zijn.");
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool IfTextBoxIsEmpty(TextBox txtBox, string errorMessage)
+        {
+            if (txtBox.Text == "")
+            {
+                CallErrorPanel(errorMessage);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool IsDouble(string text)
+        {
+            double num = 0;
+            bool isDouble = false;
+
+            if (string.IsNullOrEmpty(text))
+                return false;
+
+            isDouble = double.TryParse(text, out num);
+
+            return isDouble;
+        }
+        //Hides all panels and displays given panel.
         private void ShowPanel(string panelName)
         {
             if (panelName == "pnlAdminStock")
@@ -71,9 +109,14 @@ namespace ChapooUI
                 pnlAdminUsers.Show();
             }
         }
+        //Cancel Buttons and linking buttons
         private void btnAdminStock_Click(object sender, EventArgs e)
         {
             ShowPanel("pnlAdminStock");
+        }
+        private void btnAdminStockBack_Click(object sender, EventArgs e)
+        {
+            pnlAdminStockEdit.Hide();
         }
         private void btnAdminMenuArticles_Click(object sender, EventArgs e)
         {
@@ -91,6 +134,31 @@ namespace ChapooUI
         {
             ShowPanel("pnlAdminUsers");
         }
+        private void btnAdminMenuCardsCreate_Click(object sender, EventArgs e)
+        {
+            pnlAdminMenuCardsCreate.Show();
+        }
+        private void btnAdminMenuCardsCancel_Click(object sender, EventArgs e)
+        {
+            pnlAdminMenuCardsCreate.Hide();
+        }
+        private void btnAdminCloseDeleteMessage_Click(object sender, EventArgs e)
+        {
+            pnlAdminMessagePanel.Hide();
+        }
+        private void btnAdminMenuItemsBack2_Click(object sender, EventArgs e)
+        {
+            pnlAdminMenuItemsEdit.Hide();
+        }
+        private void btnAdminUsersCreateCancel_Click(object sender, EventArgs e)
+        {
+            pnlAdminUsersCreate.Hide();
+        }
+        private void btnAdminUsersEditCancel_Click(object sender, EventArgs e)
+        {
+            pnlAdminUsersEdit.Hide();
+        }
+        //Fills comboboxes with menu names.
         public void FillCmbMenuNames()
         {
             List<MenuItems> menuList = menuItemService.GetMenuNames();
@@ -105,24 +173,14 @@ namespace ChapooUI
             cmbAdminMenuNames.SelectedIndex = 0;
             cmbAdminMenuNames2.SelectedIndex = 0;
         }
+        //Fills listviews with ID from combobox. (Selects particular menu)
         private void cmbAdminMenuNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             int menuId = cmbAdminMenuNames.SelectedIndex + 1;
             FillLvMenuItems(menuId);
             FillLvMenuItem(menuId);
         }
-        private bool IfTextBoxIsEmpty(TextBox txtBox, string errorMessage)
-        {
-            if(txtBox.Text == "")
-            {
-                CallErrorPanel(errorMessage);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //Function fills Listview with menuItemName & Stock that are in the menu with the given ID.
         public void FillLvMenuItems(int menuId)
         {
             List<MenuItems> menuList = menuItemService.GetMenuItemStock(menuId);
@@ -136,6 +194,7 @@ namespace ChapooUI
                 lvAdminMenuItemStock.Items.Add(item);
             }
         }
+        //Fills Listview with product id, name, price, alcoholic etc. 
         public void FillLvMenuItem(int menuId)
         {
             List<MenuItems> menuList = menuItemService.GetAllMenuItemsByMenuId(menuId);
@@ -157,6 +216,7 @@ namespace ChapooUI
                 lvAdminMenuItemList.Items.Add(item);
             }
         }
+        //Checks if stock LV has been selected and than opens edit panel.
         private void btnAdminChangeStock_Click(object sender, EventArgs e)
         {
             if (lvAdminMenuItemStock.SelectedItems.Count > 0)
@@ -169,22 +229,27 @@ namespace ChapooUI
             else
                 CallErrorPanel("Selecteer het product dat u wilt wijzigen!");
         }
-        private void btnAdminStockBack_Click(object sender, EventArgs e)
-        {
-            pnlAdminStockEdit.Hide();
-        }
+        //Updates stock of selected product. 
         private void btnAdminStockEdit_Click(object sender, EventArgs e)
         {
             int id = int.Parse(lvAdminMenuItemStock.SelectedItems[0].SubItems[0].Text);
             string name = lvAdminMenuItemStock.SelectedItems[0].SubItems[1].Text;
-            int productStock = int.Parse(tbAdminStock.Text);
 
-            menuItemService.UpdateMenuItemStock(id, productStock);
-            FillLvMenuItems(cmbAdminMenuNames.SelectedIndex + 1);
 
-            pnlAdminStockEdit.Hide();
+            if (!tbAdminStock.Text.All(char.IsDigit))
+                CallErrorPanel("U kunt alleen getallen invoeren als voorraad.");
+            else if (IfTextBoxIsEmpty(tbAdminStock, "Het voorraad mag niet leeg gelaten worden. ") == true)
+                CallErrorPanel("Het veld voorraad mag niet leeg gelaten worden.");
+            else
+            {
+                int productStock = int.Parse(tbAdminStock.Text);
+                menuItemService.UpdateMenuItemStock(id, productStock);
+                FillLvMenuItems(cmbAdminMenuNames.SelectedIndex + 1);
 
-            CallErrorPanel($"De voorraad van het product: {name} is aangepast.");
+                pnlAdminStockEdit.Hide();
+
+                CallErrorPanel($"De voorraad van het product: {name} is aangepast.");
+            }
         }
         //Fills combobox on menuArticles listview
         private void cmbAdminMenuNames2_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,6 +275,14 @@ namespace ChapooUI
         //Create method
         private void btnAdminMenuItemsCreate_Click(object sender, EventArgs e)
         {
+            if (!CheckPanelTextboxesIfEmpty(pnlAdminMenuItemsCreate))
+                return;
+            else if (!tbAdminMenuItemStock.Text.All(char.IsDigit))
+                CallErrorPanel("U kunt alleen getallen invoeren als voorraad.");
+            else if (!IsDouble(tbAdminMenuItemPrice.Text))
+                CallErrorPanel("De prijs moet bestaan uit getallen en gescheiden zijn met een comma (,)");
+            else
+            {
                 int menuId = cmbAdminMenuNames2.SelectedIndex + 1;
                 double price = double.Parse(tbAdminMenuItemPrice.Text);
                 int stock = int.Parse(tbAdminMenuItemStock.Text);
@@ -223,6 +296,7 @@ namespace ChapooUI
                 pnlAdminMenuItemsCreate.Hide();
 
                 CallErrorPanel($"Het product: {itemName} is aangemaakt.");
+            }
         }
         //Open editing form in panel 
         private void btnAdminEditMenuItem_Click(object sender, EventArgs e)
@@ -265,29 +339,32 @@ namespace ChapooUI
             else
                 CallErrorPanel("Selecteer het product dat u wilt verwijderen!");
         }
-        private void btnAdminCloseDeleteMessage_Click(object sender, EventArgs e)
-        {
-            pnlAdminMessagePanel.Hide();
-        }
-        private void btnAdminMenuItemsBack2_Click(object sender, EventArgs e)
-        {
-            pnlAdminMenuItemsEdit.Hide();
-        }
+
+        //Updates menuItem
         private void btnAdminMenuItemsUpdate_Click(object sender, EventArgs e)
         {
-            int menuItemId = int.Parse(lvAdminMenuItemList.SelectedItems[0].SubItems[0].Text);
-            string name = tbAdminMenuItemName2.Text;
-            double price = double.Parse(tbAdminMenuItemPrice2.Text);
-            int alcohol = cmbAdminAlcohol2.SelectedIndex;
+            if (!CheckPanelTextboxesIfEmpty(pnlAdminMenuItemsEdit))
+                return;
+            else if (!IsDouble(tbAdminMenuItemPrice2.Text))
+                CallErrorPanel("Prijs moet bestaan uit getallen gescheiden met een comma");
+            else
+            {
+                int menuItemId = int.Parse(lvAdminMenuItemList.SelectedItems[0].SubItems[0].Text);
+                string name = tbAdminMenuItemName2.Text;
+                double price = double.Parse(tbAdminMenuItemPrice2.Text);
+                int alcohol = cmbAdminAlcohol2.SelectedIndex;
 
-            menuItemService.UpdateMenuItem(menuItemId, name, price, alcohol);
+                menuItemService.UpdateMenuItem(menuItemId, name, price, alcohol);
 
-            FillLvMenuItem(cmbAdminMenuNames2.SelectedIndex + 1);
+                FillLvMenuItem(cmbAdminMenuNames2.SelectedIndex + 1);
 
-            pnlAdminMenuItemsEdit.Hide();
+                pnlAdminMenuItemsEdit.Hide();
 
-            CallErrorPanel($"Het product: {name} is aangepast.");
+                CallErrorPanel($"Het product: {name} is aangepast.");
+            }
         }
+
+        //MenuCards Panel
         public void FillLvMenuCards()
         {
             lvAdminMenuCardsList.Items.Clear();
@@ -300,17 +377,9 @@ namespace ChapooUI
                 lvAdminMenuCardsList.Items.Add(subItem);
             }
         }
-        private void btnAdminMenuCardsCreate_Click(object sender, EventArgs e)
-        {
-            pnlAdminMenuCardsCreate.Show();
-        }
-        private void btnAdminMenuCardsCancel_Click(object sender, EventArgs e)
-        {
-            pnlAdminMenuCardsCreate.Hide();
-        }
         private void btnAdminMenuCardsInsert_Click(object sender, EventArgs e)
         {
-            if(!IfTextBoxIsEmpty(tbAdminMenuCardName, "U bent vergeten het menu een naam te geven."))
+            if (!IfTextBoxIsEmpty(tbAdminMenuCardName, "U bent vergeten het menu een naam te geven."))
             {
                 string menuName = tbAdminMenuCardName.Text;
                 menuItemService.CreateMenu(menuName);
@@ -368,6 +437,8 @@ namespace ChapooUI
             else
                 CallErrorPanel($"Selecteer het menu dat u wilt verwijderen.");
         }
+
+        //Werknemers panel
         private void FillLVAdminUsers()
         {
             lvAdminUsers.Items.Clear();
@@ -432,10 +503,10 @@ namespace ChapooUI
 
                 admin_tbEditUsername.Text = user.Name;
                 admin_tbEditCode.Text = user.EmployeeCode;
-                admin_cmbEditFunction.SelectedIndex = user.FunctionId -1;
+                admin_cmbEditFunction.SelectedIndex = user.FunctionId - 1;
                 admin_tbEditQuestion.Text = user.SecretQuestion;
-                admin_tbEditAnswer.Text = user.SecretAnswer; 
-                
+                admin_tbEditAnswer.Text = user.SecretAnswer;
+
                 pnlAdminUsersEdit.Show();
             }
             else
@@ -450,31 +521,11 @@ namespace ChapooUI
             FillCreateFunctionsCMB();
             admin_cmbCreateFunction.SelectedIndex = 0;
         }
-        private void btnAdminUsersCreateCancel_Click(object sender, EventArgs e)
-        {
-            pnlAdminUsersCreate.Hide();
-        }
-        private void btnAdminUsersEditCancel_Click(object sender, EventArgs e)
-        {
-            pnlAdminUsersEdit.Hide();
-        }
-        private bool CheckPanelTextboxesIfEmpty(Panel panel)
-        {
-            foreach (TextBox s in panel.Controls.OfType<TextBox>())
-            {
-                if (string.IsNullOrEmpty(s.Text))
-                {
-                    CallErrorPanel($"Alle velden moeten ingevuld zijn.");
-                    return false;
-                }
-            }
-            return true;
-        }
+        //Inserts user after error checking/handling
         private void btnAdminUsersInsert_Click(object sender, EventArgs e)
         {
             if (!CheckPanelTextboxesIfEmpty(pnlAdminUsersCreate))
                 return;
-
             if (!userService.PasswordIsEqual(admin_tbCreatePassword.Text, admin_tbCreatePassword2.Text))
             {
                 CallErrorPanel($"Wachtwoorden moeten gelijk zijn!");
@@ -516,8 +567,10 @@ namespace ChapooUI
                 pnlAdminUsersCreate.Hide();
             }
         }
+        //Updates users after some error checking/handling
         private void btnAdminUsersUpdate_Click(object sender, EventArgs e)
         {
+            pnlAdminUsersEdit.Hide();
             int newValue;
             if (!CheckPanelTextboxesIfEmpty(pnlAdminUsersEdit))
                 return;
@@ -542,10 +595,13 @@ namespace ChapooUI
                 };
                 userService.UpdateUser(user);
                 CallErrorPanel($"De gebruiker: {user.Name} is bijgewerkt!");
+
+                FillLVAdminUsers();
+
             }
         }
 
-        //Login & Logout zijn gemaakt door Jelle De Vries
+        //Logout gemaakt door Jelle De Vries
         private void lblAdminLogOut_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Weet u zeker dat u wilt uitloggen?", "Uitloggen", MessageBoxButtons.YesNo);

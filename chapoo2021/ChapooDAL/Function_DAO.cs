@@ -17,7 +17,7 @@ namespace ChapooDAL
 
             SqlParameter[] sqlp = new SqlParameter[1]
             {
-                    new SqlParameter("@id", Employee.employeeId)
+                    new SqlParameter("@id", Employee.username)
             };
 
             DataTable acc = ExecuteSelectQuery("GetFunction", sqlp);

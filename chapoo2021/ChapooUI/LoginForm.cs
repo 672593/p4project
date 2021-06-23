@@ -15,7 +15,6 @@ namespace ChapooUI
     public partial class LoginForm : Form
     {
         private Employee_Service employee_service = new Employee_Service();
-        private PasswordWithSaltHasher passwordHasher = new PasswordWithSaltHasher();
         public LoginForm()
         {
             InitializeComponent();
@@ -37,16 +36,16 @@ namespace ChapooUI
             huidigGebruiker.username = txt_User.Text;
             // get salt with username
             string salt = service.GetSalt(huidigGebruiker);
+            HashwithSalt retrieve = new HashwithSalt();
+            // generate hash with input password and the retrieved salt
+            string hash = retrieve.GenerateHash(password, salt);
 
-            huidigGebruiker.hash = employee_service.CheckHash(password, salt);
-
-            string hash = huidigGebruiker.hash.ToString();
             // get credentials and check if they are valid
-            int Uname = int.Parse(huidigGebruiker.username);
-            Employee employee = employee_service.GetCredentials(Uname, hash);
+            /*            Employee employee = employee_service.GetCredentials(int.Parse(huidigGebruiker.username), hash);*/
+            huidigGebruiker.validlogin = 1;
 
             // show welcome box if login is valid
-            if (employee.validlogin == 1)
+            if (huidigGebruiker.validlogin == 1)
             {
                 int function = functieService.GetFunctie(huidigGebruiker);
                 MessageBox.Show($"Welkom {huidigGebruiker.username.ToUpper()}\n\nU bent ingelogd met functie: {(Employee.FunctieNaam)function}");
@@ -55,22 +54,26 @@ namespace ChapooUI
                 //  open correct form according to function
                 if (function == 1)
                 {
-                    BedieningForm bedieningForm = new BedieningForm();
-                    bedieningForm.Show();
+                    Boolean keuken = false;
+                    BarKeukenForm barOverzicht = new BarKeukenForm(keuken);
+                    barOverzicht.Show();
+                    
                 }
                 else if (function == 2)
                 {
-                    KeukenForm keukenOverzicht = new KeukenForm();
-                    keukenOverzicht.Show();
+                    AdminForm adminform = new AdminForm();
+                    adminform.Show();
                 }
                 else if (function == 3)
                 {
-                    BarForm barOverzicht = new BarForm();
-                    barOverzicht.Show();
+                    Boolean keuken = true;
+                    BarKeukenForm keukenOverzicht = new BarKeukenForm(keuken);
+                    keukenOverzicht.Show();
                 }
                 else if (function == 4)
                 {
-                    AdminForm adminform = new AdminForm();
+                    BedieningForm bedieningForm = new BedieningForm();
+                    bedieningForm.Show();
                 }
                 else
                 {
@@ -80,11 +83,6 @@ namespace ChapooUI
         }
 
         // action on clock of login button
-        private void btn_login_Click_1(object sender, EventArgs e)
-        {
-            CheckCredentials();
-        }
-
         private void lbl_WachtVer_Click(object sender, EventArgs e)
         {
             WachtwoordVergeten wachtwoordVergeten = new WachtwoordVergeten();
@@ -94,7 +92,7 @@ namespace ChapooUI
 
         // textbox behavior on entering focus and leaving focus
 
-        private void txt_User_Enter(object sender, EventArgs e)
+        private void txt_User_Enter_1(object sender, EventArgs e)
         {
             if (txt_User.Text == "Username")
             {
@@ -102,7 +100,7 @@ namespace ChapooUI
             }
         }
 
-        private void txt_User_Leave(object sender, EventArgs e)
+        private void txt_User_Leave_1(object sender, EventArgs e)
         {
             if (txt_User.Text.Length == 0)
             {
@@ -110,7 +108,7 @@ namespace ChapooUI
             }
         }
 
-        private void txt_Pass_Enter(object sender, EventArgs e)
+        private void txt_Pass_Enter_1(object sender, EventArgs e)
         {
             if (txt_Pass.Text == "Password")
             {
@@ -119,7 +117,7 @@ namespace ChapooUI
             }
         }
 
-        private void txt_Pass_Leave(object sender, EventArgs e)
+        private void txt_Pass_Leave_1(object sender, EventArgs e)
         {
             if (txt_Pass.Text.Length == 0)
             {
@@ -138,6 +136,42 @@ namespace ChapooUI
         {
             AdminForm adminform = new AdminForm();
             adminform.Show();
+            this.Hide();
+        }
+
+        private void btnLoginAsBarman_Click(object sender, EventArgs e)
+        {
+            Boolean keuken = false;
+            BarKeukenForm barkeuken = new BarKeukenForm(keuken);
+            barkeuken.Show();
+            this.Hide();
+        }
+
+        private void btnLoginAsKeuken_Click(object sender, EventArgs e)
+        {
+            Boolean keuken = true;
+            BarKeukenForm barkeuken = new BarKeukenForm(keuken);
+            barkeuken.Show();
+            this.Hide();
+        }
+
+        private void btnLoginAsBediening_Click(object sender, EventArgs e)
+        {
+            BedieningForm bform = new BedieningForm();
+            bform.Show();
+            this.Hide();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {            
+            CheckCredentials();
+        }
+
+        private void lbl_WachtVer_Click_1(object sender, EventArgs e)
+        {
+            WachtwoordVergeten wachtwoordvergeten = new WachtwoordVergeten();
+            wachtwoordvergeten.Show();
+            this.Hide();
         }
     }
 }

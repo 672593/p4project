@@ -65,11 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BarForm.cs">
+    <Compile Include="BarKeukenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BarForm.Designer.cs">
-      <DependentUpon>BarForm.cs</DependentUpon>
+    <Compile Include="BarKeukenForm.Designer.cs">
+      <DependentUpon>BarKeukenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BedieningForm.cs">
       <SubType>Form</SubType>
@@ -82,12 +82,6 @@
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KeukenForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KeukenForm.Designer.cs">
-      <DependentUpon>KeukenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -105,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarKeukenForm.resx">
+      <DependentUpon>BarKeukenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BedieningForm.resx">
       <DependentUpon>BedieningForm.cs</DependentUpon>
@@ -162,6 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png_logo_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

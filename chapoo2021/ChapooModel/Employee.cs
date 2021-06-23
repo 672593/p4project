@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ChapooModel;
 
 namespace ChapooModel
 {
@@ -17,8 +16,6 @@ namespace ChapooModel
         public String SecretQuestion { get; set; }
         public String SecretAnswer { get; set; }
         public String Salt { get; set; }
-
-        public HashWithSalt hash;
 
         public int validlogin;
 
@@ -39,7 +36,7 @@ namespace ChapooModel
 
         public enum FunctieNaam
         {
-            Bediening = 1, Kok, Barman, Eigenaar
+            Bar = 1, Eigenaar, Kok, Bediening
         }
     }
 }
