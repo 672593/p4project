@@ -72,6 +72,7 @@ namespace ChapooUI
             this.lbl_WachtVer.Size = new System.Drawing.Size(181, 21);
             this.lbl_WachtVer.TabIndex = 11;
             this.lbl_WachtVer.Text = "Wachtwoord Vergeten?";
+            this.lbl_WachtVer.Click += new System.EventHandler(this.lbl_WachtVer_Click_1);
             // 
             // txt_User
             // 
@@ -85,6 +86,8 @@ namespace ChapooUI
             this.txt_User.TabIndex = 10;
             this.txt_User.Text = "Username";
             this.txt_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_User.Enter += new System.EventHandler(this.txt_User_Enter_1);
+            this.txt_User.Leave += new System.EventHandler(this.txt_User_Leave_1);
             // 
             // txt_Pass
             // 
@@ -98,6 +101,8 @@ namespace ChapooUI
             this.txt_Pass.TabIndex = 9;
             this.txt_Pass.Text = "Password";
             this.txt_Pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Pass.Enter += new System.EventHandler(this.txt_Pass_Enter_1);
+            this.txt_Pass.Leave += new System.EventHandler(this.txt_Pass_Leave_1);
             // 
             // btn_login
             // 

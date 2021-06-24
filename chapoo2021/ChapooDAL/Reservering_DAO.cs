@@ -38,6 +38,11 @@ namespace ChapooDAL
             return reserv;
         }
 
+        public void EditReservering(Reservering r)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteReservation(int reservationId)
         {
             SqlParameter sqlq = new SqlParameter("@reservationId", reservationId);
@@ -60,15 +65,15 @@ namespace ChapooDAL
             ExecuteEditQuery("EditReservering", sqlParameters);
         }
 
-        public void InsertReservering(Reservering re)
+        public void InsertReservering(int reservationId, int tableId, string reservationName, string reservationTel, string reservationEmail, string reservationComment, DateTime reservationDate)
         {
-            SqlParameter sqlq = new SqlParameter("@reservationId", re.reservationId);
-            SqlParameter sqlq1 = new SqlParameter("@tableId", re.tableId);
-            SqlParameter sqlq2 = new SqlParameter("@reservationName", re.reservationName);
-            SqlParameter sqlq3 = new SqlParameter("@reservationTel", re.reservationTel);
-            SqlParameter sqlq4 = new SqlParameter("@reservationEmail", re.reservationEmail);
-            SqlParameter sqlq5 = new SqlParameter("@reservationComment", re.reservationComment);
-            SqlParameter sqlq6 = new SqlParameter("@reservationDate", re.reservationDate);
+            SqlParameter sqlq = new SqlParameter("@reservationId", reservationId);
+            SqlParameter sqlq1 = new SqlParameter("@tableId", tableId);
+            SqlParameter sqlq2 = new SqlParameter("@reservationName", reservationName);
+            SqlParameter sqlq3 = new SqlParameter("@reservationTel", reservationTel);
+            SqlParameter sqlq4 = new SqlParameter("@reservationEmail", reservationEmail);
+            SqlParameter sqlq5 = new SqlParameter("@reservationComment", reservationComment);
+            SqlParameter sqlq6 = new SqlParameter("@reservationDate", reservationDate);
             SqlParameter[] sqlParameters = new SqlParameter[] { sqlq, sqlq1, sqlq2, sqlq3, sqlq4, sqlq5, sqlq6 };
 
             ExecuteEditQuery("InsertReservering", sqlParameters);

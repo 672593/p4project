@@ -42,15 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Afreken_Service.cs" />
-    <Compile Include="BarBestellingLogic.cs" />
-    <Compile Include="BarLogic.cs" />
     <Compile Include="BestellingItem_Service.cs" />
     <Compile Include="Bestelling_Service.cs" />
     <Compile Include="Employee_Service.cs" />
     <Compile Include="Function_service.cs" />
     <Compile Include="HashwithSalt.cs" />
-    <Compile Include="KeukenBestellingLogic.cs" />
-    <Compile Include="KeukenLogic.cs" />
+    <Compile Include="KeukenBarBestelling_Service.cs" />
     <Compile Include="MenuItems_Service.cs" />
     <Compile Include="Menu_Service.cs" />
     <Compile Include="PasswordWithSaltHasher.cs" />

@@ -9,246 +9,123 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
+
 
 namespace ChapooUI
 {
     public partial class BarKeukenForm : Form
     {
 
-        //Hier moet code staan voor het controller op login//
-        //Boolean checkKeuken = false;//
-        public BarKeukenForm(Boolean checkKeuken)
+        private static System.Timers.Timer aTimer = new System.Timers.Timer(10000);
+        public Boolean checkKeukenBar;
+        public Boolean checkOpenstaand = true;
+
+        public BarKeukenForm(Boolean checkKeukenBar)
         {
 
+            this.checkKeukenBar = checkKeukenBar;
+
             InitializeComponent();
-            if (checkKeuken == true)
+
+            if (checkKeukenBar == true)
             {
-                RefreshItemsKeuken();
-                RefreshOrdersKeuken();
-                barbestelling_gereedLv.Hide();
-                voorraad_barmanLv.Hide();
-                RefreshOrdersBtn.Hide();
-                btn_Gereed_Bestelling_Bar.Hide();
                 Chapoo_title.Text = "| Keuken";
             }
             else
             {
-                RefreshItemsBar();
-                RefreshOrdersBar();
-                keukenbestelling_gereedLv.Hide();
-                voorraad_keukenLv.Hide();
-                RefreshStockBtn.Hide();
-                btn_Gereed_Bestelling_Keuken.Hide();
                 Chapoo_title.Text = "| Barman";
             }
+
+
+            RefreshOrders();
+            ts_menuItem_Filter.Text = "Openstaand";
+            System.Windows.Forms.Timer aTimer = new System.Windows.Forms.Timer();
+            aTimer.Tick += new EventHandler(OnTimedEvent);
+            aTimer.Interval = 10000;
+            aTimer.Enabled = true;
+
+        }
+        private void OnTimedEvent(object source, EventArgs e)
+        {
+            RefreshOrders();
         }
 
         private void RefreshStockBtn_Click(object sender, EventArgs e)
         {
-            RefreshItemsKeuken();
-            RefreshOrdersKeuken();
+            RefreshOrders();
         }
 
-        public void RefreshOrdersBtn_Click(object sender, EventArgs e)
+
+        private void RefreshOrders()
         {
-            RefreshItemsBar();
-            RefreshOrdersBar();
-        }
+            ChapooLogic.KeukenBarBestelling_Service KeukenBarBestelLogic = new ChapooLogic.KeukenBarBestelling_Service();
+            List<KeukenBarBestelling> KeukenBarBestelList = KeukenBarBestelLogic.GetKeuken(checkKeukenBar, checkOpenstaand);
 
-        private void RefreshItemsBar()
-        {
-            ChapooLogic.BarLogic barLogic = new ChapooLogic.BarLogic();
-            List<BarModel> barList = barLogic.GetBar();
+            bestelling_gereedLv.Items.Clear();
 
-            voorraad_barmanLv.Items.Clear();
-
-            foreach (ChapooModel.BarModel b in barList)
-            {
-                ListViewItem item = new ListViewItem(b.ItemID.ToString());
-                item.SubItems.Add(b.Type.ToString());
-                item.SubItems.Add(b.Price.ToString("F"));
-                item.SubItems.Add(b.Stock.ToString());
-                item.SubItems.Add(b.Alcohol.ToString());
-                item.SubItems.Add(b.Name);
-
-                voorraad_barmanLv.Items.Add(item);
-            }
-        }
-
-        private void RefreshItemsKeuken()
-        {
-            ChapooLogic.KeukenLogic barLogic = new ChapooLogic.KeukenLogic();
-            List<KeukenModel> barList = barLogic.GetKeuken();
-
-            voorraad_keukenLv.Items.Clear();
-
-            foreach (ChapooModel.KeukenModel b in barList)
-            {
-                ListViewItem item = new ListViewItem(b.ItemID.ToString());
-                item.SubItems.Add(b.Type.ToString());
-                item.SubItems.Add(b.Price.ToString("F"));
-                item.SubItems.Add(b.Stock.ToString());
-                //item.SubItems.Add(b.Alcohol.ToString());
-                item.SubItems.Add(b.Name);
-
-                voorraad_keukenLv.Items.Add(item);
-            }
-        }
-
-        private void RefreshOrdersBar()
-        {
-            ChapooLogic.BarBestellingLogic bbarLogic = new ChapooLogic.BarBestellingLogic();
-            List<BarBestellingModel> bbarList = bbarLogic.GetBar();
-
-            barbestelling_gereedLv.Items.Clear();
-
-            foreach (ChapooModel.BarBestellingModel b in bbarList)
-            {
-                ListViewItem item = new ListViewItem(b.OrderItemID.ToString());
-                item.SubItems.Add(b.Amount.ToString());
-                item.SubItems.Add(b.Price.ToString("F"));
-                item.SubItems.Add(b.orderTableId.ToString());
-                item.SubItems.Add(b.Name);
-                item.SubItems.Add(b.OrderItemStatus.ToString());
-                item.SubItems.Add(b.Alcohol.ToString());
-
-                barbestelling_gereedLv.Items.Add(item);
-            }
-        }
-
-        private void RefreshOrdersKeuken()
-        {
-            ChapooLogic.KeukenBestellingLogic KeukenBestelLogic = new ChapooLogic.KeukenBestellingLogic();
-            List<KeukenBestellingModel> KeukenBestelList = KeukenBestelLogic.GetKeuken();
-
-            keukenbestelling_gereedLv.Items.Clear();
-
-            foreach (ChapooModel.KeukenBestellingModel k in KeukenBestelList)
+            foreach (ChapooModel.KeukenBarBestelling k in KeukenBarBestelList)
             {
                 ListViewItem item = new ListViewItem(k.OrderItemID.ToString());
-                item.SubItems.Add(k.Amount.ToString());
-                item.SubItems.Add(k.Price.ToString("F"));
                 item.SubItems.Add(k.orderTableId.ToString());
                 item.SubItems.Add(k.Name);
-                item.SubItems.Add(k.OrderItemStatus.ToString());
-
-                keukenbestelling_gereedLv.Items.Add(item);
+                item.SubItems.Add(k.Amount.ToString());
+                item.SubItems.Add(k.Datum.ToString());
+                tb_opmerking_keukenBar.Text = "Comment in bestelling " + k.orderTableId.ToString() + " : '" + k.Comment.ToString() + "'\n";
+                bestelling_gereedLv.Items.Add(item);
             }
         }
 
-        private void EditOrderKeuken()
+        private void EditOrderKeukenBar()
         {
-            if (keukenbestelling_gereedLv.SelectedItems.Count > 0 && keukenbestelling_gereedLv.SelectedItems.Count != null)
+            if (bestelling_gereedLv.SelectedItems.Count > 0)
             {
-                pnl_Keuken_Bestelling_Wijzig.Show();
-                tb_pnl_ID_keuken.Text = keukenbestelling_gereedLv.SelectedItems[0].SubItems[0].Text;
-                tb_pnl_Amount_keuken.Text = keukenbestelling_gereedLv.SelectedItems[0].SubItems[1].Text;
-                tb_pnl_Prijs_keuken.Text = keukenbestelling_gereedLv.SelectedItems[0].SubItems[2].Text;
-                tb_pnl_Tafel_keuken.Text = keukenbestelling_gereedLv.SelectedItems[0].SubItems[3].Text;
-                tb_pnl_Name_keuken.Text = keukenbestelling_gereedLv.SelectedItems[0].SubItems[4].Text;
-                tb_pnl_Status_keuken.Text = keukenbestelling_gereedLv.SelectedItems[0].SubItems[5].Text;
+                pnl_Bestelling_Wijzig.Show();
+                tb_pnl_ID_bestelling.Text = bestelling_gereedLv.SelectedItems[0].SubItems[0].Text;
+                tb_pnl_Tafel_bestelling.Text = bestelling_gereedLv.SelectedItems[0].SubItems[1].Text;
+                tb_pnl_Name_bestelling.Text = bestelling_gereedLv.SelectedItems[0].SubItems[2].Text;
+                tb_pnl_Aantal_bestelling.Text = bestelling_gereedLv.SelectedItems[0].SubItems[3].Text;
+                tb_pnl_Tijd_bestelling.Text = bestelling_gereedLv.SelectedItems[0].SubItems[4].Text;
             }
             else
             {
                 MessageBox.Show("Please select an Order first.");
-                    RefreshItemsKeuken();
-                    RefreshOrdersKeuken();
-            }
-        }
-        private void EditOrderBar()
-        {
-            if (barbestelling_gereedLv.SelectedItems.Count > 0 && barbestelling_gereedLv.SelectedItems.Count != null)
-            {
-                pnl_Bar_Bestelling_Wijzig.Show();
-                tb_pnl_ID_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[0].Text;
-                tb_pnl_Amount_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[1].Text;
-                tb_pnl_Prijs_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[2].Text;
-                tb_pnl_Tafel_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[3].Text;
-                tb_pnl_Name_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[4].Text;
-                tb_pnl_Status_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[5].Text;
-                tb_pnl_Alcohol_bar.Text = barbestelling_gereedLv.SelectedItems[0].SubItems[6].Text;
-            }
-            else
-            {
-                MessageBox.Show("Please select an Order first.");
-                    RefreshItemsBar();
-                    RefreshOrdersBar();
-            }
-        }
-
-        private void btn_Gereed_Bestelling_Keuken_Click(object sender, EventArgs e)
-        {
-            EditOrderKeuken();
-        }
-
-        private void btn_Keuken_Wijzig_Cancel_Click(object sender, EventArgs e)
-        {
-            pnl_Keuken_Bestelling_Wijzig.Hide();
-        }
-
-        private void btn_Keuken_Wijzig_Accept_Click(object sender, EventArgs e)
-        {
-            pnl_Keuken_Bestelling_Wijzig.Hide();
-
-            try
-            {
-                KeukenBestellingLogic keukenService = new KeukenBestellingLogic();
-                int id = int.Parse(tb_pnl_ID_keuken.Text);
-                Boolean status = Convert.ToBoolean(1); 
-
-                KeukenBestellingModel keuken = new KeukenBestellingModel();
-                keuken.OrderItemID = id;
-                keuken.OrderItemStatus = status;
-
-                keukenService.WijzigBestellingKeuken(keuken);
-                MessageBox.Show("Succes!");
-
-                RefreshItemsKeuken();
-                RefreshOrdersKeuken();
-            }
-            catch
-            {
-                MessageBox.Show("Failed.");
-                RefreshItemsKeuken();
-                RefreshOrdersKeuken();
+                RefreshOrders();
             }
         }
 
         private void btn_Gereed_Bestelling_Bar_Click(object sender, EventArgs e)
         {
-            EditOrderBar();
+            EditOrderKeukenBar();
         }
 
         private void btn_Bar_Wijzig_Cancel_Click(object sender, EventArgs e)
         {
-            pnl_Bar_Bestelling_Wijzig.Hide();
+            pnl_Bestelling_Wijzig.Hide();
         }
 
         private void btn_Bar_Wijzig_Accept_Click(object sender, EventArgs e)
         {
-            pnl_Bar_Bestelling_Wijzig.Hide();
+            pnl_Bestelling_Wijzig.Hide();
 
             try
             {
-                BarBestellingLogic barService = new BarBestellingLogic();
-                int id = int.Parse(tb_pnl_ID_bar.Text);
+                KeukenBarBestelling_Service keukenService = new KeukenBarBestelling_Service();
+                int id = int.Parse(tb_pnl_ID_bestelling.Text);
                 Boolean status = Convert.ToBoolean(1);
 
-                BarBestellingModel bar = new BarBestellingModel();
-                bar.OrderItemID = id;
-                bar.OrderItemStatus = status;
+                KeukenBarBestelling keukenBar = new KeukenBarBestelling();
+                keukenBar.OrderItemID = id;
+                keukenBar.OrderItemStatus = status;
 
-                barService.WijzigBestellingBar(bar);
-                MessageBox.Show("Succes!");
-
-                RefreshItemsBar();
-                RefreshOrdersBar();
+                keukenService.WijzigBestelling(keukenBar);
+                MessageBox.Show("Bestelling Gereed!");
+                RefreshOrders();
             }
             catch
             {
-                MessageBox.Show("Failed.");
-                RefreshItemsBar();
-                RefreshOrdersBar();
+                MessageBox.Show("Failed, Probeer Opnieuw.");
+                RefreshOrders();
             }
         }
 
@@ -267,6 +144,23 @@ namespace ChapooUI
             {
                 return;
             }
+        }
+
+        private void gereedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkOpenstaand = false;
+            ts_menuItem_Filter.Text = "Gereed";
+            pnl_Bestelling_Wijzig.Hide();
+            btn_Gereed_Bestelling_Bestelling.Hide();
+            RefreshOrders();
+        }
+
+        private void openstaandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkOpenstaand = true;
+            ts_menuItem_Filter.Text = "Openstaand";
+            btn_Gereed_Bestelling_Bestelling.Show();
+            RefreshOrders();
         }
     }
 }

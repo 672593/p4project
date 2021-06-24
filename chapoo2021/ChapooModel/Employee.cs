@@ -36,7 +36,7 @@ namespace ChapooModel
 
         public enum FunctieNaam
         {
-            Bediening = 1, Kok, Barman, Eigenaar
+            Bar = 1, Eigenaar, Kok, Bediening
         }
     }
 }

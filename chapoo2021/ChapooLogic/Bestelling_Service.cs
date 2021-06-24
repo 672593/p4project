@@ -23,16 +23,7 @@ namespace ChapooLogic
                 Console.WriteLine(e.Message);
 
                 List<Bestelling> bestelling = new List<Bestelling>();
-                Bestelling be = new Bestelling();
 
-                //Test values
-                be.orderId = 99;
-                be.orderTableId = 99;
-                be.currentDate = DateTime.Now;
-                be.totalPrice = 99;
-                be.comment = "Geen resultaat";
-
-                bestelling.Add(be);
                 return bestelling;
             }
         }

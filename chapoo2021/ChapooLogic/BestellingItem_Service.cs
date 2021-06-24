@@ -13,37 +13,57 @@ namespace ChapooLogic
         BestellingItem_DAO _bestellingDAO = new BestellingItem_DAO();
         public List<BestellingItem> GetBestellingItems()
         {
+            List<BestellingItem> bestellingitem = null;
             try
             {
-                List<BestellingItem> bestellingitem = _bestellingDAO.Db_Get_OrderItem();
+                bestellingitem = _bestellingDAO.Db_Get_OrderItem();
                 return bestellingitem;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
 
-                List<BestellingItem> bestellingitem = new List<BestellingItem>();
-                BestellingItem bi = new BestellingItem();
-
-                //Test values
-                bi.orderId = 99;
-                bi.orderItemId = 99;
-                bi.itemName = "Test";
-                bi.menuItemId = 99;
-                bi.amount = 99;
-
-                bestellingitem.Add(bi);
                 return bestellingitem;
             }
         }
 
+        public List<BestellingItem> GetOrderItemSpec(int orderTableId)
+        {
+            List<BestellingItem> bestellingitem = null;
+            try
+            {
+                bestellingitem = _bestellingDAO.Db_Get_OrderItemSpec(orderTableId);
+                return bestellingitem;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+                return bestellingitem;
+            }
+        }
+
+        public List<BestellingItem> GetAllOrderTableId()
+        {
+            List<BestellingItem> ordertableId = null;
+            try
+            {
+                ordertableId = _bestellingDAO.GetAllOrderTableId();
+                return ordertableId;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+                return ordertableId;
+            }
+        }
         public bool DeleteOrderItem(int menuItemId, int orderItemId)
         {
             try
             {
                 _bestellingDAO.DeleteOrderItem(menuItemId, orderItemId);
                 return true;
-
             }
             catch (Exception e)
             {
@@ -67,11 +87,11 @@ namespace ChapooLogic
             }
         }
 
-        public bool UpdateAmountOrderItem(int orderItemId, int amount)
+        public bool UpdateAmountOrderItem(int orderId, int amount)
         {
             try
             {
-                _bestellingDAO.UpdateAmountOrderItem(orderItemId, amount);
+                _bestellingDAO.UpdateAmountOrderItem(orderId, amount);
                 return true;
             }
             catch (Exception e)
@@ -81,11 +101,11 @@ namespace ChapooLogic
             }
         }
 
-        public bool InsertBestelling(BestellingItem be)
+        public bool InsertBestellingItem(BestellingItem be)
         {
             try
             {
-                _bestellingDAO.InsertBestelling(be);
+                _bestellingDAO.InsertBestellingItem(be);
                 return true;
             }
             catch (Exception e)

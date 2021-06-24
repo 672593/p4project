@@ -89,7 +89,7 @@ namespace ChapooUI
             }
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
+        private void btn_back_Click_1(object sender, EventArgs e)
         {
             // open login form again
             LoginForm loginForm = new LoginForm();

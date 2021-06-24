@@ -65,15 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Afreken_DAO.cs" />
-    <Compile Include="BarBestellingDAO.cs" />
-    <Compile Include="BarDAO.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="BestellingItem_DAO.cs" />
     <Compile Include="Bestelling_DAO.cs" />
     <Compile Include="Employee_DAO.cs" />
     <Compile Include="Function_DAO.cs" />
-    <Compile Include="KeukenBestellingDAO.cs" />
-    <Compile Include="KeukenDAO.cs" />
+    <Compile Include="KeukenBarBestelling_DAO.cs" />
     <Compile Include="MenuAdmin_DAO.cs" />
     <Compile Include="Menu_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

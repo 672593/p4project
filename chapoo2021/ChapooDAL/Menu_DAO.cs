@@ -18,6 +18,7 @@ namespace ChapooDAL
             return ReadTablesMenuName(ExecuteSelectQuery("getMenuNames", sqlp));
         }
 
+
         private List<Menuu> ReadTablesMenuName(DataTable dataTable)
         {
             List<Menuu> menu = new List<Menuu>();
@@ -32,13 +33,44 @@ namespace ChapooDAL
             return menu;
         }
 
+        public List<MenuuItem> Db_get_MenuItems()
+        {
+            SqlParameter[] sqlp = new SqlParameter[0];
+            return ReadTablesMenuItems(ExecuteSelectQuery("GetmenuItems", sqlp));
+        }
+
+        private List<MenuuItem> ReadTablesMenuItems(DataTable dataTable)
+        {
+            List<MenuuItem> menuitem = new List<MenuuItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                MenuuItem m = new MenuuItem();
+                m.menuItemId = (int)dr["menuItemId"];
+                m.itemName = (string)dr["menuName"];
+                m.price = (decimal)dr["price"];
+                menuitem.Add(m);
+            }
+            return menuitem;
+        }
+
+
         public List<MenuuItem> Db_Get_itemName(int menuId)
         {
             SqlParameter sqlp = new SqlParameter("@menuId", menuId);
             SqlParameter[] sqlp1 = new SqlParameter[] { sqlp };
             return ReadTablesItemName(ExecuteSelectQuery("GetitemName", sqlp1));
         }
+      /*  public decimal GetPriceForOrderItem(int menuitemId)
+        {
+            DataTable order = ExecuteSelectQuery("GetPriceForOrderItem");
+            foreach (DataRow item in order.Rows)
+            {
+                menuitemId = (int)item["menuitemId"];
+            }
 
+            return menuitemId;
+        }*/
         private List<MenuuItem> ReadTablesItemName(DataTable dataTable)
         {
             List<MenuuItem> itemName = new List<MenuuItem>();
@@ -47,6 +79,7 @@ namespace ChapooDAL
             {
                 MenuuItem m = new MenuuItem();
                 m.itemName = (string)dr["itemName"];
+                m.price = (decimal)dr["price"];
                 itemName.Add(m);
             }
             return itemName;

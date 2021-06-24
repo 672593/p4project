@@ -41,15 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Afreken.cs" />
-    <Compile Include="BarBestellingModel.cs" />
-    <Compile Include="BarModel.cs" />
     <Compile Include="Bestelling.cs" />
-    <Compile Include="BestellingItem.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="HashWithSalt.cs" />
-    <Compile Include="KeukenBestellingModel.cs" />
-    <Compile Include="KeukenModel.cs" />
     <Compile Include="MenuItems.cs" />
     <Compile Include="Menuu.cs" />
     <Compile Include="Reservering.cs" />

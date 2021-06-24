@@ -10,32 +10,18 @@ namespace ChapooLogic
 {
     public class Afreken_Service
     {
-        readonly Afreken_DAO AfrekenDao = new Afreken_DAO();
+        private Afreken_DAO AfrekenDao = new Afreken_DAO();
 
-        public List<OrdersTable> GetAllOrdersFromTable(int orderId)
+        public List<BestellingItem> GetAllOrdersFromTable(int orderId)
         {
             try
             {
-                List<OrdersTable> orderTable = AfrekenDao.ReadAllOrdersFromTable(orderId);
-                return orderTable;
+                return AfrekenDao.ReadAllOrdersFromTable(orderId);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
 
-                List<OrdersTable> orderTable = new List<OrdersTable>();
-                OrdersTable bi = new OrdersTable
-                {
-                    //Test values
-                    MenuItemId = 99,
-                    Amount = 99,
-                    ItemName = "Test, it's not working correctly",
-                    Price = 99,
-                    OrderTableId = 99
-                };
-
-                orderTable.Add(bi);
-                return orderTable;
+                throw new Exception(e.Message);
             }
         }
         public void ReceiptCustomer(int OrderId, int PayMethodId, decimal VatPercentage, decimal Tip, decimal PaidPrice, decimal TotalPrice)
@@ -47,29 +33,30 @@ namespace ChapooLogic
             catch (Exception e)
             {
 
-                Console.WriteLine(e);
+                throw new Exception(e.Message);
             }
-
         }
         public List<string> GetAllPaymethods()
         {
             try
             {
-                List<string> customerReceipt = AfrekenDao.GetAllPaymethods();
-                return customerReceipt;
+                return AfrekenDao.GetAllPaymethods();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                throw new Exception(e.Message);
+            }
+        }
+        public bool CheckBetaald(int orderID)
+        {
+            try
+            {
+                return AfrekenDao.CheckBetaald(orderID);
+            }
+            catch (Exception e)
+            {
 
-                List<string> customerReceipt = new List<string>();
-                CustomerReceipt bi = new CustomerReceipt
-                {
-                    //Test values
-                    ReceiptId = 99
-                };
-
-                return customerReceipt;
+                throw new Exception(e.Message);
             }
         }
     }

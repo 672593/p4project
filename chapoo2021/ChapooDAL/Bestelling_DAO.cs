@@ -27,16 +27,11 @@ namespace ChapooDAL
                 Bestelling be = new Bestelling()
                 {
                     orderTableId = (int)dr["orderTableId"],
-                    employeeId = (int)dr["employeeId"],
+                   // employeeId = (int)dr["employeeId"],
                     orderId = (int)dr["orderId"],
                     currentDate = (DateTime)dr["currentDate"],
                     totalPrice = (decimal)dr["totalPrice"],
                     comment = (string)dr["comment"],
-                    /* menuItemId = (int)dr["menuItemId"],
-                     orderTime = (DateTime)dr["orderTime"],
-                     amount = (int)dr["amount"],
-                     price = (decimal)dr["price"],
-                     orderItemStatus = (bool)dr["orderItemStatus"],*/
 
                 };
                 bestelling.Add(be);
@@ -46,14 +41,13 @@ namespace ChapooDAL
 
         public void InsertBestelling(Bestelling be)
         {
-            SqlParameter sqlq = new SqlParameter("@orderId", be.orderId);
             SqlParameter sqlq1 = new SqlParameter("@orderTableId", be.orderTableId);
             SqlParameter sqlq2 = new SqlParameter("@employeeId", be.employeeId);
             SqlParameter sqlq3 = new SqlParameter("@currentDate", be.currentDate);
             SqlParameter sqlq4 = new SqlParameter("@totalPrice", be.totalPrice);
             SqlParameter sqlq5 = new SqlParameter("@comment", be.comment);
 
-            SqlParameter[] sqlParameters = new SqlParameter[] { sqlq, sqlq1, sqlq2, sqlq3, sqlq4, sqlq5 };
+            SqlParameter[] sqlParameters = new SqlParameter[] { sqlq1, sqlq2, sqlq3, sqlq4, sqlq5 };
 
             ExecuteEditQuery("CreateOrder", sqlParameters);
         }

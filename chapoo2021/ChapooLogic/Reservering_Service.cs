@@ -25,15 +25,6 @@ namespace ChapooLogic
                 List<Reservering> res = new List<Reservering>();
                 Reservering re = new Reservering();
 
-                //Test values
-                re.reservationId = 99;
-                re.tableId = 99;
-                re.reservationName = "Fout";
-                re.reservationTel = "Fout";
-                re.reservationEmail = "Fout";
-                re.reservationComment = "Fout";
-                re.reservationDate = DateTime.Now;
-                res.Add(re);
                 return res;
             }
         }
@@ -51,8 +42,20 @@ namespace ChapooLogic
                 return false;
             }
         }
-
-        public bool EditReservering(int reservationId, int tableId, string reservationName, string reservationTel, string reservationEmail, string reservationComment, DateTime reservationDate)
+        public bool EditReservering(Reservering r)
+        {
+            try
+            {
+                reserveringDAO.EditReservering(r);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+      /*  public bool EditReservering(int reservationId, int tableId, string reservationName, string reservationTel, string reservationEmail, string reservationComment, DateTime reservationDate)
         {
             try
             {
@@ -64,13 +67,13 @@ namespace ChapooLogic
                 Console.WriteLine(e.Message);
                 return false;
             }
-        }
+        }*/
 
-        public bool InsertReservering(Reservering re)
+        public bool InsertReservering(int reservationId, int tableId, string reservationName, string reservationTel, string reservationEmail, string reservationComment, DateTime reservationDate)
         {
             try
             {
-                reserveringDAO.InsertReservering(re);
+                reserveringDAO.InsertReservering(reservationId, tableId, reservationName, reservationTel, reservationEmail, reservationComment, reservationDate);
                 return true;
             }
             catch (Exception e)

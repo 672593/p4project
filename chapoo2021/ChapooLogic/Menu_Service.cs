@@ -12,7 +12,10 @@ namespace ChapooLogic
     public class Menu_Service
     {
         private Menu_DAO _menuDAO = new Menu_DAO();
-
+       /* public decimal GetPriceForOrderItem(int menuItemId)
+        {
+            return _menuDAO.GetPriceForOrderItem(menuItemId);
+        }*/
         public List<Menuu> GetMenuNames()
         {
             try

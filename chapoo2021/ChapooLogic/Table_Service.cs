@@ -25,14 +25,18 @@ namespace ChapooLogic
 
                 List<Table> table = new List<Table>();
                 Table t = new Table();
-
-                //Test values
-                t.tableId = 99;
-
-
-                table.Add(t);
                 return table;
             }
+        }
+
+        public List<Table> GetTafelData()
+        {
+            return table_db.Get_Tafel_Data();
+        }
+
+        public List<Table> GetOrderStatus()
+        {
+            return table_db.GetOrderStatus();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ChapooDAL
 {
     public class Afreken_DAO : Base
     {
-        public List<OrdersTable> ReadAllOrdersFromTable(int orderId)
+        public List<BestellingItem> ReadAllOrdersFromTable(int orderId)
         {
             SqlParameter[] sqlParameters = new SqlParameter[] {
                 new SqlParameter("@orderId", orderId)
@@ -20,19 +20,19 @@ namespace ChapooDAL
             return GetAllOrdersFromTable(ExecuteSelectQuery("GetAllOrdersFromTable", sqlParameters));
         }
 
-        private List<OrdersTable> GetAllOrdersFromTable(DataTable dataTable)
+        private List<BestellingItem> GetAllOrdersFromTable(DataTable dataTable)
         {
-            List<OrdersTable> ordersTables = new List<OrdersTable>();
+            List<BestellingItem> ordersTables = new List<BestellingItem>();
             foreach (DataRow item in dataTable.Rows)
             {
-                OrdersTable orderTable = new OrdersTable
+                BestellingItem orderTable = new BestellingItem
                 {
-                    MenuItemId = (int)item["menuItemId"],
-                    Amount = (int)item["amount"],
-                    ItemName = (string)item["itemName"],
-                    Price = (decimal)item["price"],
-                    OrderTableId = (int)item["orderTableId"],
-                    OrderId = (int)item["orderId"]
+                    menuItemId = (int)item["menuItemId"],
+                    amount = (int)item["amount"],
+                    itemName = (string)item["itemName"],
+                    price = (decimal)item["price"],
+                    orderTableId = (int)item["orderTableId"],
+                    orderId = (int)item["orderId"]
                 };
 
                 ordersTables.Add(orderTable);
@@ -65,6 +65,19 @@ namespace ChapooDAL
                 modelList.Add(payMethodName);
             }
             return modelList;
+        }
+        public bool CheckBetaald(int tableId)
+        {
+            SqlParameter[] sqlParameters = new SqlParameter[] {
+                new SqlParameter("@tableId", tableId)
+            };
+            DataTable dt = ExecuteSelectQuery("CheckBetaald", sqlParameters);
+
+            if (dt == null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -138,9 +138,5 @@ namespace ChapooDAL
 
             ExecuteEditQuery("AlterSalt", sqlq);
         }
-
-
-
-
     }
 }

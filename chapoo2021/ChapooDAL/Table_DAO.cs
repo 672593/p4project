@@ -31,5 +31,51 @@ namespace ChapooDAL
             }
             return tables;
         }
+
+        private List<Table> ReadStatus(DataTable dataTable)
+        {
+            List<Table> tafels = new List<Table>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Table tafel = new Table()
+                {
+                    tableId = (int)dr["tableId"],
+                    TafelStatusId = (int)dr["tableStatusId"],
+                };
+                tafels.Add(tafel);
+            }
+            return tafels;
+        }
+
+        private List<Table> ReadOrderStatus(DataTable dataTable)
+        {
+            List<Table> tafels = new List<Table>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Table tafel = new Table()
+                {
+                    orderid = (int)dr["orderid"],
+                    orderTableId = (int)dr["orderTableid"],
+                    currentDate = (DateTime)dr["currentDate"]
+                };
+                tafels.Add(tafel);
+            }
+            return tafels;
+        }
+
+        public List<Table> Get_Tafel_Data() // made by Jelle de Vries. Get table data from database
+        {
+            SqlParameter[] sqlp = new SqlParameter[0];
+            return ReadStatus(ExecuteSelectQuery("GetTafelStatus", sqlp));
+        }
+
+
+        public List<Table> GetOrderStatus() // made by Jelle de Vries. Get order data from database
+        {
+            SqlParameter[] sqlp = new SqlParameter[0];
+            return ReadOrderStatus(ExecuteSelectQuery("GetOrderStatus", sqlp));
+        }
     }
 }
